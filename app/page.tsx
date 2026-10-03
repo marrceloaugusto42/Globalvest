@@ -1,6 +1,6 @@
 'use client';
-import {useEffect,useState} from "react"; import {supabase} from "../lib/supabase";
-export default function Home(){
+import {useEffect,useState} from "react"; import {getSupabase} from "../lib/supabase";
+export default function Home(){ const supabase=getSupabase();
 const [session,setSession]=useState<any>(null); const [profile,setProfile]=useState<any>(null); const [products,setProducts]=useState<any[]>([]); const [email,setEmail]=useState(""); const [password,setPassword]=useState(""); const [msg,setMsg]=useState("");
 useEffect(()=>{supabase.auth.getSession().then(({data})=>{setSession(data.session);if(data.session)load(data.session.user.id)});const {data}=supabase.auth.onAuthStateChange((_e,s)=>{setSession(s);if(s)load(s.user.id)});return()=>data.subscription.unsubscribe()},[]);
 async function load(id:string){const a=await supabase.from("profiles").select("*").eq("id",id).single();setProfile(a.data);const b=await supabase.from("investment_products").select("*").eq("status","active");setProducts(b.data||[])}
