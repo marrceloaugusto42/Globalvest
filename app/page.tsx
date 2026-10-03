@@ -2,7 +2,7 @@
 import {useEffect,useState} from 'react';
 import {getSupabase} from '../lib/supabase';
 
-const currencies=[['USD',' function Home(){
+const currencies=[['USD','$'],['EUR','€'],['GBP','£'],['NGN','₦'],['CAD','C$'],['CHF','CHF'],['BRL','R$']]; const countries=['Nigeria','Brazil','United Kingdom','United States','Canada','Germany','France','Portugal','South Africa','Ghana','Kenya','Other'];
  const supabase=getSupabase();
  const [session,setSession]=useState<any>(null),[profile,setProfile]=useState<any>(null),[wallets,setWallets]=useState<any[]>([]),[products,setProducts]=useState<any[]>([]),[view,setView]=useState('Overview'),[auth,setAuth]=useState(''),[email,setEmail]=useState(''),[password,setPassword]=useState(''),[name,setName]=useState(''),[country,setCountry]=useState(''),[msg,setMsg]=useState(''),[currency,setCurrency]=useState('USD');
  useEffect(()=>{supabase.auth.getSession().then(({data})=>{setSession(data.session);if(data.session)load(data.session.user.id)});const x=supabase.auth.onAuthStateChange((_e,s)=>{setSession(s);if(s)load(s.user.id)});return()=>x.data.subscription.unsubscribe()},[]);
