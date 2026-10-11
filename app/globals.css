@@ -885,3 +885,15 @@ html[data-theme='dark'] .content .walletActions button.primary {
     padding:4px 2px!important;
   }
 }
+
+/* Scrollable custom language picker */
+.globalvestLanguagePicker{position:relative!important;overflow:visible!important;z-index:120!important}
+.languagePickerButton{display:flex;align-items:center;justify-content:space-between;gap:6px;width:100%;height:38px;padding:0 9px;border:1px solid var(--border,#d6dce5);border-radius:9px;background:var(--card,#fff);color:var(--text,#182230);font-size:12px;font-weight:850;white-space:nowrap;cursor:pointer;touch-action:manipulation}
+.languagePickerMenu{position:absolute;top:calc(100% + 7px);right:0;width:190px;max-height:min(60vh,360px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:var(--card,#fff);border:1px solid var(--border,#d6dce5);border-radius:11px;box-shadow:0 12px 32px rgba(0,0,0,.22);padding:5px;z-index:9999}
+.languagePickerMenu button{display:block;width:100%;min-height:39px;padding:9px 11px;text-align:left;border:0;border-radius:7px;background:transparent;color:var(--text,#182230);font-size:13px;font-weight:750;cursor:pointer}
+.languagePickerMenu button:active,.languagePickerMenu button:hover{background:rgba(90,110,140,.14)}
+.googleTranslateHidden{position:absolute!important;left:-10000px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important}
+html[data-theme='dark'] .languagePickerButton,html[data-theme='dark'] .languagePickerMenu{background:#141b24;color:#f1f5f9;border-color:#394454}
+html[data-theme='dark'] .languagePickerMenu button{color:#f1f5f9}
+@media(max-width:900px){.mobileHeaderActions .globalvestLanguagePicker{width:clamp(112px,31vw,145px)!important;min-width:112px!important;max-width:145px!important;flex-shrink:0!important}.languagePickerMenu{position:fixed;top:76px;right:72px;width:min(220px,62vw);max-height:65vh;z-index:99999!important}.languagePickerButton{height:38px;font-size:12px}}
+@media(max-width:380px){.mobileHeaderActions .globalvestLanguagePicker{width:105px!important;min-width:105px!important}.languagePickerMenu{right:64px;width:min(210px,65vw)}}
