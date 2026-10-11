@@ -228,3 +228,17 @@ input,select,textarea{font-size:16px}
 .botFinePrint{font-size:11px;color:#718096;line-height:1.65;margin:16px 2px 0}
 @media(max-width:1050px){.botMetricGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.botWorkspace{grid-template-columns:1fr}}
 @media(max-width:600px){.tradingBotPage{padding:0 0 18px}.botPageHeading{align-items:flex-start;margin-top:0}.botPageHeading h2{font-size:26px}.botPageHeading p{max-width:245px;font-size:12px}.botStatus{padding:8px 9px;font-size:9px}.botDemoNotice{padding:12px}.botMetricGrid{gap:8px}.botMetric{padding:13px 11px;border-radius:12px}.botMetric>span{font-size:11px}.botMetric strong{font-size:18px;margin:9px 0 4px}.botMetric small{font-size:10px}.botCard{padding:15px;border-radius:13px}.botInputPair{gap:9px}.botSetup label{font-size:11px}.botSetup input,.botSetup select{padding:11px 8px;font-size:13px}.botTradeRow{grid-template-columns:43px minmax(0,1fr) minmax(0,1fr);gap:7px}.botTradeRow>div b{font-size:11px}.botTradeRow>div small{font-size:9px}.botNextLevels{gap:7px}.botMainActions button{padding:12px 10px}.botBalanceRows>div{padding:12px 10px;font-size:11px}}
+
+
+/* Dashboard language selector — Google Translate provides a broad language list */
+.globalvestLanguagePicker{display:flex;align-items:center;gap:7px;min-width:0;max-width:220px;padding:7px 10px;border:1px solid #dce4ee;border-radius:10px;background:#fff;color:#17212f}
+.globalvestLanguagePicker>span{font-size:17px;flex-shrink:0}
+#google_translate_element{min-width:0;max-width:180px;overflow:hidden}
+#google_translate_element .goog-te-gadget{font-family:inherit!important;font-size:0!important;color:transparent!important;white-space:nowrap}
+#google_translate_element .goog-te-gadget .goog-te-combo{max-width:170px;min-width:0;margin:0!important;padding:5px 18px 5px 4px;border:0;background:#fff;color:#17212f;font-size:12px;font-weight:800;outline:none;cursor:pointer}
+#google_translate_element .goog-logo-link,#google_translate_element .goog-te-gadget span{display:none!important}
+.goog-te-banner-frame,.skiptranslate iframe{display:none!important}
+body{top:0!important}
+.languageLoading{font-size:12px;font-weight:800;color:#334155}
+@media(max-width:760px){.globalvestLanguagePicker{max-width:145px;padding:6px 7px;gap:4px}.globalvestLanguagePicker>span{font-size:15px}#google_translate_element{max-width:112px}#google_translate_element .goog-te-gadget .goog-te-combo{max-width:110px;font-size:11px;padding:5px 1px}}
+@media(max-width:420px){.globalvestLanguagePicker{max-width:124px}.globalvestLanguagePicker>span{display:none}#google_translate_element{max-width:105px}#google_translate_element .goog-te-gadget .goog-te-combo{max-width:103px}}
