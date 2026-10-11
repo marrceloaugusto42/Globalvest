@@ -576,3 +576,82 @@ html[data-theme='dark'] .botEmpty>div{background:#20352d!important;color:#36d99a
  html[data-theme='dark'] .dashboardHeaderTools .globalvestLanguagePicker,
  html[data-theme='dark'] .dashboardCurrencySelect{background:#20262e!important;color:#eef2f7!important;border-color:#38424f!important}
 }
+
+
+/* Final contrast and spacing polish for the theme/language/currency toolbar */
+html[data-theme='dark'] .content,
+html[data-theme='dark'] .content *,
+html[data-theme='dark'] .app main,
+html[data-theme='dark'] .app main *{
+  text-shadow:none;
+}
+html[data-theme='dark'] .content [style*="color: white"],
+html[data-theme='dark'] .content [style*="color:white"],
+html[data-theme='dark'] .content [style*="color: #fff"],
+html[data-theme='dark'] .content [style*="color:#fff"],
+html[data-theme='dark'] .content [style*="color: #ffffff"],
+html[data-theme='dark'] .content [style*="color:#ffffff"],
+html[data-theme='dark'] .app [style*="color: white"],
+html[data-theme='dark'] .app [style*="color:white"],
+html[data-theme='dark'] .app [style*="color: #fff"],
+html[data-theme='dark'] .app [style*="color:#fff"],
+html[data-theme='dark'] .app [style*="color: #ffffff"],
+html[data-theme='dark'] .app [style*="color:#ffffff"]{
+ color:#f4f7fb!important;
+}
+html[data-theme='dark'] .content .whiteText,
+html[data-theme='dark'] .content .text-white,
+html[data-theme='dark'] .content .textWhite,
+html[data-theme='dark'] .content .onDarkText,
+html[data-theme='dark'] .app .whiteText,
+html[data-theme='dark'] .app .text-white,
+html[data-theme='dark'] .app .textWhite,
+html[data-theme='dark'] .app .onDarkText{color:#f4f7fb!important}
+html[data-theme='dark'] .dashboardHeaderTools .themeToggle,
+html[data-theme='dark'] .dashboardHeaderTools .globalvestLanguagePicker,
+html[data-theme='dark'] .dashboardHeaderTools .dashboardCurrencySelect,
+html[data-theme='dark'] .dashboardCurrencySelect{
+ color:#f4f7fb!important;background:#1b222b!important;border-color:#3a4654!important;
+ box-shadow:0 3px 12px rgba(0,0,0,.18)!important;
+}
+html[data-theme='dark'] .dashboardHeaderTools #google_translate_element .goog-te-gadget,
+html[data-theme='dark'] .dashboardHeaderTools #google_translate_element .goog-te-gadget .goog-te-combo{
+ color:#f4f7fb!important;background:#1b222b!important;
+}
+.dashboardHeaderTools{gap:14px!important}
+.dashboardHeaderTools .themeToggle{
+ min-width:100px!important;padding:0 15px!important;gap:9px!important;
+}
+.dashboardHeaderTools .globalvestLanguagePicker{
+ min-width:178px!important;max-width:220px!important;padding:0 14px!important;gap:10px!important;
+}
+.dashboardHeaderTools #google_translate_element{max-width:168px!important}
+.dashboardHeaderTools #google_translate_element .goog-te-gadget .goog-te-combo{
+ max-width:168px!important;min-height:34px!important;font-size:13px!important;
+}
+.dashboardHeaderTools .dashboardCurrencySelect,
+.dashboardHeaderTools select.dashboardCurrencySelect{
+ min-width:112px!important;max-width:132px!important;padding:0 12px!important;font-size:13px!important;
+}
+@media(max-width:900px){
+ .dashboardHeaderTools{gap:10px!important;justify-content:space-between!important}
+ .dashboardHeaderTools .themeToggle{min-width:88px!important;padding:0 11px!important}
+ .dashboardHeaderTools .globalvestLanguagePicker{
+  min-width:0!important;width:auto!important;flex:1 1 0;max-width:none!important;padding:0 10px!important;
+ }
+ .dashboardHeaderTools #google_translate_element{max-width:none!important;flex:1 1 auto}
+ .dashboardHeaderTools #google_translate_element .goog-te-gadget .goog-te-combo{
+  width:100%!important;max-width:100%!important;font-size:12px!important;
+ }
+ .dashboardHeaderTools .dashboardCurrencySelect,
+ .dashboardHeaderTools select.dashboardCurrencySelect{
+  min-width:94px!important;max-width:112px!important;padding:0 8px!important;
+ }
+}
+@media(max-width:380px){
+ .dashboardHeaderTools{gap:7px!important}
+ .dashboardHeaderTools .themeToggle{min-width:78px!important;padding:0 8px!important}
+ .dashboardHeaderTools .globalvestLanguagePicker{padding:0 7px!important}
+ .dashboardHeaderTools .dashboardCurrencySelect,
+ .dashboardHeaderTools select.dashboardCurrencySelect{min-width:82px!important;max-width:90px!important;font-size:11px!important}
+}
