@@ -242,3 +242,13 @@ body{top:0!important}
 .languageLoading{font-size:12px;font-weight:800;color:#334155}
 @media(max-width:760px){.globalvestLanguagePicker{max-width:145px;padding:6px 7px;gap:4px}.globalvestLanguagePicker>span{font-size:15px}#google_translate_element{max-width:112px}#google_translate_element .goog-te-gadget .goog-te-combo{max-width:110px;font-size:11px;padding:5px 1px}}
 @media(max-width:420px){.globalvestLanguagePicker{max-width:124px}.globalvestLanguagePicker>span{display:none}#google_translate_element{max-width:105px}#google_translate_element .goog-te-gadget .goog-te-combo{max-width:103px}}
+
+
+/* Editable account profile fields */
+.profileField{display:flex;flex-direction:column;gap:8px;margin:16px 0;max-width:560px;color:#17212f;font-size:14px;font-weight:800}
+.profileField input{width:100%;min-width:0;padding:13px 14px;border:1px solid #d7e0e9;border-radius:10px;background:#fff;color:#111827;font-size:16px;font-weight:600;outline:none}
+.profileField input:focus{border-color:#0dbb91;box-shadow:0 0 0 3px #0dbb911f}
+.profileField input[readonly]{background:#f3f5f7;color:#687385}
+.profileField small{font-size:12px;font-weight:500;color:#687385}
+.panel .primary.full{max-width:560px;min-height:46px;font-weight:850}
+.panel .primary:disabled{opacity:.65;cursor:wait}
