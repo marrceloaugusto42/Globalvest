@@ -655,3 +655,12 @@ html[data-theme='dark'] .dashboardHeaderTools #google_translate_element .goog-te
  .dashboardHeaderTools .dashboardCurrencySelect,
  .dashboardHeaderTools select.dashboardCurrencySelect{min-width:82px!important;max-width:90px!important;font-size:11px!important}
 }
+
+
+/* Balance visibility controls */
+.balanceCardHeading{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;margin-bottom:8px}
+.balanceVisibilityToggle{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:36px;padding:7px 11px;border:1px solid var(--gv-border,#d9dee7);border-radius:10px;background:rgba(255,255,255,.12);color:inherit;font:inherit;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap}
+.balanceVisibilityToggle span{font-size:17px;line-height:1}
+.balanceVisibilityToggle:focus-visible{outline:2px solid #ef4444;outline-offset:3px}
+html[data-theme='dark'] .balanceVisibilityToggle{background:#202733;border-color:#465164;color:#f8fafc}
+@media(max-width:600px){.balanceCardHeading{gap:8px}.balanceVisibilityToggle{min-height:38px;padding:8px 10px;font-size:13px}}
