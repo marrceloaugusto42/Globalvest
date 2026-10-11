@@ -798,3 +798,37 @@ html[data-theme='dark'] .content .receiptLink,
 html[data-theme='dark'] .content .notificationHead button {
   color: #36d99a !important;
 }
+
+
+/* Withdrawal form: force readable foregrounds in dark mode, including inherited black text */
+html[data-theme='dark'] .content .actionGrid,
+html[data-theme='dark'] .content .actionGrid *,
+html[data-theme='dark'] .content .walletActions,
+html[data-theme='dark'] .content .walletActions * {
+  color: #eef2f7 !important;
+}
+html[data-theme='dark'] .content .actionGrid input,
+html[data-theme='dark'] .content .walletActions input,
+html[data-theme='dark'] .content .walletActions select,
+html[data-theme='dark'] .content .actionGrid select {
+  background: #10151b !important;
+  color: #f4f7fb !important;
+  -webkit-text-fill-color: #f4f7fb !important;
+  border-color: #465164 !important;
+}
+html[data-theme='dark'] .content .actionGrid input::placeholder,
+html[data-theme='dark'] .content .walletActions input::placeholder {
+  color: #aeb9c7 !important;
+  -webkit-text-fill-color: #aeb9c7 !important;
+  opacity: 1 !important;
+}
+html[data-theme='dark'] .content .actionGrid button,
+html[data-theme='dark'] .content .walletActions button {
+  color: #f4f7fb !important;
+}
+html[data-theme='dark'] .content .actionGrid button.primary,
+html[data-theme='dark'] .content .walletActions button.primary {
+  background: #0ecb81 !important;
+  color: #07150f !important;
+  -webkit-text-fill-color: #07150f !important;
+}
