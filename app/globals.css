@@ -832,3 +832,24 @@ html[data-theme='dark'] .content .walletActions button.primary {
   color: #07150f !important;
   -webkit-text-fill-color: #07150f !important;
 }
+
+
+/* Mobile navigation: taller tap targets and bold, readable labels */
+@media(max-width:900px){
+  .app{padding-bottom:96px!important}
+  .mobileNav{height:78px!important;bottom:9px!important;padding:7px 6px!important;gap:3px!important}
+  .mobileNav button{min-height:62px!important;gap:5px!important;padding:5px 2px!important}
+  .mobileNav span{font-size:22px!important;line-height:23px!important;font-weight:900!important}
+  .mobileNav small{font-size:11px!important;line-height:14px!important;font-weight:900!important;letter-spacing:.1px}
+  .mobileHeaderActions{gap:16px!important;flex-shrink:0}
+  .mobileHeaderActions .globalvestLanguagePicker{width:clamp(112px,31vw,145px)!important;min-width:112px!important;max-width:145px!important;height:40px!important;padding:0 8px!important;gap:6px!important;flex-shrink:0}
+  .mobileHeaderActions #google_translate_element{min-width:0!important;max-width:100px!important;flex:1!important}
+  .mobileHeaderActions #google_translate_element .goog-te-gadget .goog-te-combo{width:100%!important;max-width:100px!important;min-height:30px!important;font-size:11px!important;font-weight:800!important}
+  .mobileHeaderActions .notificationButton{flex-shrink:0}
+}
+@media(max-width:380px){
+  .mobileHeaderActions{gap:12px!important}
+  .mobileHeaderActions .globalvestLanguagePicker{width:105px!important;min-width:105px!important;padding:0 5px!important}
+  .mobileHeaderActions .globalvestLanguagePicker>span{display:none}
+  .mobileNav small{font-size:10px!important}
+}
