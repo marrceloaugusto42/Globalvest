@@ -252,3 +252,49 @@ body{top:0!important}
 .profileField small{font-size:12px;font-weight:500;color:#687385}
 .panel .primary.full{max-width:560px;min-height:46px;font-weight:850}
 .panel .primary:disabled{opacity:.65;cursor:wait}
+
+
+/* User-selectable dark mode. The light theme remains the default. */
+.themeToggle{display:inline-flex;align-items:center;justify-content:center;gap:7px;flex-shrink:0;min-height:40px;padding:0 12px;border:1px solid #d9dce1;border-radius:10px;background:#fff;color:#1e2329;font-weight:800;font-size:12px;white-space:nowrap}
+.themeToggle span{font-size:19px;line-height:1}
+.themeToggle:hover{border-color:#9ba3af}
+html[data-theme='dark'] body{background:#0b0e11!important;color:#eaecef!important}
+html[data-theme='dark'] .app,html[data-theme='dark'] .landing{background:#0b0e11!important;color:#eaecef!important}
+html[data-theme='dark'] .landing nav{border-color:#2b3038}
+html[data-theme='dark'] .brand,html[data-theme='dark'] .landing .brand,html[data-theme='dark'] .heroCopy h1,html[data-theme='dark'] .content h1,html[data-theme='dark'] .content h2,html[data-theme='dark'] .content h3{color:#f5f5f5}
+html[data-theme='dark'] .heroCopy p,html[data-theme='dark'] .navlinks a,html[data-theme='dark'] .content header p,html[data-theme='dark'] .product p,html[data-theme='dark'] .stat span,html[data-theme='dark'] .stat small,html[data-theme='dark'] .wallet small,html[data-theme='dark'] .legend,html[data-theme='dark'] .listRow small{color:#aeb4bc}
+html[data-theme='dark'] .features{background:#2b3038}
+html[data-theme='dark'] .features div,html[data-theme='dark'] .stat,html[data-theme='dark'] .product,html[data-theme='dark'] .panel,html[data-theme='dark'] .wallet,html[data-theme='dark'] .accountPortfolioCard,html[data-theme='dark'] .availableCard,html[data-theme='dark'] .accountTabs,html[data-theme='dark'] .securityCard,html[data-theme='dark'] .depositWaiting{background:#181a20!important;color:#eaecef!important;border-color:#2b3038!important}
+html[data-theme='dark'] .quickActions button,html[data-theme='dark'] .mobileIcon,html[data-theme='dark'] .notificationButton,html[data-theme='dark'] .themeToggle,html[data-theme='dark'] .globalvestLanguagePicker,html[data-theme='dark'] .globalvestLanguagePicker #google_translate_element .goog-te-gadget .goog-te-combo{background:#181a20!important;color:#eaecef!important;border-color:#343840!important}
+html[data-theme='dark'] .quickActions span,html[data-theme='dark'] .accountSectionTitle,html[data-theme='dark'] .accountIdentity,html[data-theme='dark'] .accountTabs button{color:#eaecef}
+html[data-theme='dark'] .quickActions b{background:#29332f;color:#0ecb81}
+html[data-theme='dark'] .accountSectionTitle span,html[data-theme='dark'] .productTop,html[data-theme='dark'] .productDetailFacts span{color:#aeb4bc}
+html[data-theme='dark'] .accountTabs button.selected{background:#2b3038;color:#fff}
+html[data-theme='dark'] .accountIcon,html[data-theme='dark'] .coinLogo{background:#252a31;color:#eaecef}
+html[data-theme='dark'] .balanceHero{background:linear-gradient(120deg,#181a20,#242a32)!important;border:1px solid #343840}
+html[data-theme='dark'] .badge{background:#263b32;color:#0ecb81}
+html[data-theme='dark'] .notice{background:#1c342b;color:#7ce3b6;border-color:#285341}
+html[data-theme='dark'] .panel input,html[data-theme='dark'] .panel select,html[data-theme='dark'] .actionGrid input,html[data-theme='dark'] .walletActions select,html[data-theme='dark'] .productForm input,html[data-theme='dark'] .productForm select,html[data-theme='dark'] .creditForm input,html[data-theme='dark'] .creditForm select,html[data-theme='dark'] .profileField input,html[data-theme='dark'] .auth input,html[data-theme='dark'] .auth select,html[data-theme='dark'] .productDetailModal input,html[data-theme='dark'] .bankDetailEditor textarea{background:#0f1318!important;color:#eaecef!important;border-color:#343840!important}
+html[data-theme='dark'] input::placeholder,html[data-theme='dark'] textarea::placeholder{color:#7c8796}
+html[data-theme='dark'] .profileField,html[data-theme='dark'] .profileField b,html[data-theme='dark'] .profileField input[readonly]{color:#eaecef}
+html[data-theme='dark'] .profileField input[readonly]{background:#242a31!important}
+html[data-theme='dark'] .notificationPanel,html[data-theme='dark'] .auth,html[data-theme='dark'] .productDetailModal{background:#181a20!important;color:#eaecef!important;border-color:#343840!important}
+html[data-theme='dark'] .notificationHead,html[data-theme='dark'] .notificationItem,html[data-theme='dark'] .listRow,html[data-theme='dark'] .botBalanceRows>div,html[data-theme='dark'] .botTradeRow{border-color:#2b3038!important}
+html[data-theme='dark'] .notificationItem span,html[data-theme='dark'] .notificationItem small,html[data-theme='dark'] .notificationEmpty,html[data-theme='dark'] .empty,html[data-theme='dark'] .productRiskNote{color:#aeb4bc}
+html[data-theme='dark'] .adminTabs button,html[data-theme='dark'] .adminActions button,html[data-theme='dark'] .adminStatButton .stat{background:#181a20;color:#eaecef;border-color:#343840}
+html[data-theme='dark'] .adminTabs button.active{background:#2b3038;color:#fff;border-color:#454b55}
+html[data-theme='dark'] .depositWaiting,html[data-theme='dark'] .bankDetails,html[data-theme='dark'] .adminProvided,html[data-theme='dark'] .paymentDeadline,html[data-theme='dark'] .verificationNotice,html[data-theme='dark'] .adminReceipt,html[data-theme='dark'] .receiptUpload{background:#20242b!important;color:#eaecef!important;border-color:#343840!important}
+html[data-theme='dark'] .bankDetails pre,html[data-theme='dark'] .adminProvided pre,html[data-theme='dark'] .paymentDeadline span,html[data-theme='dark'] .verificationNotice p{color:#c5cbd3}
+html[data-theme='dark'] .receiptUpload span,html[data-theme='dark'] .verificationNotice b,html[data-theme='dark'] .paymentDeadline b,html[data-theme='dark'] .adminReceipt b{color:#f0b90b}
+html[data-theme='dark'] .switch,html[data-theme='dark'] .linkButton,html[data-theme='dark'] .receiptLink{color:#f0b90b}
+html[data-theme='dark'] .authTabs{background:#0f1318}
+html[data-theme='dark'] .authTabs button.active{background:#343840;color:#fff}
+html[data-theme='dark'] .sideBottom{border-color:#343840}
+html[data-theme='dark'] .mobileNav{background:rgba(24,26,32,.98)!important;border-color:#343840}
+html[data-theme='dark'] .mobileNav button.active{background:#343840;color:#fff}
+html[data-theme='dark'] .nativeBtcChart,html[data-theme='dark'] .tradingBotPage .botCard,html[data-theme='dark'] .tradingBotPage .botMetric,html[data-theme='dark'] .tradingBotPage .botSetup,html[data-theme='dark'] .tradingBotPage .botWorkspace>section{background:#181a20!important;color:#eaecef!important;border-color:#343840!important}
+html[data-theme='dark'] .tradingBotPage h1,html[data-theme='dark'] .tradingBotPage h2,html[data-theme='dark'] .tradingBotPage h3,html[data-theme='dark'] .tradingBotPage b,html[data-theme='dark'] .tradingBotPage label{color:#eaecef}
+html[data-theme='dark'] .tradingBotPage p,html[data-theme='dark'] .tradingBotPage small,html[data-theme='dark'] .tradingBotPage span{color:#aeb4bc}
+html[data-theme='dark'] .tradingBotPage input,html[data-theme='dark'] .tradingBotPage select{background:#0f1318!important;color:#eaecef!important;border-color:#343840!important}
+html[data-theme='dark'] .modal{background:rgba(0,0,0,.76)}
+@media(max-width:760px){.themeToggle{min-height:38px;padding:0 9px;gap:5px}.themeToggle b{font-size:11px}}
