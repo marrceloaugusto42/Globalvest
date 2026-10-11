@@ -897,3 +897,8 @@ html[data-theme='dark'] .languagePickerButton,html[data-theme='dark'] .languageP
 html[data-theme='dark'] .languagePickerMenu button{color:#f1f5f9}
 @media(max-width:900px){.mobileHeaderActions .globalvestLanguagePicker{width:clamp(112px,31vw,145px)!important;min-width:112px!important;max-width:145px!important;flex-shrink:0!important}.languagePickerMenu{position:fixed;top:76px;right:72px;width:min(220px,62vw);max-height:65vh;z-index:99999!important}.languagePickerButton{height:38px;font-size:12px}}
 @media(max-width:380px){.mobileHeaderActions .globalvestLanguagePicker{width:105px!important;min-width:105px!important}.languagePickerMenu{right:64px;width:min(210px,65vw)}}
+
+/* Keep Google Translate implementation hidden behind the branded language picker */
+.googleTranslateHidden,.googleTranslateHidden *{visibility:hidden!important;pointer-events:none!important}
+.goog-te-banner-frame,.goog-te-balloon-frame,#goog-gt-tt,.goog-te-gadget-icon{display:none!important}
+body{top:0!important}
