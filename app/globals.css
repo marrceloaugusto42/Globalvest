@@ -93,3 +93,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
 
 /* Mobile app layout: keep the balance at the top and place Deposit/Invest in the fixed bottom bar. */
 @media(max-width:900px){.app .quickActions{display:none!important}.app .mobileAccountNav{display:none!important}.app .mobileNav{left:0;right:0;bottom:0;height:72px;border-radius:18px 18px 0 0;padding:6px 8px max(6px,env(safe-area-inset-bottom));border-left:0;border-right:0;border-bottom:0}.app .mobileNav small{font-size:10px}.app .mobileNav span{font-size:21px}.app .content{padding-bottom:100px}.app .arielDashboard{padding-bottom:16px}}
+
+/* Mobile-app navigation: keep the balance in the dashboard content and dock actions at the bottom. */
+@media(max-width:700px){
+  .app .quickActions{position:fixed;left:0;right:0;bottom:0;z-index:100;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin:0;padding:9px 8px calc(9px + env(safe-area-inset-bottom));background:var(--gv-card,#fff);border-top:1px solid var(--gv-line,#e5e7eb);border-radius:0;box-shadow:0 -5px 18px rgba(20,25,35,.08)}
+  .app .quickActions button{min-width:0;padding:5px 2px;border:0;background:transparent;border-radius:10px;gap:4px;color:var(--gv-text,#181a20);font-size:11px}
+  .app .quickActions button b{width:28px;height:28px;display:grid;place-items:center;border-radius:9px;background:var(--gv-yellow,#f7c843);color:#181a20;font-size:17px}
+  .app .quickActions button span{white-space:nowrap}
+  .app .content{padding-bottom:105px!important}
+  .app .arielDashboard .mobileAccountNav{display:none!important}
+}
