@@ -84,7 +84,7 @@ export default function TradingBot() {
             b.quoteBalance += gross - FEE;
             b.realized += cyclePnl;
             b.fees += FEE;
-            b.trades = [{ id: crypto.randomUUID(), time: new Date().toISOString(), side: 'SELL', price: live, amount: quantity, fee: FEE, pnl: cyclePnl }, ...b.trades].slice(0, 100);
+            b.trades = [{ id: crypto.randomUUID(), time: new Date().toISOString(), side: 'SELL' as const, price: live, amount: quantity, fee: FEE, pnl: cyclePnl }, ...b.trades].slice(0, 100);
             b.baseQty = 0;
           }
           b.active = false;
@@ -107,7 +107,7 @@ export default function TradingBot() {
             b.fees += FEE;
             b.nextSell = Math.min(b.upper, live + step);
             b.nextBuy = Math.max(b.lower, live - step);
-            b.trades = [{ id: crypto.randomUUID(), time: new Date().toISOString(), side: 'BUY', price: live, amount: quantity, fee: FEE }, ...b.trades].slice(0, 100);
+            b.trades = [{ id: crypto.randomUUID(), time: new Date().toISOString(), side: 'BUY' as const, price: live, amount: quantity, fee: FEE }, ...b.trades].slice(0, 100);
             b.status = 'Buy filled in demo mode';
           }
         } else if (b.baseQty > 0 && live >= b.nextSell) {
@@ -120,7 +120,7 @@ export default function TradingBot() {
           b.fees += FEE;
           b.nextBuy = Math.max(b.lower, live - step);
           b.nextSell = Math.min(b.upper, live + step);
-          b.trades = [{ id: crypto.randomUUID(), time: new Date().toISOString(), side: 'SELL', price: live, amount: quantity, fee: FEE, pnl }, ...b.trades].slice(0, 100);
+          b.trades = [{ id: crypto.randomUUID(), time: new Date().toISOString(), side: 'SELL' as const, price: live, amount: quantity, fee: FEE, pnl }, ...b.trades].slice(0, 100);
           b.status = pnl >= 0 ? 'Sell filled · grid cycle complete' : 'Sell filled · this cycle closed at a loss';
         }
         return b;
