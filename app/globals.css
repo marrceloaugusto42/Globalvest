@@ -853,3 +853,35 @@ html[data-theme='dark'] .content .walletActions button.primary {
   .mobileHeaderActions .globalvestLanguagePicker>span{display:none}
   .mobileNav small{font-size:10px!important}
 }
+
+
+/* Language picker: keep the native language list fully accessible and scrollable */
+.globalvestLanguagePicker{position:relative;overflow:visible!important;z-index:35}
+#google_translate_element{overflow:visible!important;position:relative;min-width:0!important}
+#google_translate_element .goog-te-gadget{overflow:visible!important;white-space:normal!important}
+#google_translate_element .goog-te-gadget .goog-te-combo{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  height:32px!important;
+  padding:4px 3px!important;
+  margin:0!important;
+  font-size:12px!important;
+  font-weight:800!important;
+  cursor:pointer!important;
+  touch-action:manipulation;
+  -webkit-appearance:auto;
+  appearance:auto;
+}
+@media(max-width:900px){
+  .mobileHeaderActions .globalvestLanguagePicker{overflow:visible!important;z-index:36}
+  .mobileHeaderActions #google_translate_element{overflow:visible!important;max-width:none!important;flex:1 1 auto!important}
+  .mobileHeaderActions #google_translate_element .goog-te-gadget .goog-te-combo{
+    width:100%!important;
+    max-width:none!important;
+    min-height:32px!important;
+    font-size:12px!important;
+    padding:4px 2px!important;
+  }
+}
