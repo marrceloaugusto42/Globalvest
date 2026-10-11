@@ -169,3 +169,14 @@ input,select,textarea{font-size:16px}
 .mobileDrawerLogout{margin-top:auto;min-height:48px;border:1px solid #496057;border-radius:11px;background:#19372c;color:#fff;font-size:15px;font-weight:800}
 @media(max-width:900px){.menuToggle{display:flex}.mobileTopBrand{display:flex;align-items:center;gap:12px}.mobileTopBrand>.brand{font-size:18px}.mobileHeaderActions{margin-left:auto;display:flex;align-items:center;gap:10px}.content header>div:first-child{width:100%}}
 @media(max-width:560px){.content{padding:16px 12px}.content header{gap:10px}.mobileTopBrand{gap:9px}.mobileTopBrand>.brand{gap:6px;font-size:17px}.mobileTopBrand>.brand span{width:29px;height:29px}.menuToggle{width:40px;height:40px;flex-basis:40px}.mobileHeaderActions{gap:10px}.content header h1{font-size:26px}.mobileDrawerNav button{min-height:50px;font-size:16px}}
+
+/* Make the bottom-bar Deposit/Invest/Withdraw/Transactions symbols dark green. */
+@media(max-width:700px){
+ .app .quickActions button b{
+   background:#e5f6ef!important;
+   color:#075c43!important;
+   border:1px solid #b9e6d2!important;
+   font-weight:950!important;
+ }
+ .app .quickActions button:active b{background:#c9efdd!important}
+}
