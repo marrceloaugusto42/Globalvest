@@ -103,3 +103,23 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
   .app .content{padding-bottom:105px!important}
   .app .arielDashboard .mobileAccountNav{display:none!important}
 }
+
+/* Professional mobile polish: accessible action labels, no gold accents, stable touch layout. */
+:root{--gv-yellow:#0dbb91;--gv-yellow-dark:#099b79;--gv-teal:#0dbb91;--gv-accent:#0dbb91}
+html{width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;touch-action:pan-x pan-y}
+body{width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+button,a,input,select,textarea{touch-action:manipulation}
+@media(max-width:700px){
+ .app .quickActions{min-height:78px;grid-template-columns:repeat(4,minmax(0,1fr));padding:8px 6px calc(8px + env(safe-area-inset-bottom))}
+ .app .quickActions button{min-height:58px;font-size:14px;font-weight:800;gap:5px}
+ .app .quickActions button b{width:32px;height:30px;font-size:20px;background:#e8f8f3;color:#087e62}
+ .app .quickActions button span{font-size:14px;font-weight:800;line-height:1.15}
+ .app .content{padding-bottom:112px!important}
+ .notificationButton{color:#e11d48!important;font-weight:900!important}
+ .notificationButton svg{display:block;width:25px;height:25px;stroke:#e11d48;stroke-width:2.8}
+ .notificationButton i{background:#e11d48!important;color:#fff!important;font-size:11px!important;font-weight:900!important;min-width:19px!important;height:19px!important;line-height:19px!important}
+}
+@media(max-width:390px){.app .quickActions button,.app .quickActions button span{font-size:13px}}
+input,select,textarea{font-size:16px}
+@media(max-width:700px){input,select,textarea{font-size:16px!important}}
+.primary,.loginLink,.heroSignup .primary,.app .quickActions button b{background-color:var(--gv-teal)!important;border-color:var(--gv-teal)!important}
