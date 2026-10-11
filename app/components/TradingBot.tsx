@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 type Trade = { id: string; time: string; side: 'BUY' | 'SELL'; price: number; amount: number; fee: number; pnl?: number };
 type BotState = {
-  active: boolean; symbol: string; lower: number; upper: number; grids: number; investment: number;
+  active: boolean; symbol: string; lower: number; upper: number; stopLoss: number; takeProfit: number; grids: number; investment: number;
   initialCapital: number; quoteBalance: number; baseQty: number; avgEntry: number; realized: number;
   fees: number; trades: Trade[]; nextBuy: number; nextSell: number; lastPrice: number; status: string;
 };
@@ -17,7 +17,7 @@ const SYMBOLS: Record<string, { id: string; label: string }> = {
 };
 const money = (n: number) => '$' + (Number.isFinite(n) ? n : 0).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const priceFmt = (n: number) => n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: n < 1 ? 6 : 2 });
-const blank = (): BotState => ({ active: false, symbol: 'BTCUSDT', lower: 0, upper: 0, grids: 20, investment: 100, initialCapital: 0, quoteBalance: 0, baseQty: 0, avgEntry: 0, realized: 0, fees: 0, trades: [], nextBuy: 0, nextSell: 0, lastPrice: 0, status: 'Ready to configure' });
+const blank = (): BotState => ({ active: false, symbol: 'BTCUSDT', lower: 0, upper: 0, stopLoss: 0, takeProfit: 0, grids: 20, investment: 100, initialCapital: 0, quoteBalance: 0, baseQty: 0, avgEntry: 0, realized: 0, fees: 0, trades: [], nextBuy: 0, nextSell: 0, lastPrice: 0, status: 'Ready to configure' });
 
 export default function TradingBot() {
   const [bot, setBot] = useState<BotState>(blank);
@@ -75,6 +75,22 @@ export default function TradingBot() {
       update(current => {
         const b = { ...current, lastPrice: live };
         if (!b.active) return b;
+        const exitReason = b.stopLoss > 0 && live <= b.stopLoss ? 'Stop-loss triggered' : b.takeProfit > 0 && live >= b.takeProfit ? 'Take-profit triggered' : '';
+        if (exitReason) {
+          if (b.baseQty > 0) {
+            const quantity = b.baseQty;
+            const gross = quantity * live;
+            const cyclePnl = gross - FEE - quantity * b.avgEntry;
+            b.quoteBalance += gross - FEE;
+            b.realized += cyclePnl;
+            b.fees += FEE;
+            b.trades = [{ id: crypto.randomUUID(), time: new Date().toISOString(), side: 'SELL', price: live, amount: quantity, fee: FEE, pnl: cyclePnl }, ...b.trades].slice(0, 100);
+            b.baseQty = 0;
+          }
+          b.active = false;
+          b.status = exitReason + ' · bot stopped';
+          return b;
+        }
         if (live < b.lower || live > b.upper) {
           b.status = 'Paused: price is outside your grid range';
           return b;
@@ -129,7 +145,7 @@ export default function TradingBot() {
 
   const selectedPrice = prices[bot.symbol] || bot.lastPrice;
   const pnl = bot.quoteBalance + bot.baseQty * selectedPrice - bot.initialCapital;
-  const changeConfig = (field: 'symbol' | 'lower' | 'upper' | 'grids' | 'investment', value: string) => {
+  const changeConfig = (field: 'symbol' | 'lower' | 'upper' | 'stopLoss' | 'takeProfit' | 'grids' | 'investment', value: string) => {
     if (bot.active) { setNotice('Stop the bot before changing its settings.'); return; }
     update({ ...bot, [field]: field === 'symbol' ? value : Number(value) });
   };
@@ -139,6 +155,8 @@ export default function TradingBot() {
     if (!(bot.lower > 0 && bot.upper > bot.lower && bot.grids >= 2 && bot.grids <= 100 && bot.investment >= 10)) {
       return setNotice('Set a valid price range, 2–100 grids, and at least $10 demo capital.');
     }
+    if (bot.stopLoss > 0 && bot.stopLoss >= bot.lower) return setNotice('Stop-loss must be below the lower grid price.');
+    if (bot.takeProfit > 0 && bot.takeProfit <= bot.upper) return setNotice('Take-profit must be above the upper grid price.');
     if (p < bot.lower || p > bot.upper) return setNotice('The current price is outside your grid range. Adjust the range to include the current price.');
     const step = (bot.upper - bot.lower) / bot.grids;
     update({ ...bot, active: true, initialCapital: bot.investment, quoteBalance: bot.investment, baseQty: 0, avgEntry: 0, realized: 0, fees: 0, trades: [], lastPrice: p, nextBuy: Math.max(bot.lower, p - step), nextSell: Math.min(bot.upper, p + step), status: 'Running · waiting for first grid trigger' });
@@ -147,7 +165,7 @@ export default function TradingBot() {
   const stop = () => update({ ...botRef.current, active: false, status: 'Stopped · demo assets remain in this simulator' });
   const reset = () => {
     if (botRef.current.active) return setNotice('Stop the bot before resetting its demo session.');
-    const fresh = { ...blank(), symbol: bot.symbol, lower: bot.lower, upper: bot.upper, grids: bot.grids, investment: bot.investment, lastPrice: selectedPrice, status: 'Demo session reset' };
+    const fresh = { ...blank(), symbol: bot.symbol, lower: bot.lower, upper: bot.upper, stopLoss: bot.stopLoss, takeProfit: bot.takeProfit, grids: bot.grids, investment: bot.investment, lastPrice: selectedPrice, status: 'Demo session reset' };
     update(fresh);
   };
 
@@ -166,7 +184,8 @@ export default function TradingBot() {
         <label>Trading pair<select value={bot.symbol} disabled={bot.active} onChange={e => changeConfig('symbol', e.target.value)}>{Object.entries(SYMBOLS).map(([symbol, item]) => <option key={symbol} value={symbol}>{item.label}</option>)}</select></label>
         <div className="botInputPair"><label>Lower price (USDT)<input type="number" min="0" value={bot.lower || ''} disabled={bot.active} placeholder="Auto from market price" onChange={e => changeConfig('lower', e.target.value)} /></label><label>Upper price (USDT)<input type="number" min="0" value={bot.upper || ''} disabled={bot.active} placeholder="Auto from market price" onChange={e => changeConfig('upper', e.target.value)} /></label></div>
         <div className="botInputPair"><label>Grid levels<input type="number" min="2" max="100" value={bot.grids} disabled={bot.active} onChange={e => changeConfig('grids', e.target.value)} /></label><label>Demo capital (USD)<input type="number" min="10" step="1" value={bot.investment} disabled={bot.active} onChange={e => changeConfig('investment', e.target.value)} /></label></div>
-        <div className="botRiskBox"><b>Risk controls & fees</b><span>• Spot-style simulation only; no leverage.</span><span>• Fixed $0.02 fee is deducted from the demo balance for each simulated order.</span><span>• The bot stops opening orders when price leaves your selected range.</span><span>• Grid trading can lose money; profits are not guaranteed.</span></div>
+        <div className="botInputPair"><label>Stop-loss price · optional<input type="number" min="0" value={bot.stopLoss || ''} disabled={bot.active} placeholder="Disabled" onChange={e => changeConfig('stopLoss', e.target.value)} /></label><label>Take-profit price · optional<input type="number" min="0" value={bot.takeProfit || ''} disabled={bot.active} placeholder="Disabled" onChange={e => changeConfig('takeProfit', e.target.value)} /></label></div>
+        <div className="botRiskBox"><b>Risk controls & fees</b><span>• Spot-style simulation only; no leverage.</span><span>• Fixed $0.02 fee is deducted from the demo balance for each simulated order.</span><span>• Stop-loss and take-profit can stop the bot automatically.</span><span>• The bot pauses new orders when price leaves your selected range.</span><span>• Grid trading can lose money; profits are not guaranteed.</span></div>
         <div className="botMainActions">{bot.active ? <button className="botStop" onClick={stop}>Stop bot</button> : <button className="botStart" onClick={start}>Start demo bot</button>}<button className="botReset" onClick={reset} disabled={bot.active}>Reset</button></div>
         <div className="botNextLevels"><span>Next buy trigger <b>{bot.nextBuy ? money(bot.nextBuy) : '—'}</b></span><span>Next sell trigger <b>{bot.nextSell ? money(bot.nextSell) : '—'}</b></span></div>
       </section>
