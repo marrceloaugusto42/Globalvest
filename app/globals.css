@@ -664,3 +664,137 @@ html[data-theme='dark'] .dashboardHeaderTools #google_translate_element .goog-te
 .balanceVisibilityToggle:focus-visible{outline:2px solid #ef4444;outline-offset:3px}
 html[data-theme='dark'] .balanceVisibilityToggle{background:#202733;border-color:#465164;color:#f8fafc}
 @media(max-width:600px){.balanceCardHeading{gap:8px}.balanceVisibilityToggle{min-height:38px;padding:8px 10px;font-size:13px}}
+
+
+/* Dark mode readability fix: deposit, withdrawal, payment instructions and all dashboard form text */
+html[data-theme='dark'] .depositWaiting,
+html[data-theme='dark'] .bankDetails,
+html[data-theme='dark'] .adminProvided,
+html[data-theme='dark'] .paymentDeadline,
+html[data-theme='dark'] .receiptUpload,
+html[data-theme='dark'] .adminReceipt,
+html[data-theme='dark'] .depositAdminRow,
+html[data-theme='dark'] .walletActions,
+html[data-theme='dark'] .walletActions > div,
+html[data-theme='dark'] .content .panel,
+html[data-theme='dark'] .content .wallet,
+html[data-theme='dark'] .content .stat,
+html[data-theme='dark'] .content .product,
+html[data-theme='dark'] .content .securityCard,
+html[data-theme='dark'] .content .securityHero {
+  background-color: #171c23 !important;
+  color: #eef2f7 !important;
+  border-color: #303a46 !important;
+}
+html[data-theme='dark'] .depositWaiting *,
+html[data-theme='dark'] .bankDetails *,
+html[data-theme='dark'] .adminProvided *,
+html[data-theme='dark'] .paymentDeadline *,
+html[data-theme='dark'] .receiptUpload *,
+html[data-theme='dark'] .adminReceipt *,
+html[data-theme='dark'] .walletActions *,
+html[data-theme='dark'] .content .panel *,
+html[data-theme='dark'] .content .wallet *,
+html[data-theme='dark'] .content .stat *,
+html[data-theme='dark'] .content .product *,
+html[data-theme='dark'] .content .securityCard *,
+html[data-theme='dark'] .content .securityHero * {
+  border-color: #303a46;
+}
+html[data-theme='dark'] .depositWaiting p,
+html[data-theme='dark'] .depositWaiting small,
+html[data-theme='dark'] .bankDetails small,
+html[data-theme='dark'] .adminProvided small,
+html[data-theme='dark'] .paymentDeadline span,
+html[data-theme='dark'] .receiptUpload small,
+html[data-theme='dark'] .content .panel p,
+html[data-theme='dark'] .content .panel small,
+html[data-theme='dark'] .content .panel label,
+html[data-theme='dark'] .content .panel .listRow small,
+html[data-theme='dark'] .content .wallet small,
+html[data-theme='dark'] .content .wallet span,
+html[data-theme='dark'] .content .stat span,
+html[data-theme='dark'] .content .stat small,
+html[data-theme='dark'] .content .product p,
+html[data-theme='dark'] .content .productTop,
+html[data-theme='dark'] .content .legend {
+  color: #aeb9c7 !important;
+}
+html[data-theme='dark'] .bankDetails pre,
+html[data-theme='dark'] .adminProvided pre,
+html[data-theme='dark'] .paymentDeadline b,
+html[data-theme='dark'] .receiptUpload span,
+html[data-theme='dark'] .receiptLink,
+html[data-theme='dark'] .content .panel h2,
+html[data-theme='dark'] .content .panel h3,
+html[data-theme='dark'] .content .panel b,
+html[data-theme='dark'] .content .wallet strong,
+html[data-theme='dark'] .content .stat strong,
+html[data-theme='dark'] .content .product h3,
+html[data-theme='dark'] .content .product b {
+  color: #f4f7fb !important;
+}
+html[data-theme='dark'] .content input,
+html[data-theme='dark'] .content select,
+html[data-theme='dark'] .content textarea,
+html[data-theme='dark'] .content .actionGrid input,
+html[data-theme='dark'] .content .walletActions select,
+html[data-theme='dark'] .content .panel input,
+html[data-theme='dark'] .content .panel select,
+html[data-theme='dark'] .content .panel textarea,
+html[data-theme='dark'] .content .productForm input,
+html[data-theme='dark'] .content .productForm select,
+html[data-theme='dark'] .content .receiptUpload {
+  background-color: #10151b !important;
+  color: #f4f7fb !important;
+  border-color: #3a4553 !important;
+  caret-color: #f4f7fb;
+}
+html[data-theme='dark'] .content input::placeholder,
+html[data-theme='dark'] .content textarea::placeholder {
+  color: #8793a3 !important;
+  opacity: 1 !important;
+}
+html[data-theme='dark'] .content input:focus,
+html[data-theme='dark'] .content select:focus,
+html[data-theme='dark'] .content textarea:focus {
+  outline: 2px solid #0ecb81;
+  outline-offset: 1px;
+}
+html[data-theme='dark'] .content .badge {
+  background: #263b33 !important;
+  color: #72e6b1 !important;
+  border-color: #365548 !important;
+}
+html[data-theme='dark'] .content .ghost,
+html[data-theme='dark'] .content .adminTabs button,
+html[data-theme='dark'] .content .adminActions button {
+  background-color: #202733 !important;
+  color: #eef2f7 !important;
+  border-color: #3a4553 !important;
+}
+html[data-theme='dark'] .content .adminTabs button.active {
+  background-color: #263b33 !important;
+  color: #72e6b1 !important;
+  border-color: #365548 !important;
+}
+html[data-theme='dark'] .content .notice,
+html[data-theme='dark'] .content .verificationNotice,
+html[data-theme='dark'] .content .botNotice,
+html[data-theme='dark'] .content .botDemoNotice {
+  background-color: #1b2d27 !important;
+  color: #c9f7df !important;
+  border-color: #315344 !important;
+}
+html[data-theme='dark'] .content .paymentDeadline {
+  background-color: #222b35 !important;
+  border-color: #3a4553 !important;
+}
+html[data-theme='dark'] .content .paymentDeadline b,
+html[data-theme='dark'] .content .paymentDeadline span {
+  color: #e3ebf5 !important;
+}
+html[data-theme='dark'] .content .receiptLink,
+html[data-theme='dark'] .content .notificationHead button {
+  color: #36d99a !important;
+}
