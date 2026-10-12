@@ -947,3 +947,26 @@ body{top:0!important}
 html[data-theme="dark"] .dailyProfitCard{background:var(--card,#111827);color:var(--text,#f3f4f6);border-color:var(--border,#30394a)}
 html[data-theme="dark"] .dailyProfitMetrics>div{background:var(--soft,#172033);border-color:var(--border,#30394a)}
 html[data-theme="dark"] .dailyRateInline{background:var(--card,#111827);color:var(--text,#f3f4f6);border-color:var(--border,#30394a)}
+
+
+/* Support live chat, secure image attachments and local-currency plan cards */
+.supportChat{display:flex;flex-direction:column;gap:10px;margin:16px 0}
+.supportChatMessage{max-width:92%;padding:13px 15px;border:1px solid var(--border,#e4e8ef);border-radius:13px;background:var(--soft,#f7f9fc);overflow-wrap:anywhere}
+.supportChatMessage p{margin:7px 0 0;white-space:pre-wrap;line-height:1.55}
+.supportChatMessage>b{font-size:11px;color:var(--muted,#687386)}
+.supportChatMessage.fromSupport{align-self:flex-start;border-top-left-radius:4px}
+.supportChatMessage.fromCustomer{align-self:flex-end;border-top-right-radius:4px;background:rgba(83,103,166,.09)}
+.initialChatMessage{max-width:100%}
+.supportChatActions{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding-top:12px;border-top:1px solid var(--border,#e4e8ef)}
+.supportChatActions textarea{width:100%;min-height:76px;resize:vertical;padding:12px;border:1px solid var(--border,#dbe1ea);border-radius:10px;background:var(--card,#fff);color:var(--text,#172033);font:inherit}
+.supportChatFile{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:13px;font-weight:750;cursor:pointer}
+.supportChatFile input{max-width:100%;font-size:12px}
+.supportImageLink{margin-top:8px}
+.planPayout{display:flex;flex-direction:column;gap:4px;margin:12px 0;padding:12px;border-radius:11px;background:var(--soft,#f6f8fb);border:1px solid var(--border,#e2e7ef)}
+.planPayout span{font-size:11px;line-height:1.45;color:var(--muted,#687386);font-weight:650}
+.planPayout strong{font-size:18px;font-weight:850;overflow-wrap:anywhere}
+html[data-theme="dark"] .supportChatMessage{background:var(--soft,#172033);border-color:var(--border,#30394a);color:var(--text,#f3f4f6)}
+html[data-theme="dark"] .supportChatMessage.fromCustomer{background:rgba(120,140,210,.13)}
+html[data-theme="dark"] .supportChatActions textarea{background:var(--card,#111827);border-color:var(--border,#30394a);color:var(--text,#f3f4f6)}
+html[data-theme="dark"] .planPayout{background:var(--soft,#172033);border-color:var(--border,#30394a)}
+@media(max-width:640px){.supportChatMessage{max-width:100%;padding:12px}.supportChatActions .primary{min-height:44px}.supportChatFile input{width:100%}.planPayout strong{font-size:17px}}
