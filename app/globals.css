@@ -1033,3 +1033,118 @@ html[data-theme="dark"] .planPayout{background:var(--soft,#172033);border-color:
   .supportInboxThreadHead select{max-width:none;width:100%}
   .supportInboxMessages{max-height:340px}
 }
+
+
+
+/* Globalvest UI polish: stable language dropdown, complete dark mode and button feedback. */
+.languagePickerMenu{
+  position:absolute!important;z-index:100000!important;isolation:isolate;
+  background:#fff!important;color:#1e2329!important;border:1px solid #d9dce1!important;
+  box-shadow:0 14px 36px rgba(0,0,0,.24)!important;transform:none!important;
+}
+.languagePickerMenu button{color:#1e2329!important;background:transparent!important}
+.languagePickerMenu button:hover,.languagePickerMenu button[aria-selected="true"]{background:#edf2f7!important}
+.goog-te-menu-frame,.goog-te-menu2,.goog-te-menu2-item,.goog-te-menu2-item div,
+.goog-te-menu-value,#goog-gt-tt,.goog-te-balloon-frame,.goog-te-spinner-pos,
+.goog-te-gadget-icon,.goog-te-banner-frame{display:none!important;visibility:hidden!important;pointer-events:none!important}
+body{top:0!important}
+html[data-theme='dark'] .languagePickerMenu{background:#171a20!important;color:#f1f5f9!important;border-color:#343840!important}
+html[data-theme='dark'] .languagePickerMenu button{color:#f1f5f9!important}
+html[data-theme='dark'] .languagePickerMenu button:hover,
+html[data-theme='dark'] .languagePickerMenu button[aria-selected="true"]{background:#2a3038!important}
+html[data-theme='dark'] .app,
+html[data-theme='dark'] .content,
+html[data-theme='dark'] .content>section,
+html[data-theme='dark'] .content header,
+html[data-theme='dark'] .arielDashboard,
+html[data-theme='dark'] .card,
+html[data-theme='dark'] .statCard,
+html[data-theme='dark'] .portfolioCard,
+html[data-theme='dark'] .productCard,
+html[data-theme='dark'] .productGrid,
+html[data-theme='dark'] .dailyProfitCard,
+html[data-theme='dark'] .accountTabs,
+html[data-theme='dark'] .quickActions,
+html[data-theme='dark'] .notificationPanel,
+html[data-theme='dark'] .mobileMenuDrawer,
+html[data-theme='dark'] .mobileDrawerNav,
+html[data-theme='dark'] .mobileDrawerUser,
+html[data-theme='dark'] .supportCard,
+html[data-theme='dark'] .supportTicket,
+html[data-theme='dark'] .supportChatPanel,
+html[data-theme='dark'] .tableWrap,
+html[data-theme='dark'] .content table,
+html[data-theme='dark'] .content th,
+html[data-theme='dark'] .content td,
+html[data-theme='dark'] .content details,
+html[data-theme='dark'] .content summary,
+html[data-theme='dark'] .content .panel,
+html[data-theme='dark'] .content .sectionCard,
+html[data-theme='dark'] .content .settingsCard,
+html[data-theme='dark'] .content .walletCard,
+html[data-theme='dark'] .content .investmentCard{
+  background-color:#14171c!important;color:#eaecef!important;border-color:#303640!important;
+}
+html[data-theme='dark'] .content p,
+html[data-theme='dark'] .content label,
+html[data-theme='dark'] .content span,
+html[data-theme='dark'] .content small,
+html[data-theme='dark'] .content li,
+html[data-theme='dark'] .content td,
+html[data-theme='dark'] .content th,
+html[data-theme='dark'] .content dt,
+html[data-theme='dark'] .content dd,
+html[data-theme='dark'] .mobileDrawerNav button,
+html[data-theme='dark'] .notificationItem,
+html[data-theme='dark'] .notificationEmpty{
+  color:#d2d7df;
+}
+html[data-theme='dark'] .content h1,
+html[data-theme='dark'] .content h2,
+html[data-theme='dark'] .content h3,
+html[data-theme='dark'] .content h4,
+html[data-theme='dark'] .content b,
+html[data-theme='dark'] .content strong,
+html[data-theme='dark'] .mobileDrawerNav button.active{
+  color:#f5f7fa;
+}
+html[data-theme='dark'] .content input,
+html[data-theme='dark'] .content textarea,
+html[data-theme='dark'] .content select,
+html[data-theme='dark'] .content option,
+html[data-theme='dark'] .verificationCodeBox input,
+html[data-theme='dark'] .auth input{
+  background:#0e1116!important;color:#f5f7fa!important;border-color:#3b424d!important;
+}
+html[data-theme='dark'] .content input::placeholder,
+html[data-theme='dark'] .content textarea::placeholder,
+html[data-theme='dark'] .auth input::placeholder{color:#9ca6b5!important;opacity:1}
+html[data-theme='dark'] .content button:not(.primary):not(.active),
+html[data-theme='dark'] .auth .ghost{color:#eaecef}
+html[data-theme='dark'] .content .notice,
+html[data-theme='dark'] .content .notificationItem,
+html[data-theme='dark'] .content .notificationHead,
+html[data-theme='dark'] .content .pageTitleRow{background:#14171c!important;color:#eaecef!important;border-color:#303640!important}
+html[data-theme='dark'] .content .quickActions button{background:#181c22!important;color:#f5f7fa!important;border-color:#303640!important}
+html[data-theme='dark'] .content .quickActions button span{color:#f5f7fa!important}
+html[data-theme='dark'] .content .mobileTopBrand .brand,
+html[data-theme='dark'] .content .pageTitleRow h1{color:#f5f7fa!important}
+html[data-theme='dark'] .content .ghost,
+html[data-theme='dark'] .content button.ghost{background:#1c2129!important;color:#f5f7fa!important;border-color:#3b424d!important}
+html[data-theme='dark'] .content .globalvestLanguagePicker,
+html[data-theme='dark'] .content .themeToggle,
+html[data-theme='dark'] .content .dashboardCurrencySelect{background:#181a20!important;color:#f5f7fa!important;border-color:#343840!important}
+html[data-theme='dark'] .byHero{grid-template-columns:minmax(0,1fr)!important}
+.byHero{grid-template-columns:minmax(0,1fr)!important}
+.heroCopy{max-width:850px}
+.interactionLoadingIndicator{
+  position:fixed;right:16px;bottom:18px;z-index:200000;display:flex;align-items:center;gap:9px;
+  padding:10px 14px;border:1px solid #d6dce5;border-radius:12px;background:#fff;color:#202833;
+  box-shadow:0 8px 28px rgba(0,0,0,.16);font-size:12px;font-weight:800;pointer-events:none;
+}
+.interactionLoadingIndicator i{width:14px;height:14px;border:2px solid #c9d2dd;border-top-color:#0b6b4f;border-radius:50%;animation:gvSpin .7s linear infinite}
+html[data-theme='dark'] .interactionLoadingIndicator{background:#171a20;color:#f5f7fa;border-color:#343840}
+@keyframes gvSpin{to{transform:rotate(360deg)}}
+.verificationCodeBox{display:grid;gap:10px;margin:12px 0}
+.verificationCodeBox p{font-size:13px;line-height:1.5;margin:0 0 4px}
+.btcChartFrame iframe{display:block;width:100%;height:100%;border:0}
