@@ -1473,3 +1473,57 @@ html[data-theme='dark'] .app select{
 .inviteSteps .listRow{align-items:flex-start}
 .inviteSteps .listRow small{display:block;max-width:680px;white-space:normal;line-height:1.5;margin-top:5px}
 @media(max-width:600px){.launchpoolGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.launchpoolCard{padding:12px}.launchpoolCardTop{align-items:flex-start;flex-direction:column}.launchpoolCard h3{font-size:15px}.launchpoolCard p{font-size:12px}.launchpoolCard .badge{font-size:10px}}
+
+
+/* Globalvest Launchpool spacing, live market indicators and coin chart panel */
+.content .sectionHead.marketSectionHead,
+.content .sectionHead:has(+ .launchpoolGrid){
+  width:100%;
+  box-sizing:border-box;
+  padding:22px clamp(18px,4vw,38px);
+  margin:0 auto 18px;
+  text-align:center;
+  justify-content:center;
+}
+.content .sectionHead.marketSectionHead>div,
+.content .sectionHead:has(+ .launchpoolGrid)>div{
+  width:100%;
+  max-width:760px;
+  margin-inline:auto;
+  text-align:center;
+}
+.content .sectionHead.marketSectionHead h2,
+.content .sectionHead:has(+ .launchpoolGrid) h2{margin-inline:auto;text-align:center}
+.content .sectionHead.marketSectionHead p,
+.content .sectionHead:has(+ .launchpoolGrid) p{margin:8px auto 0;max-width:650px;text-align:center}
+.content .launchpoolGrid{width:100%;box-sizing:border-box;padding:0 clamp(16px,3vw,30px) 24px;gap:16px}
+.content .launchpoolCard{min-width:0;padding:20px;box-sizing:border-box}
+.content .launchpoolCardTop{gap:12px;flex-wrap:wrap}
+.content .launchpoolCard h3,.content .launchpoolCard p{overflow-wrap:anywhere}
+.content .marketChangeUp{color:#0a9f72!important}
+.content .marketChangeDown{color:#e5484d!important}
+.content .coinChartPanel{width:100%;box-sizing:border-box;margin:18px 0 24px;padding:clamp(14px,2.5vw,24px);border:1px solid #e2e6ec;border-radius:18px;background:#fff;overflow:hidden}
+.content .coinChartHeading{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
+.content .coinChartHeading>div{min-width:0}
+.content .coinChartHeading small{font-size:11px;letter-spacing:.09em;font-weight:800;color:#737b89}
+.content .coinChartHeading h2{margin:6px 0;font-size:clamp(20px,3vw,28px);font-weight:850;color:#202630}
+.content .coinChartHeading h2 span{font-size:13px;color:#727b88;margin-left:8px}
+.content .coinChartHeading p{margin:0;color:#727b88;font-size:13px}
+.content .coinChartFrame{height:clamp(360px,58vw,570px);width:100%;overflow:hidden;border-radius:12px;background:#f7f9fc}
+.content .coinChartFrame iframe{display:block;width:100%;height:100%;border:0}
+.content .coinChartIndicators{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+.content .coinChartIndicators span{font-size:12px;font-weight:750;color:#354052;border:1px solid #e1e5eb;border-radius:999px;padding:7px 10px;background:#f8fafc}
+.content .chartDisclaimer{font-size:12px;line-height:1.5;margin:12px 0 0}
+.content .marketRow[role=button]{cursor:pointer}
+.content .marketRow[role=button]:focus-visible{outline:3px solid #0dbb91;outline-offset:2px}
+@media(max-width:640px){
+ .content .sectionHead:has(+ .launchpoolGrid),.content .sectionHead.marketSectionHead{padding:18px 18px;margin-bottom:12px}
+ .content .launchpoolGrid{padding:0 14px 20px;gap:12px}
+ .content .launchpoolCard{padding:14px}
+ .content .coinChartPanel{padding:12px;margin:14px 0 20px}
+ .content .coinChartHeading{align-items:flex-start}
+ .content .coinChartHeading .ghost{flex-shrink:0;padding:8px;font-size:12px}
+ .content .coinChartFrame{height:430px}
+ .content .coinChartIndicators{gap:6px}
+ .content .coinChartIndicators span{font-size:11px;padding:6px 8px}
+}
