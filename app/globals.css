@@ -1354,3 +1354,37 @@ html[data-theme='dark'] .app select{
  .content .availableCard{min-height:190px}
  .content .arielDashboard .accountPortfolioCard{order:3}
 }
+
+/* Exact reference palette for the mobile dashboard: white canvas, black text,
+   neutral light-gray surfaces, exchange blue CTA, and green gain badges. */
+@media(max-width:700px){
+ html,body,.app,.app .content,.content header,.content .arielDashboard,
+ .content .availableCard,.content .accountTabs,.content .accountPortfolioCard,
+ .content .dailyProfitCard,.content .secondaryAccountCard,.mobileBottomNav{
+   background-color:#fff!important;color:#111!important;
+ }
+ .content .balanceCardHeading{color:#555!important}
+ .content .availableCard>strong,.content .accountSectionTitle h2,
+ .content .accountIdentity b,.content .portfolioValuation strong,
+ .content .allocationLegend b,.content .dailyProfitCard h3,
+ .content .dailyProfitCard strong,.content .quickActions button span,
+ .mobileBottomNav button.active{color:#080808!important}
+ .content .accountTabs button{color:#888!important}
+ .content .accountTabs button.selected{background:#f3f4f6!important;color:#111!important}
+ .content .quickActions button b,.mobileTopBrand .menuToggle,
+ .mobileHeaderActions .mobileIcon,.dashboardHeaderTools .themeToggle,
+ .dashboardCurrencySelect,.exchangeSearchBar{background-color:#f3f4f6!important}
+ .exchangeSearchBar input{color:#111!important}
+ .exchangeSearchBar input::placeholder{color:#999!important}
+ .content .availableActions .depositPill{background-color:#1246f5!important;color:#fff!important}
+ .content .marketRow .live,.content .marketRow .change,.content .marketRow .gain,
+ .content .marketRow .positive,.content .marketRow [class*='percent']{
+   color:#2da77a!important
+ }
+ .mobileBottomNav{border-top:1px solid #ededed!important;box-shadow:0 -3px 12px rgba(0,0,0,.025)!important}
+ .mobileBottomNav button{color:#888!important}
+ .mobileBottomNav button.active{color:#080808!important}
+ .content .accountPortfolioCard,.content .dailyProfitCard,.content .secondaryAccountCard{
+   border-color:#ededed!important
+ }
+}
