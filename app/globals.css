@@ -1681,3 +1681,12 @@ html[data-theme='dark'] .content .rewardsHistoryRow{border-color:#303846}
  .content .rewardsHistoryRow{align-items:flex-start;flex-wrap:wrap}
  .content .rewardsHistoryRow>strong{margin-left:52px;text-align:left}
 }
+
+/* Wallet visibility and verified password-change form */
+.exchangeWalletBreakdown{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.exchangeWalletBreakdown button{display:flex;flex:1 1 125px;min-width:0;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--border,#303744);border-radius:12px;background:var(--card-bg,rgba(127,140,160,.08));color:inherit;text-align:left;cursor:pointer}
+.exchangeWalletBreakdown button span{font-size:12px;opacity:.78}
+.exchangeWalletBreakdown button strong{font-size:13px;font-weight:800;white-space:nowrap}
+.profileField{display:flex;flex-direction:column;gap:8px;margin:14px 0}
+.profileField input{width:100%;min-height:46px;padding:12px 14px;border:1px solid var(--border,#303744);border-radius:10px;background:var(--input-bg,transparent);color:inherit;font:inherit}
+.securityCard .ghost{cursor:pointer}
