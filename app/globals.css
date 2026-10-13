@@ -1337,3 +1337,20 @@ html[data-theme='dark'] .app select{
  .content .quickActions button b{width:49px;height:49px}
  .content .quickActions button span{font-size:12px}
 }
+
+/* Reference screenshot: search pill, asset rows and quick-link labels */
+.exchangeSearchBar{display:none}
+@media(max-width:700px){
+ .exchangeSearchBar{display:flex;align-items:center;gap:10px;width:100%;height:48px;margin-top:8px;padding:0 14px;border-radius:28px;background:#f3f4f6;color:#111}
+ .exchangeSearchBar .searchGlass{font-size:0;width:18px;height:18px;border:2.5px solid #111;border-radius:50%;position:relative;flex:0 0 18px}
+ .exchangeSearchBar .searchGlass:after{content:'';position:absolute;width:8px;height:2.5px;background:#111;right:-6px;bottom:-3px;transform:rotate(48deg);border-radius:2px}
+ .exchangeSearchBar input{min-width:0;flex:1;width:100%;border:0;outline:0;background:transparent;color:#111;font-size:16px}
+ .exchangeSearchBar input::placeholder{color:#999;opacity:1}
+ .exchangeSearchBar button{border:0;background:transparent;font-size:0;width:28px;height:30px;position:relative}
+ .exchangeSearchBar button:after{content:'⌕';font-size:28px;color:#111;position:absolute;inset:0;line-height:27px}
+ .content .quickActions{grid-template-columns:repeat(4,minmax(0,1fr));}
+ .content .quickActions button:nth-child(1) span:after{content:''}
+ .content .availableCard .availableActions .withdrawPill{display:none}
+ .content .availableCard{min-height:190px}
+ .content .arielDashboard .accountPortfolioCard{order:3}
+}
