@@ -1164,3 +1164,93 @@ html[data-theme='dark'] .content [style*="color:#000"],
 html[data-theme='dark'] .content [style*="color: #000"],
 html[data-theme='dark'] .content [style*="color:black"],
 html[data-theme='dark'] .content [style*="color: black"]{color:#eaecef!important}
+
+
+
+/* Dark-mode contrast for Wallets, deposits, withdrawals and all nested controls. */
+html[data-theme='dark'] .walletActions,
+html[data-theme='dark'] .walletActions.card,
+html[data-theme='dark'] .walletActions .actionGrid,
+html[data-theme='dark'] .walletActions .bankDetails,
+html[data-theme='dark'] .walletActions .depositWaiting,
+html[data-theme='dark'] .depositWaiting,
+html[data-theme='dark'] .paymentDeadline,
+html[data-theme='dark'] .receiptUpload,
+html[data-theme='dark'] .walletGrid .wallet,
+html[data-theme='dark'] .wallet,
+html[data-theme='dark'] .content .walletActions,
+html[data-theme='dark'] .content .walletActions.card{
+  background:#14171c!important;color:#eaecef!important;border-color:#303640!important;
+}
+html[data-theme='dark'] .walletActions h1,
+html[data-theme='dark'] .walletActions h2,
+html[data-theme='dark'] .walletActions h3,
+html[data-theme='dark'] .walletActions p,
+html[data-theme='dark'] .walletActions b,
+html[data-theme='dark'] .walletActions strong,
+html[data-theme='dark'] .walletActions span,
+html[data-theme='dark'] .walletActions label,
+html[data-theme='dark'] .walletActions small,
+html[data-theme='dark'] .depositWaiting *,
+html[data-theme='dark'] .paymentDeadline *,
+html[data-theme='dark'] .receiptUpload *,
+html[data-theme='dark'] .wallet,
+html[data-theme='dark'] .wallet *{
+  color:#e5eaf1;
+}
+html[data-theme='dark'] .walletActions input,
+html[data-theme='dark'] .walletActions textarea,
+html[data-theme='dark'] .walletActions select,
+html[data-theme='dark'] .walletActions option,
+html[data-theme='dark'] .actionGrid input,
+html[data-theme='dark'] .actionGrid select,
+html[data-theme='dark'] .actionGrid option,
+html[data-theme='dark'] .supportForm input,
+html[data-theme='dark'] .supportForm textarea,
+html[data-theme='dark'] .supportForm select,
+html[data-theme='dark'] .profileField input,
+html[data-theme='dark'] .profileField select,
+html[data-theme='dark'] .creditForm input,
+html[data-theme='dark'] .creditForm select,
+html[data-theme='dark'] .productForm input,
+html[data-theme='dark'] .productForm select{
+  background:#0d1117!important;color:#f5f7fa!important;border:1px solid #3b424d!important;
+  -webkit-text-fill-color:#f5f7fa!important;caret-color:#f5f7fa!important;
+}
+html[data-theme='dark'] .walletActions input::placeholder,
+html[data-theme='dark'] .actionGrid input::placeholder,
+html[data-theme='dark'] .supportForm input::placeholder,
+html[data-theme='dark'] .supportForm textarea::placeholder,
+html[data-theme='dark'] .profileField input::placeholder{
+  color:#a6b0bf!important;opacity:1!important;-webkit-text-fill-color:#a6b0bf!important;
+}
+html[data-theme='dark'] .walletActions pre,
+html[data-theme='dark'] .bankDetails pre{
+  color:#f5f7fa!important;background:#0d1117!important;border-color:#303640!important;white-space:pre-wrap;overflow-wrap:anywhere;
+}
+html[data-theme='dark'] .walletActions .ghost,
+html[data-theme='dark'] .walletActions button:not(.primary){
+  color:#f5f7fa!important;
+}
+html[data-theme='dark'] .walletActions .receiptLink,
+html[data-theme='dark'] .walletActions a{color:#73dcb2!important}
+html[data-theme='dark'] .walletActions .badge{color:#e5eaf1!important;background:#27303a!important}
+html[data-theme='dark'] .walletActions input[type='file']{color:#e5eaf1!important}
+html[data-theme='dark'] .walletActions input[type='file']::file-selector-button{
+  background:#252b34!important;color:#f5f7fa!important;border:1px solid #3b424d!important;border-radius:7px;padding:7px 10px;
+}
+html[data-theme='dark'] .content input,
+html[data-theme='dark'] .content textarea,
+html[data-theme='dark'] .content select,
+html[data-theme='dark'] .content option,
+html[data-theme='dark'] .app input,
+html[data-theme='dark'] .app textarea,
+html[data-theme='dark'] .app select,
+html[data-theme='dark'] .app option{
+  color:#f5f7fa;
+}
+html[data-theme='dark'] .app input:not([type='checkbox']):not([type='radio']),
+html[data-theme='dark'] .app textarea,
+html[data-theme='dark'] .app select{
+  -webkit-text-fill-color:#f5f7fa;caret-color:#f5f7fa;
+}
