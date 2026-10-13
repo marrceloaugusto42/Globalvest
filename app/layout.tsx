@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description:
     "Explore global investment opportunities, manage your portfolio, and track your assets with Globalvest Capital.",
   applicationName: "Globalvest Capital",
+  icons: { icon: "/icon.svg", shortcut: "/icon.svg" },
   openGraph: {
     type: "website",
     url: siteUrl,
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
       "Explore global investment opportunities, manage your portfolio, and track your assets with Globalvest Capital.",
     images: [
       {
-        url: "/opengraph-image",
+        url: new URL("/opengraph-image", siteUrl).toString(),
         width: 1200,
         height: 630,
         alt: "Globalvest Capital — Global Investing",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     title: "Globalvest Capital | Global Investing",
     description:
       "Explore global investment opportunities, manage your portfolio, and track your assets with Globalvest Capital.",
-    images: ["/opengraph-image"],
+    images: [new URL("/opengraph-image", siteUrl).toString()],
   },
   robots: { index: true, follow: true },
 };
