@@ -983,3 +983,53 @@ html[data-theme="dark"] .planPayout{background:var(--soft,#172033);border-color:
 .notice{background:#e8f7ef!important;color:#08734f!important;border-color:#b8ead2!important}
 .marketLine strong,.gain{color:#0ECB81!important}
 .bars i{background:#0ECB81!important}
+
+
+/* App-level back navigation */
+.pageTitleRow{display:flex;align-items:center;gap:12px;min-width:0}
+.pageTitleRow h1{min-width:0}
+.pageBackButton{display:inline-flex;align-items:center;justify-content:center;gap:7px;flex:0 0 auto;min-height:40px;padding:8px 12px;border:1px solid #dce5e1;border-radius:10px;background:#fff;color:#17382f;font-weight:800}
+.pageBackButton span{font-size:22px;line-height:1}
+.pageBackButton:hover{background:#eaf5ef;border-color:#b9d9ca}
+.supportHeroAction{margin-top:10px}
+.supportInbox{margin-top:18px;padding:22px}
+.supportInboxHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:18px}
+.supportInboxHeader h2{margin:5px 0 6px}
+.supportInboxHeader p{margin:0}
+.supportInboxLayout{display:grid;grid-template-columns:minmax(230px,310px) minmax(0,1fr);gap:16px;min-height:400px}
+.supportInboxList{min-width:0;border:1px solid #e1e8e4;border-radius:12px;overflow:hidden;background:#f9fbfa}
+.supportInboxListTitle{display:flex;align-items:center;justify-content:space-between;padding:13px 14px;border-bottom:1px solid #e1e8e4;font-weight:800;font-size:13px}
+.supportInboxListTitle b{background:#e5f3ec;color:#0b6b4f;padding:3px 8px;border-radius:20px}
+.supportInboxItem{width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:7px;text-align:left;padding:14px;border:0;border-bottom:1px solid #e6ece8;background:#fff;color:#18241f}
+.supportInboxItem:hover,.supportInboxItem.active{background:#edf7f1}
+.supportInboxItem.active{box-shadow:inset 3px 0 #0b6b4f}
+.supportInboxItem>b{font-size:14px;overflow-wrap:anywhere}
+.supportInboxItem small{font-size:11px;color:#728078;line-height:1.4}
+.supportInboxItem .supportStatus{font-size:10px}
+.supportInboxId{opacity:.85}
+.supportInboxThread{min-width:0;display:flex;flex-direction:column;border:1px solid #e1e8e4;border-radius:12px;overflow:hidden;background:#fff}
+.supportInboxThreadHead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:16px;border-bottom:1px solid #e7ece9;background:#fbfcfb}
+.supportInboxThreadHead h3{margin:8px 0 5px;overflow-wrap:anywhere}
+.supportInboxThreadHead p{margin:0;color:#78847e;font-size:12px;overflow-wrap:anywhere}
+.supportInboxThreadHead select{max-width:155px;padding:9px;border:1px solid #d9e3de;border-radius:9px;background:#fff;color:#1b2b24}
+.supportInboxMessages{display:flex;flex-direction:column;gap:10px;padding:16px;max-height:430px;overflow:auto;flex:1}
+.supportInboxComposer{display:flex;flex-direction:column;gap:10px;padding:14px;border-top:1px solid #e7ece9;background:#fbfcfb}
+.supportInboxComposer textarea{width:100%;resize:vertical;padding:12px;border:1px solid #d9e3de;border-radius:10px;background:#fff;color:#18241f}
+.supportInboxComposer .primary{align-self:flex-end}
+.supportInboxEmpty{display:flex;flex:1;min-height:300px;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:25px;color:#77847d}
+.supportInboxEmpty>span{display:grid;place-items:center;width:54px;height:54px;border-radius:16px;background:#e8f5ef;color:#0b6b4f;font-size:26px}
+.supportInboxEmpty h3{margin:14px 0 6px;color:#20372d}
+.supportInboxEmpty p{max-width:290px;line-height:1.5;margin:0}
+@media(max-width:760px){
+  .pageTitleRow{gap:8px}
+  .pageBackButton{min-height:36px;padding:7px 10px;font-size:13px}
+  .supportInbox{padding:14px}
+  .supportInboxHeader{flex-direction:column}
+  .supportInboxHeader>.ghost{width:100%}
+  .supportInboxLayout{grid-template-columns:minmax(0,1fr);min-height:0}
+  .supportInboxList{max-height:270px;overflow:auto}
+  .supportInboxThread{min-height:340px}
+  .supportInboxThreadHead{flex-direction:column}
+  .supportInboxThreadHead select{max-width:none;width:100%}
+  .supportInboxMessages{max-height:340px}
+}
