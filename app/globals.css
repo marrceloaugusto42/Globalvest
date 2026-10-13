@@ -1527,3 +1527,76 @@ html[data-theme='dark'] .app select{
  .content .coinChartIndicators{gap:6px}
  .content .coinChartIndicators span{font-size:11px;padding:6px 8px}
 }
+
+
+/* Exchange-style header controls and persistent professional dark theme */
+.content .dashboardHeaderTools{gap:9px}
+.content .headerSupportButton,.content .headerThemeButton{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:40px;padding:0 12px;border-radius:11px;border:1px solid #dfe3e8;background:#fff;color:#202630;font-weight:800;white-space:nowrap;cursor:pointer}
+.content .headerSupportButton span{font-size:19px;line-height:1}
+.content .headerThemeButton span{font-size:20px;line-height:1}
+.content .marketChangeUnavailable{color:#8b929d!important}
+.landingAuth .qrLoginButton{display:inline-flex;align-items:center;gap:7px;background:transparent;color:inherit;border:1px solid #d8dde5;border-radius:10px;padding:10px 13px;font-weight:800;cursor:pointer}
+.landingAuth .qrLoginButton span{font-size:19px}
+.qrLoginBackdrop{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(7,12,22,.72);backdrop-filter:blur(7px)}
+.qrLoginModal{position:relative;width:min(100%,390px);box-sizing:border-box;padding:28px 24px 24px;border-radius:22px;background:#fff;color:#202630;text-align:center;box-shadow:0 24px 90px rgba(0,0,0,.3)}
+.qrLoginClose{position:absolute;right:14px;top:10px;border:0;background:transparent;color:#5c6572;font-size:28px;cursor:pointer}
+.qrLoginIcon{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:15px;background:#e9f8f3;color:#0a9f72;font-size:30px;font-weight:900}
+.qrLoginModal h2{font-size:23px;margin:14px 0 8px}
+.qrLoginModal p{font-size:14px;line-height:1.55;color:#657080;margin:0 auto 18px;max-width:300px}
+.qrLoginModal img{display:block;width:220px;height:220px;max-width:100%;margin:0 auto 14px;border:1px solid #e4e8ee;border-radius:12px}
+.qrLoginModal small{display:block;color:#707987;font-size:11px;line-height:1.5}
+html[data-theme='dark'] body,html[data-theme='dark'] .app{background:#0b0e11!important;color:#eaecef!important}
+html[data-theme='dark'] .content{background:#0b0e11!important;color:#eaecef!important}
+html[data-theme='dark'] .content header,html[data-theme='dark'] .content .quickActions,
+html[data-theme='dark'] .content .card,html[data-theme='dark'] .content .panel,
+html[data-theme='dark'] .content .exchangeAssets,html[data-theme='dark'] .content .exchangeShortcuts,
+html[data-theme='dark'] .content .exchangeMarketSection,html[data-theme='dark'] .content .launchpoolCard,
+html[data-theme='dark'] .content .earnCard,html[data-theme='dark'] .content .earnHero,
+html[data-theme='dark'] .content .coinChartPanel,html[data-theme='dark'] .content .marketTable,
+html[data-theme='dark'] .content .dailyProfitCard,html[data-theme='dark'] .content .walletActions,
+html[data-theme='dark'] .content .supportCard,html[data-theme='dark'] .content .exchangeHome{
+ background:#161a1e!important;color:#eaecef!important;border-color:#2b3139!important;box-shadow:none!important
+}
+html[data-theme='dark'] .content h1,html[data-theme='dark'] .content h2,html[data-theme='dark'] .content h3,
+html[data-theme='dark'] .content b,html[data-theme='dark'] .content strong,html[data-theme='dark'] .content label,
+html[data-theme='dark'] .content .exchangeCoinSymbol,html[data-theme='dark'] .content .coinChartHeading h2{
+ color:#f0f3f6!important
+}
+html[data-theme='dark'] .content p,html[data-theme='dark'] .content small,html[data-theme='dark'] .content .muted,
+html[data-theme='dark'] .content .exchangeAssetsLabel,html[data-theme='dark'] .content .exchangeApprox,
+html[data-theme='dark'] .content .exchangeLocalBalance span,html[data-theme='dark'] .content .coinChartHeading p{
+ color:#9aa4b2!important
+}
+html[data-theme='dark'] .content input,html[data-theme='dark'] .content textarea,
+html[data-theme='dark'] .content select,html[data-theme='dark'] .content .exchangeSearchBar{
+ background:#0b0e11!important;color:#eaecef!important;border-color:#343b45!important
+}
+html[data-theme='dark'] .content input::placeholder,html[data-theme='dark'] .content textarea::placeholder{color:#737e8d!important}
+html[data-theme='dark'] .content button:not(.primary):not(.exchangeDeposit):not(.active),
+html[data-theme='dark'] .content .headerSupportButton,html[data-theme='dark'] .content .headerThemeButton{
+ color:#eaecef;border-color:#343b45;background:#1e2329
+}
+html[data-theme='dark'] .content .exchangeMarketTabs button.selected,
+html[data-theme='dark'] .content .sideNav button.active,
+html[data-theme='dark'] .content .mobileDrawerNav button.active{background:#0b3027!important;color:#35d6a0!important}
+html[data-theme='dark'] .content .marketRow,html[data-theme='dark'] .content .listRow,
+html[data-theme='dark'] .content .exchangeCoinRow,html[data-theme='dark'] .content .exchangeAccountStrip button,
+html[data-theme='dark'] .content .exchangeShortcuts button{border-color:#2b3139!important}
+html[data-theme='dark'] .content .coinChartIndicators span{background:#1e2329;color:#c8d0da;border-color:#343b45}
+html[data-theme='dark'] .content .coinChartFrame{background:#0b0e11}
+html[data-theme='dark'] aside{background:#111519!important;border-color:#242a32!important;color:#eaecef!important}
+html[data-theme='dark'] aside .brand,html[data-theme='dark'] aside .sideNav button,
+html[data-theme='dark'] aside .sideBottom{color:#eaecef!important}
+html[data-theme='dark'] .mobileMenuDrawer{background:#151a20!important;color:#eaecef!important}
+html[data-theme='dark'] .notificationPanel,html[data-theme='dark'] .languagePickerMenu{
+ background:#161a1e!important;color:#eaecef!important;border-color:#343b45!important
+}
+html[data-theme='dark'] .notificationItem,html[data-theme='dark'] .languagePickerMenu button{border-color:#343b45!important;color:#eaecef!important}
+html[data-theme='dark'] .exchangeCoinPrice small{color:#8f9aa8!important}
+html[data-theme='dark'] .content .primary{background:#0ecb81!important;color:#07130e!important;border-color:#0ecb81!important}
+html[data-theme='dark'] .content .ghost{background:#1e2329!important;color:#eaecef!important;border-color:#343b45!important}
+@media(max-width:640px){
+ .content .headerSupportButton,.content .headerThemeButton{min-width:38px;min-height:38px;padding:0 8px}
+ .content .headerSupportButton b,.content .headerThemeButton b{font-size:11px}
+ .landingAuth .qrLoginButton{padding:8px;font-size:12px}
+}
