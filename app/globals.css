@@ -1254,3 +1254,86 @@ html[data-theme='dark'] .app textarea,
 html[data-theme='dark'] .app select{
   -webkit-text-fill-color:#f5f7fa;caret-color:#f5f7fa;
 }
+
+
+/* Mobile dashboard refresh: reference-inspired exchange layout */
+@media(max-width:700px){
+ html,body{max-width:100%;overflow-x:hidden;background:#fff}
+ .app{display:block;background:#fff;min-height:100vh;padding-bottom:76px;color:#111}
+ .app .content{padding:15px 0 24px;max-width:none;width:100%;margin:0;background:#fff}
+ .content header{padding:0 18px 16px;margin:0;display:flex;align-items:center;flex-wrap:wrap;gap:12px;border-bottom:1px solid #f0f0f0}
+ .content header>div:first-child{width:100%;flex:1 0 100%;display:flex;flex-direction:column;gap:0}
+ .mobileTopBrand{display:flex;align-items:center;justify-content:space-between;width:100%;gap:12px}
+ .mobileTopBrand>.brand{display:none}
+ .mobileTopBrand .menuToggle{display:grid;place-content:center;gap:4px;width:38px;height:38px;border:0;border-radius:50%;background:#f3f4f6}
+ .mobileTopBrand .menuToggle span{display:block;width:18px;height:2px;background:#111;border-radius:2px}
+ .mobileHeaderActions{display:flex;align-items:center;gap:10px;width:100%;justify-content:flex-end}
+ .mobileHeaderActions .globalvestLanguagePickerWrap{display:none}
+ .mobileHeaderActions .notificationButton{order:3;position:relative;width:40px;height:40px;border:0;background:transparent;color:#111}
+ .mobileHeaderActions .notificationButton svg{width:27px;height:27px;stroke-width:2.6}
+ .mobileHeaderActions .notificationButton i{background:#f0273e;color:#fff;min-width:19px;height:19px;top:0;right:-1px;font-style:normal;font-weight:800;font-size:11px}
+ .mobileHeaderActions .mobileIcon{order:1;border:0;background:#f1f2f4;border-radius:50%;width:42px;height:42px;font-size:25px}
+ .dashboardHeaderTools{width:auto;flex:1;gap:7px;justify-content:flex-end}
+ .dashboardHeaderTools .themeToggle{height:36px;min-width:56px;border:0;background:#f3f4f6;color:#111;padding:0 8px;font-size:12px}
+ .dashboardCurrencySelect{height:36px;min-width:72px;max-width:84px;background:#f3f4f6;border:0;color:#111}
+ .content .pageTitleRow{display:flex;align-items:center;gap:8px;margin:12px 0 0}
+ .content .pageTitleRow h1{font-size:0;margin:0}
+ .content header p{display:none}
+ .content .quickActions{order:4;margin:0;padding:22px 12px 20px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 5px;background:#fff;border-bottom:7px solid #f6f6f7}
+ .content .quickActions button{min-width:0;min-height:88px;padding:8px 2px 2px;border:0;border-radius:0;background:transparent;color:#111;gap:9px;justify-content:flex-start}
+ .content .quickActions button b{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#f3f4f6;color:#111;font-size:28px;font-weight:500}
+ .content .quickActions button span{font-size:13px;line-height:1.25;font-weight:700;text-align:center;overflow-wrap:anywhere}
+ .content .notice{margin:12px 14px}
+ .content .arielDashboard{display:flex;flex-direction:column;gap:0;padding:0;background:#fff}
+ .content .accountTabs{order:1;display:flex;gap:20px;overflow-x:auto;white-space:nowrap;padding:16px 18px;border-bottom:1px solid #f1f1f1;background:#fff;scrollbar-width:none}
+ .content .accountTabs::-webkit-scrollbar{display:none}
+ .content .accountTabs button{flex:0 0 auto;padding:8px 0;border:0;background:transparent;color:#777;font-size:14px;font-weight:700}
+ .content .accountTabs button.selected{color:#111;background:#f2f3f5;border-radius:22px;padding:10px 17px}
+ .content .availableCard{order:0;margin:0;padding:24px 18px 20px;border:0;border-radius:0;background:#fff;color:#111;box-shadow:none;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px 12px}
+ .content .balanceCardHeading{grid-column:1;display:flex;align-items:center;gap:9px;color:#555;font-size:15px;font-weight:500}
+ .content .balanceVisibilityToggle{border:0;background:transparent;color:#111;padding:2px;display:flex;align-items:center;gap:4px}
+ .content .balanceVisibilityToggle span{font-size:19px}
+ .content .balanceVisibilityToggle b{font-size:0}
+ .content .availableCard>strong{grid-column:1;grid-row:2;font-size:36px;line-height:1.15;font-weight:800;color:#090909;letter-spacing:-.8px;overflow-wrap:anywhere}
+ .content .availableActions{grid-column:2;grid-row:1/3;display:flex;flex-direction:column;gap:9px;align-items:stretch}
+ .content .availableActions button{min-width:105px;padding:14px 16px;border-radius:28px;font-weight:800;font-size:14px;border:0}
+ .content .availableActions .depositPill{background:#1246f5;color:#fff}
+ .content .availableActions .withdrawPill{display:none}
+ .content .accountSectionTitle{order:2;padding:18px 18px 8px;margin:0;display:flex;align-items:center;justify-content:space-between}
+ .content .accountSectionTitle h2{font-size:18px;margin:0;color:#111}
+ .content .accountSectionTitle span{color:#888;font-size:12px}
+ .content .accountPortfolioCard{order:3;margin:0 14px 18px;padding:17px;border:1px solid #eceef1;border-radius:17px;background:#fff;box-shadow:none;color:#111}
+ .content .accountCardHead{gap:10px}
+ .content .accountIcon{background:#f1f2f4;color:#111;border-radius:50%}
+ .content .accountIdentity b,.content .portfolioValuation strong,.content .allocationLegend b{color:#111}
+ .content .accountIdentity span,.content .accountOpened span,.content .portfolioValuation span{color:#858585}
+ .content .portfolioValuation{margin:18px 0 14px}
+ .content .portfolioValuation strong{font-size:27px;font-weight:800}
+ .content .allocationBar{height:7px;border-radius:8px;background:#e8e8f5;overflow:hidden}
+ .content .allocationBar i{background:#7558ed;border-radius:8px}
+ .content .allocationLegend{gap:12px;margin-top:15px}
+ .content .allocationLegend>div{display:flex;justify-content:space-between;gap:8px;font-size:12px}
+ .content .dailyProfitCard{order:4;margin:0 14px 18px;padding:17px;border:1px solid #eceef1;border-radius:16px;background:#fff;color:#111}
+ .content .dailyProfitCard h3,.content .dailyProfitCard strong{color:#111}
+ .content .dailyProfitCard p,.content .dailyProfitCard small,.content .dailyProfitCard span{color:#777}
+ .content .secondaryAccountCard{margin:0 14px 12px;border:1px solid #eee;border-radius:14px;background:#fff}
+ .content .statGrid,.content .productGrid,.content .twoCol,.content .walletGrid{padding-left:14px;padding-right:14px}
+ .content .stat,.content .product,.content .panel,.content .wallet{border-radius:14px;box-shadow:none}
+ .content .mobileBottomNav{display:grid}
+ .app aside{display:none}
+}
+.mobileBottomNav{display:none}
+@media(max-width:700px){
+ .mobileBottomNav{position:fixed;z-index:15;left:0;right:0;bottom:0;height:70px;padding:7px 4px calc(7px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid #e9e9eb;grid-template-columns:repeat(5,minmax(0,1fr));align-items:center;box-shadow:0 -4px 18px rgba(0,0,0,.035)}
+ .mobileBottomNav button{height:54px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:0;background:transparent;color:#85878b;font-size:11px;font-weight:700;padding:2px}
+ .mobileBottomNav button span{font-size:25px;line-height:1;font-weight:400}
+ .mobileBottomNav button.active{color:#080808}
+ .mobileBottomNav button.active span{font-weight:800}
+}
+@media(max-width:360px){
+ .content .availableCard{padding-left:14px;padding-right:14px}
+ .content .availableCard>strong{font-size:31px}
+ .content .availableActions button{min-width:88px;padding:12px 10px}
+ .content .quickActions button b{width:49px;height:49px}
+ .content .quickActions button span{font-size:12px}
+}
