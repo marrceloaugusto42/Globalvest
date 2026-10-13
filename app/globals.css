@@ -1600,3 +1600,28 @@ html[data-theme='dark'] .content .ghost{background:#1e2329!important;color:#eaec
  .content .headerSupportButton b,.content .headerThemeButton b{font-size:11px}
  .landingAuth .qrLoginButton{padding:8px;font-size:12px}
 }
+
+
+/* Keep header actions on their own top row above search. */
+.content header{flex-wrap:wrap!important;align-items:flex-start!important;row-gap:12px!important}
+.content header>div:first-child{order:2!important;flex:1 1 100%!important;width:100%!important;min-width:0!important}
+.content header>.dashboardHeaderTools{order:1!important;flex:1 1 100%!important;width:100%!important;justify-content:flex-end!important;margin:0 0 2px!important}
+.content .dashboardHeaderTools{gap:10px!important}
+@media(max-width:640px){.content header>.dashboardHeaderTools{justify-content:flex-end!important;gap:8px!important}.content .headerSupportButton,.content .headerThemeButton{min-height:40px!important;padding:0 10px!important}}
+
+/* Neutral percentage pill; green/red text shows direction. */
+.content .exchangeGain,.content .exchangeGain.marketChangeUp,.content .exchangeGain.marketChangeDown,.content .exchangeGain.marketChangeUnavailable{min-height:32px!important;padding:0 10px!important;border:0!important;border-radius:5px!important;background:#f0f2f5!important;color:#0ecb81!important;font-size:13px!important;font-weight:700!important;line-height:1!important;white-space:nowrap!important}
+.content .exchangeGain.marketChangeDown{color:#f6465d!important;background:#f0f2f5!important}
+.content .exchangeGain.marketChangeUnavailable{color:#848e9c!important}
+html[data-theme='dark'] .content .exchangeGain,html[data-theme='dark'] .content .exchangeGain.marketChangeUp,html[data-theme='dark'] .content .exchangeGain.marketChangeDown,html[data-theme='dark'] .content .exchangeGain.marketChangeUnavailable{background:#2b3139!important}
+html[data-theme='dark'] .content .exchangeGain.marketChangeUp{color:#0ecb81!important}
+html[data-theme='dark'] .content .exchangeGain.marketChangeDown{color:#f6465d!important}
+html[data-theme='dark'] .content .exchangeGain.marketChangeUnavailable{color:#848e9c!important}
+
+/* Use actual coin images in market lists rather than generic letter icons. */
+.content .marketDot{overflow:hidden;background:transparent!important;flex:0 0 34px}
+.content .marketDot img{display:block;width:100%;height:100%;object-fit:contain;border-radius:50%}
+.content .exchangeCoinLogo{overflow:hidden}
+.content .exchangeCoinLogo img{width:100%!important;height:100%!important;object-fit:contain!important;border-radius:50%!important}
+.content .exchangeLocalBalance{display:block!important;margin-top:2px!important}
+.content .exchangeLocalBalance span{font-size:12px!important;font-weight:600!important}
