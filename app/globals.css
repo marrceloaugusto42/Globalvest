@@ -1625,3 +1625,59 @@ html[data-theme='dark'] .content .exchangeGain.marketChangeUnavailable{color:#84
 .content .exchangeCoinLogo img{width:100%!important;height:100%!important;object-fit:contain!important;border-radius:50%!important}
 .content .exchangeLocalBalance{display:block!important;margin-top:2px!important}
 .content .exchangeLocalBalance span{font-size:12px!important;font-weight:600!important}
+
+
+/* Spacious, exchange-style primary dashboard actions and service cards. */
+.content .quickActions{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;margin:0 0 22px!important}
+.content .quickActions button{min-height:88px!important;border:1px solid #e2e8f0!important;border-radius:16px!important;background:linear-gradient(180deg,#fff 0%,#f7f9fc 100%)!important;color:#1e2329!important;padding:15px 8px!important;gap:9px!important;box-shadow:0 3px 12px rgba(16,24,40,.045)!important;transition:transform .16s ease,box-shadow .16s ease!important}
+.content .quickActions button:active{transform:scale(.98)!important}
+.content .quickActions b{width:38px!important;height:38px!important;border-radius:12px!important;background:#e8f7f0!important;color:#0ecb81!important;font-size:22px!important}
+.content .quickActions button:nth-child(2) b{background:#eaf2ff!important;color:#3861fb!important}
+.content .quickActions button:nth-child(3) b{background:#fff0f0!important;color:#f6465d!important}
+.content .quickActions button:nth-child(4) b{background:#eef1f5!important;color:#596579!important}
+.content .quickActions span{font-size:14px!important;font-weight:800!important;line-height:1.2!important}
+html[data-theme='dark'] .content .quickActions button{background:linear-gradient(180deg,#202630 0%,#181d25 100%)!important;border-color:#303846!important;color:#f0f3f7!important;box-shadow:none!important}
+.content .allActionsGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 28px}
+.content .allActionCard{display:flex;align-items:center;gap:14px;text-align:left;min-height:94px;padding:18px;border:1px solid #e2e8f0;border-radius:16px;background:#fff;color:#1e2329;box-shadow:0 4px 16px rgba(16,24,40,.04)}
+.content .allActionCard>span{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;border-radius:14px;background:#e8f7f0;color:#0ecb81;font-size:24px;font-weight:800}
+.content .allActionCard>div{display:flex;flex:1;min-width:0;flex-direction:column;gap:6px}
+.content .allActionCard b{font-size:15px;font-weight:800}
+.content .allActionCard small{font-size:12px;line-height:1.4;color:#707a8a}
+.content .allActionCard>strong{font-size:24px;color:#9aa3b2}
+html[data-theme='dark'] .content .allActionCard{background:#202630;border-color:#303846;color:#f0f3f7}
+.content .rewardsHero{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:28px;border-radius:20px;background:linear-gradient(115deg,#182b3a,#263f55);color:#fff;margin-bottom:18px}
+.content .rewardsHero small{font-size:11px;letter-spacing:1.5px;font-weight:800;color:#b8d4e8}
+.content .rewardsHero h2{font-size:26px;margin:10px 0}
+.content .rewardsHero p{max-width:650px;color:#d6e2ed;margin:0;line-height:1.55}
+.content .rewardsHeroIcon{width:62px;height:62px;flex:0 0 62px;border-radius:18px;background:rgba(255,255,255,.12);display:grid;place-items:center;font-size:34px;color:#8be8c0}
+.content .rewardsMetricGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:20px}
+.content .rewardsMetricGrid article{display:flex;flex-direction:column;gap:10px;padding:20px;border:1px solid #e3e8ef;border-radius:16px;background:#fff}
+.content .rewardsMetricGrid article span{font-size:13px;color:#707a8a;font-weight:700}
+.content .rewardsMetricGrid article strong{font-size:25px;font-weight:800;overflow-wrap:anywhere}
+.content .rewardsMetricGrid article small{font-size:12px;color:#8a93a2;line-height:1.4}
+html[data-theme='dark'] .content .rewardsMetricGrid article{background:#202630;border-color:#303846;color:#f0f3f7}
+.content .rewardsHistory{display:flex;flex-direction:column}
+.content .rewardsHistoryRow{display:flex;align-items:center;gap:12px;padding:15px 0;border-bottom:1px solid #edf0f4}
+.content .rewardsHistoryRow:last-child{border-bottom:0}
+.content .rewardHistoryIcon{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:#e8f7f0;color:#0ecb81;font-size:20px;flex:0 0 40px}
+.content .rewardsHistoryRow>div{display:flex;flex:1;min-width:0;flex-direction:column;gap:5px}
+.content .rewardsHistoryRow b{font-size:14px;text-transform:capitalize}
+.content .rewardsHistoryRow small{font-size:12px;color:#8992a1}
+.content .rewardsHistoryRow>strong{font-size:14px;font-weight:800;color:#0ecb81;text-align:right;overflow-wrap:anywhere}
+html[data-theme='dark'] .content .rewardsHistoryRow{border-color:#303846}
+@media(max-width:640px){
+ .content .quickActions{gap:8px!important;margin-bottom:18px!important}
+ .content .quickActions button{min-height:94px!important;padding:12px 4px!important;border-radius:14px!important}
+ .content .quickActions b{width:40px!important;height:40px!important;font-size:23px!important}
+ .content .quickActions span{font-size:13px!important;font-weight:800!important}
+ .content .allActionsGrid{grid-template-columns:1fr;gap:10px}
+ .content .allActionCard{min-height:86px;padding:15px}
+ .content .rewardsHero{padding:22px 18px}
+ .content .rewardsHero h2{font-size:22px}
+ .content .rewardsHeroIcon{width:48px;height:48px;flex-basis:48px;font-size:27px}
+ .content .rewardsMetricGrid{grid-template-columns:1fr;gap:10px}
+ .content .rewardsMetricGrid article{padding:16px}
+ .content .rewardsMetricGrid article strong{font-size:23px}
+ .content .rewardsHistoryRow{align-items:flex-start;flex-wrap:wrap}
+ .content .rewardsHistoryRow>strong{margin-left:52px;text-align:left}
+}
