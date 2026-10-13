@@ -20,21 +20,12 @@ export const metadata: Metadata = {
     title: "Globalvest Capital | Global Investing",
     description:
       "Explore global investment opportunities, manage your portfolio, and track your assets with Globalvest Capital.",
-    images: [
-      {
-        url: new URL("/opengraph-image", siteUrl).toString(),
-        width: 1200,
-        height: 630,
-        alt: "Globalvest Capital — Global Investing",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Globalvest Capital | Global Investing",
     description:
       "Explore global investment opportunities, manage your portfolio, and track your assets with Globalvest Capital.",
-    images: [new URL("/opengraph-image", siteUrl).toString()],
   },
   robots: { index: true, follow: true },
 };
