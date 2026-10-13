@@ -970,3 +970,16 @@ html[data-theme="dark"] .supportChatMessage.fromCustomer{background:rgba(120,140
 html[data-theme="dark"] .supportChatActions textarea{background:var(--card,#111827);border-color:var(--border,#30394a);color:var(--text,#f3f4f6)}
 html[data-theme="dark"] .planPayout{background:var(--soft,#172033);border-color:var(--border,#30394a)}
 @media(max-width:640px){.supportChatMessage{max-width:100%;padding:12px}.supportChatActions .primary{min-height:44px}.supportChatFile input{width:100%}.planPayout strong{font-size:17px}}
+
+
+/* Brand consistency: replace yellow/gold accents with Globalvest green. */
+:root{--gv-yellow:#0ECB81;--gv-yellow-dark:#0aa86a;--gv-yellow2:#22d995;--gv-soft:#e8f7ef;--gv-green:#0ECB81}
+.splashLogo{background:#0ECB81!important;color:#071b15!important}
+.splashBar i{background:#0ECB81!important}
+.primary,.primary:hover{background:#0ECB81!important;border-color:#0ECB81!important;color:#071b15!important}
+.brand span{background:#0ECB81!important;color:#071b15!important}
+.eyebrow,.heroCopy h1 em,.notificationHead button,.badge{color:#08734f!important}
+.badge,.quickActions b,.wallet .coinLogo{background:#e8f7ef!important}
+.notice{background:#e8f7ef!important;color:#08734f!important;border-color:#b8ead2!important}
+.marketLine strong,.gain{color:#0ECB81!important}
+.bars i{background:#0ECB81!important}
