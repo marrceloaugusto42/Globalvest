@@ -1728,3 +1728,16 @@ html[data-theme='dark'] .authCard form>input,html[data-theme='dark'] .authPasswo
 html[data-theme='dark'] .authPasswordField button{color:#eaecef}
 html[data-theme='dark'] .heroLoginButton{background:#181c22;color:#f5f7fa;border-color:#303640}
 @media(max-width:520px){.authPage{align-items:flex-start;padding:18px 12px}.authCard{padding:25px 20px;border-radius:17px;margin:auto 0}.authBrand{margin-bottom:27px}.authCard h1{font-size:29px}.heroSignup{display:flex}.heroSignup .primary,.heroLoginButton{width:100%;justify-content:center}.authCard form>input,.authPasswordField input,.verificationInput{font-size:16px}}
+
+
+/* Globalvest personalized dashboard welcome */
+.dashboardWelcome{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0 0 16px;padding:22px 24px;border:1px solid var(--border,#e5e7eb);border-radius:16px;background:var(--card,#fff);color:var(--text,#111827);box-shadow:0 4px 18px rgba(15,23,42,.04)}
+.dashboardWelcomeEyebrow{display:block;margin-bottom:7px;font-size:10px;font-weight:800;letter-spacing:1.7px;color:var(--muted,#64748b)}
+.dashboardWelcome h1{margin:0;font-size:clamp(22px,3vw,30px);line-height:1.2;font-weight:850;letter-spacing:-.6px}
+.dashboardWelcome p{margin:8px 0 0;color:var(--muted,#64748b);font-size:13px;line-height:1.5}
+.dashboardWelcomeMark{display:flex;align-items:center;justify-content:center;flex:0 0 48px;width:48px;height:48px;border-radius:14px;background:#edf4ef;color:#1d7047;font-size:24px;font-weight:900}
+.exchangeLocalCurrencyValue{display:flex;flex-direction:column;gap:5px;margin-top:12px;padding:12px 14px;border:1px solid rgba(120,140,128,.24);border-radius:10px;background:rgba(120,140,128,.08)}
+.exchangeLocalCurrencyValue span{font-size:12px;color:var(--muted,#64748b)}
+.exchangeLocalCurrencyValue strong{font-size:19px;font-weight:800;color:var(--text,#111827)}
+.exchangeLocalCurrencyValue small{font-size:10px;line-height:1.5;color:var(--muted,#64748b)}
+@media(max-width:600px){.dashboardWelcome{padding:17px 16px;margin-bottom:12px;border-radius:13px}.dashboardWelcome h1{font-size:22px}.dashboardWelcome p{font-size:12px}.dashboardWelcomeMark{flex-basis:40px;width:40px;height:40px;border-radius:12px;font-size:20px}.exchangeLocalCurrencyValue{padding:11px 12px}}
