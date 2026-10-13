@@ -45,7 +45,7 @@ export async function GET() {
             GLOBAL INVESTING, SIMPLIFIED
           </div>
           <div style={{ fontSize: 66, lineHeight: 1.08, fontWeight: 800, letterSpacing: -2 }}>Your goals.</div>
-          <div style={{ fontSize: 66, lineHeight: 1.08, fontWeight: 800, letterSpacing: -2, color: "#0ecb81 }}>
+          <div style={{ fontSize: 66, lineHeight: 1.08, fontWeight: 800, letterSpacing: -2, color: "#0ecb81" }}>
             A global perspective.
           </div>
           <div style={{ fontSize: 23, lineHeight: 1.5, color: "#d0e5dc", marginTop: 22 }}>
