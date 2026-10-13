@@ -1436,3 +1436,9 @@ html[data-theme='dark'] .app select{
  .content .exchangeGain{font-size:12px;min-height:38px}
  .content .exchangeDeposit{min-width:108px;padding:14px 20px}
 }
+
+
+/* Globalvest dashboard preference: green deposit action and clear balance eye control */
+.exchangeDeposit{background:#16a34a!important;color:#fff!important;box-shadow:0 4px 12px rgba(22,163,74,.22)!important}
+.exchangeDeposit:hover{background:#15803d!important}
+.exchangeEye{display:inline-flex;align-items:center;justify-content:center;min-width:34px;min-height:34px;border-radius:9px;background:rgba(22,163,74,.10);color:#15803d;font-size:20px;cursor:pointer}
