@@ -1148,3 +1148,19 @@ html[data-theme='dark'] .interactionLoadingIndicator{background:#171a20;color:#f
 .verificationCodeBox{display:grid;gap:10px;margin:12px 0}
 .verificationCodeBox p{font-size:13px;line-height:1.5;margin:0 0 4px}
 .btcChartFrame iframe{display:block;width:100%;height:100%;border:0}
+
+
+/* Catch inline light surfaces in dashboard panels while dark mode is active. */
+html[data-theme='dark'] .content [style*="background:#fff"],
+html[data-theme='dark'] .content [style*="background: #fff"],
+html[data-theme='dark'] .content [style*="background-color:#fff"],
+html[data-theme='dark'] .content [style*="background-color: #fff"],
+html[data-theme='dark'] .content [style*="background:white"],
+html[data-theme='dark'] .content [style*="background: white"],
+html[data-theme='dark'] .content [style*="rgb(255, 255, 255)"]{
+  background:#14171c!important;color:#eaecef!important;border-color:#303640!important;
+}
+html[data-theme='dark'] .content [style*="color:#000"],
+html[data-theme='dark'] .content [style*="color: #000"],
+html[data-theme='dark'] .content [style*="color:black"],
+html[data-theme='dark'] .content [style*="color: black"]{color:#eaecef!important}
