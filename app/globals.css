@@ -1388,3 +1388,51 @@ html[data-theme='dark'] .app select{
    border-color:#ededed!important
  }
 }
+
+/* Full reference-inspired exchange dashboard structure on mobile */
+@media(max-width:700px){
+ .content .quickActions{display:none!important}
+ .content .exchangeHome{display:block;margin:0;padding:0;background:#fff;color:#080808}
+ .content .exchangeAssets{padding:24px 18px 0;background:#fff;border-bottom:1px solid #ededed}
+ .content .exchangeAssetsLabel{display:flex;align-items:center;gap:10px;font-size:15px;color:#555;line-height:1.4}
+ .content .exchangeEye{border:0;background:transparent;color:#111;font-size:23px;line-height:1;padding:0 2px}
+ .content .exchangeBalanceLine{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px}
+ .content .exchangeBalanceLine>strong{font-size:36px;line-height:1.1;letter-spacing:-.8px;font-weight:800;color:#050505}
+ .content .exchangeDeposit{flex:0 0 auto;border:0;border-radius:32px;padding:17px 29px;background:#1246f5;color:#fff;font-size:17px;font-weight:800;min-width:130px}
+ .content .exchangeApprox{margin-top:13px;padding-bottom:24px;color:#a0a0a0;font-size:18px;font-weight:600}
+ .content .exchangeAccountStrip{margin:0 -18px;padding:15px 18px 18px;display:flex;align-items:center;gap:25px;overflow-x:auto;white-space:nowrap;border-top:0}
+ .content .exchangeAccountStrip button{display:flex;align-items:center;gap:12px;border:0;padding:0;background:transparent;color:#111;font-size:14px}
+ .content .exchangeAccountStrip button b{font-size:14px;font-weight:800;color:#111}
+ .content .exchangeAccountStrip button strong{font-size:14px;font-weight:800;color:#329e7b}
+ .content .exchangeAccountStrip button span{font-size:26px;color:#111}
+ .content .exchangeShortcuts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px 4px;padding:23px 12px 25px;background:#fff;border-bottom:7px solid #f7f7f7}
+ .content .exchangeShortcuts button{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:9px;border:0;padding:0 1px;background:transparent;color:#080808}
+ .content .exchangeShortcutIcon{width:56px;height:56px;display:grid;place-items:center;border-radius:50%;background:#f3f4f6;color:#080808;font-size:28px;font-weight:500;line-height:1}
+ .content .exchangeShortcuts button b{min-height:34px;max-width:100%;font-size:13px;line-height:1.25;font-weight:700;text-align:center;color:#080808;overflow-wrap:anywhere}
+ .content .exchangeMarketSection{padding:20px 0 8px;background:#fff}
+ .content .exchangeMarketTabs{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 18px 16px;overflow-x:auto}
+ .content .exchangeMarketTabs button{flex:0 0 auto;border:0;background:transparent;padding:11px 4px;border-radius:28px;color:#9a9a9a;font-size:14px;font-weight:800;white-space:nowrap}
+ .content .exchangeMarketTabs button.selected{padding:13px 21px;background:#f3f4f6;color:#080808}
+ .content .exchangeMarketTabs button:not(.selected):not(.muted){color:#999}
+ .content .exchangeCoinList{display:flex;flex-direction:column}
+ .content .exchangeCoinRow{width:100%;display:grid;grid-template-columns:48px minmax(80px,1fr) minmax(88px,auto) 94px;align-items:center;gap:8px;border:0;background:#fff;padding:17px 14px;color:#111;text-align:left}
+ .content .exchangeCoinLogo{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:24px;font-weight:800;color:#fff}
+ .content .exchangeCoinLogo.ethereum{color:#333;background:#f0f0f0!important}
+ .content .exchangeCoinLogo.bitcoin{color:#fff}
+ .content .exchangeCoinLogo.solana{color:#fff}
+ .content .exchangeCoinSymbol{font-size:15px;font-weight:800;white-space:nowrap;color:#080808}
+ .content .exchangeCoinPrice{display:flex;flex-direction:column;align-items:flex-end;gap:2px;min-width:0}
+ .content .exchangeCoinPrice strong{font-size:15px;line-height:1.2;font-weight:800;color:#111;white-space:nowrap}
+ .content .exchangeCoinPrice small{font-size:12px;color:#666;white-space:nowrap}
+ .content .exchangeGain{display:flex;align-items:center;justify-content:center;min-height:43px;padding:0 7px;border-radius:8px;background:#2da77a;color:#fff;font-size:15px;font-weight:800;white-space:nowrap}
+ .content .mobileBottomNav{display:grid}
+}
+@media(max-width:380px){
+ .content .exchangeCoinRow{grid-template-columns:40px minmax(67px,1fr) minmax(80px,auto) 76px;gap:5px;padding-left:10px;padding-right:10px}
+ .content .exchangeCoinLogo{width:36px;height:36px;font-size:21px}
+ .content .exchangeCoinSymbol{font-size:13px}
+ .content .exchangeCoinPrice strong{font-size:13px}
+ .content .exchangeCoinPrice small{font-size:11px}
+ .content .exchangeGain{font-size:12px;min-height:38px}
+ .content .exchangeDeposit{min-width:108px;padding:14px 20px}
+}
