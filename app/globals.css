@@ -1457,3 +1457,19 @@ html[data-theme='dark'] .app select{
 .content .exchangeLocalBalance{font-size:16px;font-weight:800;color:#252a31;line-height:1.4;margin:0 0 15px 1px;display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
 .content .exchangeLocalBalance span{font-size:12px;font-weight:600;color:#8a9099}
 @media(max-width:480px){.content .exchangeAssetsLabel{font-size:18px!important}.content .exchangeBalanceLine>strong{font-size:clamp(32px,8vw,40px)!important}.content .exchangeLocalBalance{font-size:15px}}
+
+
+/* Globalvest launchpool and official coin-logo presentation */
+.content .exchangeCoinLogo img{display:block;width:28px;height:28px;object-fit:contain;border-radius:50%}
+.launchpoolGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 28px}
+.launchpoolCard{min-width:0;padding:18px;border:1px solid #e5e7eb;border-radius:16px;background:var(--card,#fff);color:var(--text,#111827);box-shadow:0 5px 18px rgba(15,23,42,.04)}
+.launchpoolCardTop{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}
+.launchpoolCardTop img{width:48px;height:48px;object-fit:contain;border-radius:50%;background:#f3f4f6}
+.launchpoolCard h3{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:18px;font-weight:800}
+.launchpoolCard h3 small{font-size:12px;color:#64748b;font-weight:700}
+.launchpoolCard p{min-height:38px;color:var(--muted,#64748b);font-size:13px;line-height:1.5}
+.launchpoolCard .primary{width:100%;margin-top:8px}
+.inviteSteps{display:grid;gap:8px;margin:12px 0 18px}
+.inviteSteps .listRow{align-items:flex-start}
+.inviteSteps .listRow small{display:block;max-width:680px;white-space:normal;line-height:1.5;margin-top:5px}
+@media(max-width:600px){.launchpoolGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.launchpoolCard{padding:12px}.launchpoolCardTop{align-items:flex-start;flex-direction:column}.launchpoolCard h3{font-size:15px}.launchpoolCard p{font-size:12px}.launchpoolCard .badge{font-size:10px}}
