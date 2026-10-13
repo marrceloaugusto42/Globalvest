@@ -1442,3 +1442,9 @@ html[data-theme='dark'] .app select{
 .exchangeDeposit{background:#16a34a!important;color:#fff!important;box-shadow:0 4px 12px rgba(22,163,74,.22)!important}
 .exchangeDeposit:hover{background:#15803d!important}
 .exchangeEye{display:inline-flex;align-items:center;justify-content:center;min-width:34px;min-height:34px;border-radius:9px;background:rgba(22,163,74,.10);color:#15803d;font-size:20px;cursor:pointer}
+
+
+/* Keep the main wallet amount compact and inset from the card edge. */
+.content .exchangeBalanceLine{justify-content:flex-start;gap:18px;padding-left:8px;padding-right:8px}
+.content .exchangeBalanceLine>strong{font-size:30px;letter-spacing:-.45px;min-width:0;flex:1;overflow-wrap:anywhere}
+@media(max-width:480px){.content .exchangeBalanceLine{gap:12px;padding-left:10px;padding-right:10px}.content .exchangeBalanceLine>strong{font-size:26px;letter-spacing:-.3px}.content .exchangeDeposit{min-width:96px;padding:13px 17px}}
