@@ -1,7 +1,7 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://mbmmdxqbwrjcnklbmogr.supabase.co";
-const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "sb_publishable_sQfBJtUT3TWDonu3Eo77KQ_MSVbq0uz";
+const SUPABASE_URL = "https://cclyccbzupmdlthvxayp.supabase.co";
+const SUPABASE_KEY = "sb_publishable_bzr8MMjZ8-DXegs8MEpkvQ_Jgk5dd4F";
 
 let client: SupabaseClient | null = null;
 export function getSupabase() {
