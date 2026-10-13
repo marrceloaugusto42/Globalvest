@@ -1448,3 +1448,12 @@ html[data-theme='dark'] .app select{
 .content .exchangeBalanceLine{justify-content:flex-start;gap:18px;padding-left:8px;padding-right:8px}
 .content .exchangeBalanceLine>strong{font-size:30px;letter-spacing:-.45px;min-width:0;flex:1;overflow-wrap:anywhere}
 @media(max-width:480px){.content .exchangeBalanceLine{gap:12px;padding-left:10px;padding-right:10px}.content .exchangeBalanceLine>strong{font-size:26px;letter-spacing:-.3px}.content .exchangeDeposit{min-width:96px;padding:13px 17px}}
+
+
+/* Strong, realistic asset hierarchy with a secondary local-currency estimate. */
+.content .exchangeAssetsLabel{font-size:19px!important;font-weight:800!important;color:#252a31!important;gap:12px}
+.content .exchangeBalanceLine>strong{font-size:clamp(34px,7vw,44px)!important;line-height:1.08!important;letter-spacing:-1px!important;font-weight:850!important}
+.content .exchangeApprox{font-size:15px!important;line-height:1.4!important;margin-top:8px!important;padding-bottom:5px!important;color:#818894!important;font-weight:600!important}
+.content .exchangeLocalBalance{font-size:16px;font-weight:800;color:#252a31;line-height:1.4;margin:0 0 15px 1px;display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.content .exchangeLocalBalance span{font-size:12px;font-weight:600;color:#8a9099}
+@media(max-width:480px){.content .exchangeAssetsLabel{font-size:18px!important}.content .exchangeBalanceLine>strong{font-size:clamp(32px,8vw,40px)!important}.content .exchangeLocalBalance{font-size:15px}}
