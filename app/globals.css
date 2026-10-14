@@ -1820,3 +1820,63 @@ html[data-theme='dark'] .supportInboxItem.active{background:#202a32!important}
 html[data-theme='dark'] .supportInboxThreadHead select,
 html[data-theme='dark'] .supportInboxComposer textarea,
 html[data-theme='dark'] .supportChatActions textarea{background:#0e1319!important;color:#f1f5f9!important;border-color:#3a4350!important}
+
+
+/* Consistent screenshot-matched dashboard on every phone-sized viewport.
+   This final rule intentionally wins over earlier desktop/tablet and theme rules. */
+@media (max-width: 900px) {
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  .app{display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;overflow-x:hidden!important;background:#fff!important;color:#111!important}
+  .app .content{display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important;padding:12px 0 calc(88px + env(safe-area-inset-bottom))!important;overflow-x:hidden!important;background:#fff!important;color:#111!important}
+  .app .content>header{width:100%!important;max-width:100%!important;min-width:0!important;padding:8px 14px 12px!important;box-sizing:border-box!important;background:#fff!important;color:#111!important}
+  .app .content>header h1{font-size:clamp(22px,5vw,28px)!important;line-height:1.2!important;color:#111!important}
+  .app .content .exchangeSearchBar{display:flex!important;box-sizing:border-box;width:calc(100% - 28px)!important;max-width:none!important;margin:8px 14px 0!important}
+  .app .content .exchangeHome{display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important;padding:0!important;background:#fff!important;color:#080808!important}
+  .app .content .exchangeAssets{box-sizing:border-box;width:100%!important;min-width:0!important;padding:20px 16px 0!important;background:#fff!important;border-bottom:1px solid #ededed!important}
+  .app .content .exchangeAssetsLabel{color:#555!important;font-size:15px!important}
+  .app .content .exchangeBalanceLine{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;min-width:0!important}
+  .app .content .exchangeBalanceLine>strong{min-width:0!important;font-size:clamp(25px,6.4vw,36px)!important;letter-spacing:-.6px!important;overflow-wrap:anywhere!important;color:#050505!important}
+  .app .content .exchangeDeposit{flex:0 0 auto!important;min-width:100px!important;padding:13px 20px!important;border:0!important;border-radius:28px!important;background:#1246f5!important;color:#fff!important;font-size:15px!important;font-weight:800!important;white-space:nowrap!important}
+  .app .content .exchangeApprox{font-size:15px!important;color:#999!important;overflow-wrap:anywhere!important}
+  .app .content .exchangeLocalBalance,.app .content .exchangeLocalCurrencyValue{overflow-wrap:anywhere!important}
+  .app .content .exchangeAccountStrip{max-width:100%!important;box-sizing:border-box!important;overflow-x:auto!important}
+  .app .content .exchangeShortcuts{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:22px 4px!important;padding:20px 8px 22px!important;background:#fff!important}
+  .app .content .exchangeShortcuts button{min-width:0!important;max-width:100%!important}
+  .app .content .exchangeShortcutIcon{width:clamp(42px,12vw,56px)!important;height:clamp(42px,12vw,56px)!important;font-size:clamp(21px,6vw,28px)!important}
+  .app .content .exchangeShortcuts button b{font-size:clamp(10px,3.2vw,13px)!important;line-height:1.25!important;overflow-wrap:anywhere!important;color:#080808!important}
+  .app .content .exchangeMarketSection{display:block!important;width:100%!important;min-width:0!important;padding:18px 0 8px!important;background:#fff!important}
+  .app .content .exchangeMarketTabs{display:flex!important;gap:8px!important;justify-content:flex-start!important;max-width:100%!important;overflow-x:auto!important;padding:0 12px 14px!important;scrollbar-width:none}
+  .app .content .exchangeMarketTabs button{flex:0 0 auto!important;font-size:clamp(12px,3.5vw,14px)!important;white-space:nowrap!important}
+  .app .content .exchangeMarketTabs button.selected{padding:11px 14px!important}
+  .app .content .exchangeCoinList{width:100%!important;min-width:0!important}
+  .app .content .exchangeCoinRow{box-sizing:border-box!important;width:100%!important;min-width:0!important;grid-template-columns:clamp(32px,10vw,42px) minmax(0,1fr) minmax(72px,auto) clamp(68px,19vw,88px)!important;gap:clamp(4px,1.5vw,8px)!important;padding:15px 10px!important;background:#fff!important;color:#111!important}
+  .app .content .exchangeCoinLogo{width:clamp(30px,10vw,42px)!important;height:clamp(30px,10vw,42px)!important;font-size:clamp(17px,5.5vw,24px)!important}
+  .app .content .exchangeCoinSymbol{font-size:clamp(11px,3.6vw,15px)!important;white-space:normal!important;overflow-wrap:anywhere!important;color:#080808!important}
+  .app .content .exchangeCoinPrice{min-width:0!important;align-items:flex-end!important}
+  .app .content .exchangeCoinPrice strong{font-size:clamp(11px,3.6vw,15px)!important;white-space:normal!important;overflow-wrap:anywhere!important;color:#111!important}
+  .app .content .exchangeCoinPrice small{font-size:clamp(9px,2.9vw,12px)!important;white-space:normal!important}
+  .app .content .exchangeGain{min-width:0!important;box-sizing:border-box!important;min-height:36px!important;padding:0 4px!important;font-size:clamp(10px,3.3vw,14px)!important;white-space:nowrap!important}
+  .app .content .quickActions{display:none!important}
+  .app .mobileBottomNav{display:grid!important;position:fixed!important;z-index:100!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;box-sizing:border-box!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;height:calc(68px + env(safe-area-inset-bottom))!important;padding:6px 4px env(safe-area-inset-bottom)!important;background:#fff!important;border-top:1px solid #ededed!important}
+  .app .mobileBottomNav button{min-width:0!important;height:52px!important;padding:2px 0!important;color:#888!important;font-size:clamp(9px,2.8vw,11px)!important;font-weight:800!important}
+  .app .mobileBottomNav button.active{color:#080808!important}
+  .app .mobileBottomNav button span{font-size:clamp(20px,6vw,25px)!important}
+  html[data-theme='dark'] .app,html[data-theme='dark'] .app .content,
+  html[data-theme='dark'] .app .content>header,html[data-theme='dark'] .app .content .exchangeHome,
+  html[data-theme='dark'] .app .content .exchangeAssets,html[data-theme='dark'] .app .content .exchangeShortcuts,
+  html[data-theme='dark'] .app .content .exchangeMarketSection,html[data-theme='dark'] .app .content .exchangeCoinRow,
+  html[data-theme='dark'] .app .mobileBottomNav{background:#fff!important;color:#111!important}
+  html[data-theme='dark'] .app .content .exchangeAssetsLabel,
+  html[data-theme='dark'] .app .content .exchangeApprox,
+  html[data-theme='dark'] .app .content .exchangeCoinPrice small{color:#666!important}
+  html[data-theme='dark'] .app .content .exchangeBalanceLine>strong,
+  html[data-theme='dark'] .app .content .exchangeShortcuts button b,
+  html[data-theme='dark'] .app .content .exchangeCoinSymbol,
+  html[data-theme='dark'] .app .content .exchangeCoinPrice strong{color:#111!important}
+}
+@media (max-width: 360px) {
+  .app .content .exchangeCoinRow{grid-template-columns:30px minmax(0,1fr) minmax(64px,auto) 64px!important;gap:4px!important;padding-left:7px!important;padding-right:7px!important}
+  .app .content .exchangeCoinSymbol{font-size:10px!important}
+  .app .content .exchangeCoinPrice strong{font-size:10px!important}
+  .app .content .exchangeGain{font-size:9px!important;padding:0 2px!important}
+}
