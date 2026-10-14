@@ -1979,3 +1979,12 @@ html[data-theme='dark'] .todayPlanIcon{background:#12382d!important;color:#35d6a
 .biometricLockCard h2{margin:0 0 10px;font-size:25px;font-weight:900}
 .biometricLockCard p{margin:0 0 22px;color:#b5c0cc;font-size:14px;line-height:1.6}
 .biometricLockCard button{width:100%;min-height:48px;margin-top:9px}
+
+.marketTable .marketRow{grid-template-columns:minmax(170px,1.45fr) minmax(95px,.9fr) minmax(70px,.65fr) minmax(105px,.9fr) 60px;gap:12px}
+.marketTable .marketTableHeader{background:#f5f7fa;color:#687586;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;padding-top:12px;padding-bottom:12px;cursor:default}
+.marketTable .marketTableHeader span{white-space:nowrap}
+html[data-theme='dark'] .marketTable .marketTableHeader{background:#20252c;color:#aab4c0;border-color:#343a40}
+html[data-theme='dark'] .marketTable{background:#181a20;border-color:#343a40}
+html[data-theme='dark'] .marketTable .marketRow{border-color:#343a40}
+@media(max-width:720px){.marketTable .marketRow{grid-template-columns:minmax(105px,1.2fr) minmax(78px,.9fr) minmax(60px,.65fr) minmax(76px,.8fr) 42px;gap:7px;padding:13px 10px}.marketTable .marketTableHeader{font-size:9px;padding:10px}.marketTable .marketRow strong{font-size:12px}.marketTable .marketName{gap:6px;font-size:12px}.marketTable .marketDot{width:27px;height:27px}.marketTable .marketRow button{padding:5px 7px;font-size:10px}}
+@media(max-width:380px){.marketTable .marketRow{grid-template-columns:minmax(88px,1.1fr) minmax(68px,.9fr) minmax(52px,.6fr) minmax(64px,.75fr) 35px;gap:5px;padding:11px 7px}.marketTable .marketRow strong{font-size:10px}.marketTable .marketName small{font-size:9px}}
