@@ -1952,3 +1952,9 @@ html[data-theme='dark'] .content .notificationButton i{background:#f6465d!import
  html[data-theme='dark'] .content .quickActions{background:#0b0e11!important}
  html[data-theme='dark'] .content .quickActions button{background:#181a20!important;color:#eaecef!important;border-color:#343a40!important}
 }
+
+.kycGateNotice{margin:14px 0 18px;padding:14px 16px;border:1px solid #f0d58a;border-radius:12px;background:#fff8df;color:#6b4b00}
+.kycGateNotice b{display:block;font-size:14px;font-weight:900;margin-bottom:5px;color:#6b4b00}
+.kycGateNotice p{margin:0;font-size:13px;line-height:1.55;color:#6b4b00}
+html[data-theme='dark'] .kycGateNotice{background:#2a2415!important;border-color:#655024!important;color:#f6d77a!important}
+html[data-theme='dark'] .kycGateNotice b,html[data-theme='dark'] .kycGateNotice p{color:#f6d77a!important}
