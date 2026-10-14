@@ -1749,3 +1749,6 @@ html[data-theme='dark'] .heroLoginButton{background:#181c22;color:#f5f7fa;border
 .exchangeLocalCurrencyValue strong{font-size:19px;font-weight:800;color:var(--text,#111827);overflow-wrap:anywhere}
 .exchangeLocalCurrencyValue small{font-size:10px;line-height:1.5;color:var(--muted,#64748b)}
 @media(max-width:600px){.exchangeLocalCurrencyValue{padding:11px 12px}.exchangeLocalCurrencyValue strong{font-size:17px}}
+
+/* Positive verification feedback */
+.authSuccess{display:block;margin:12px 0;padding:12px 14px;border:1px solid #a7dfbf;border-radius:10px;background:#e8f8ee;color:#147a3d;font-size:14px;font-weight:700;line-height:1.5}
