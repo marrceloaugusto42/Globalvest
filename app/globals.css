@@ -1823,3 +1823,15 @@ html[data-theme='dark'] .supportChatActions textarea{background:#0e1319!importan
 
 /* Keep the notification bell in its original header position: after language and before profile. */
 @media(max-width:900px){.mobileHeaderActions .notificationButton{order:2!important}.mobileHeaderActions .mobileIcon{order:3!important}}
+
+
+/* Header spacing correction: keep the bell between language and profile, with safe space from the screen edge. */
+@media(max-width:900px){
+ .mobileTopBrand{width:100%;box-sizing:border-box;gap:8px;padding-right:8px}
+ .mobileTopBrand .brand{flex:0 0 auto}
+ .mobileHeaderActions{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-left:auto;margin-right:2px;min-width:0}
+ .mobileHeaderActions .globalvestLanguagePickerWrap{order:1;flex:0 1 auto;min-width:0}
+ .mobileHeaderActions .notificationButton{order:2!important;flex:0 0 40px;width:40px;height:40px;margin:0}
+ .mobileHeaderActions .mobileIcon{order:3!important;flex:0 0 40px;width:40px;height:40px;margin-right:2px}
+}
+@media(max-width:380px){.mobileTopBrand{gap:6px;padding-right:7px}.mobileHeaderActions{gap:7px}.mobileTopBrand .brand{font-size:16px}.mobileHeaderActions .globalvestLanguagePicker{max-width:116px}}
