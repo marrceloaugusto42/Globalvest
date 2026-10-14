@@ -1972,3 +1972,10 @@ html[data-theme='dark'] .todayPlanLabel,html[data-theme='dark'] .todayPlanCard s
 html[data-theme='dark'] .todayPlanCard strong{color:#35d6a0!important}
 html[data-theme='dark'] .todayPlanIcon{background:#12382d!important;color:#35d6a0!important}
 @media(max-width:720px){.todayPlanCard{padding:13px 14px}.todayPlanCard strong{font-size:22px}.todayPlanCard small{font-size:10px}.marketCapValue{font-size:11px!important}.marketRow{grid-template-columns:minmax(120px,1.4fr) minmax(80px,1fr) minmax(65px,.7fr) minmax(75px,.9fr) auto!important;gap:8px!important}.marketRow .live{display:none}}
+
+.biometricLockOverlay{position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(5,10,18,.96);backdrop-filter:blur(18px)}
+.biometricLockCard{width:min(100%,390px);padding:30px 24px;border:1px solid #303b49;border-radius:24px;background:#111820;color:#eaecef;text-align:center;box-shadow:0 24px 90px rgba(0,0,0,.45)}
+.biometricLockIcon{width:78px;height:78px;margin:0 auto 18px;display:grid;place-items:center;border-radius:50%;border:1px solid #2d8066;background:#12382d;color:#35d6a0;font-size:42px;font-weight:900}
+.biometricLockCard h2{margin:0 0 10px;font-size:25px;font-weight:900}
+.biometricLockCard p{margin:0 0 22px;color:#b5c0cc;font-size:14px;line-height:1.6}
+.biometricLockCard button{width:100%;min-height:48px;margin-top:9px}
