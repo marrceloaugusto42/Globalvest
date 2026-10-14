@@ -1820,3 +1820,6 @@ html[data-theme='dark'] .supportInboxItem.active{background:#202a32!important}
 html[data-theme='dark'] .supportInboxThreadHead select,
 html[data-theme='dark'] .supportInboxComposer textarea,
 html[data-theme='dark'] .supportChatActions textarea{background:#0e1319!important;color:#f1f5f9!important;border-color:#3a4350!important}
+
+/* Keep the notification bell in its original header position: after language and before profile. */
+@media(max-width:900px){.mobileHeaderActions .notificationButton{order:2!important}.mobileHeaderActions .mobileIcon{order:3!important}}
