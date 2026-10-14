@@ -1958,3 +1958,17 @@ html[data-theme='dark'] .content .notificationButton i{background:#f6465d!import
 .kycGateNotice p{margin:0;font-size:13px;line-height:1.55;color:#6b4b00}
 html[data-theme='dark'] .kycGateNotice{background:#2a2415!important;border-color:#655024!important;color:#f6d77a!important}
 html[data-theme='dark'] .kycGateNotice b,html[data-theme='dark'] .kycGateNotice p{color:#f6d77a!important}
+
+/* Globalvest daily plan and expanded market table */
+.todayPlanCard{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:15px 0 10px;padding:15px 17px;border:1px solid #d9e4ef;border-radius:14px;background:linear-gradient(115deg,#f4f8fc,#fff);color:#17212f}
+.todayPlanCard>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.todayPlanLabel{font-size:11px;font-weight:900;letter-spacing:.12em;color:#697b8d}
+.todayPlanCard strong{font-size:24px;line-height:1.15;font-weight:900;color:#16865d}
+.todayPlanCard small{font-size:11px;line-height:1.45;color:#68798b;max-width:560px}
+.todayPlanIcon{display:grid;place-items:center;width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:#e4f7ee;color:#16865d;font-size:24px;font-weight:900}
+.marketCapValue{font-size:13px!important;white-space:nowrap}
+html[data-theme='dark'] .todayPlanCard{background:linear-gradient(115deg,#181f28,#11161d)!important;border-color:#303b49!important;color:#eaecef!important}
+html[data-theme='dark'] .todayPlanLabel,html[data-theme='dark'] .todayPlanCard small{color:#a5b2c1!important}
+html[data-theme='dark'] .todayPlanCard strong{color:#35d6a0!important}
+html[data-theme='dark'] .todayPlanIcon{background:#12382d!important;color:#35d6a0!important}
+@media(max-width:720px){.todayPlanCard{padding:13px 14px}.todayPlanCard strong{font-size:22px}.todayPlanCard small{font-size:10px}.marketCapValue{font-size:11px!important}.marketRow{grid-template-columns:minmax(120px,1.4fr) minmax(80px,1fr) minmax(65px,.7fr) minmax(75px,.9fr) auto!important;gap:8px!important}.marketRow .live{display:none}}
