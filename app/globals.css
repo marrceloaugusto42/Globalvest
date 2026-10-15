@@ -2092,3 +2092,29 @@ html{top:0!important}
 html{top:0!important}
 .googleTranslateHidden,.goog-te-banner-frame,.skiptranslate{display:none!important}
 body{top:0!important}
+
+
+/* Market pages follow the selected app theme, including coin details and charts. */
+html[data-theme='dark'] .content .marketTable,
+html[data-theme='dark'] .content .marketTable .marketTableHeader,
+html[data-theme='dark'] .content .marketTable .marketRow,
+html[data-theme='dark'] .content .coinChartPanel,
+html[data-theme='dark'] .content .coinChartFrame,
+html[data-theme='dark'] .content .coinChartIndicators span {
+  background-color:#181a20!important;
+  color:#eaecef!important;
+  border-color:#343a40!important;
+}
+html[data-theme='dark'] .content .marketTable .marketTableHeader {background:#20252c!important;color:#aab4c0!important}
+html[data-theme='dark'] .content .marketName b,
+html[data-theme='dark'] .content .marketRow strong:not(.marketChangeUp):not(.marketChangeDown),
+html[data-theme='dark'] .content .coinChartHeading h2 {color:#eaecef!important}
+html[data-theme='dark'] .content .marketName small,
+html[data-theme='dark'] .content .coinChartHeading small,
+html[data-theme='dark'] .content .coinChartHeading h2 span,
+html[data-theme='dark'] .content .coinChartHeading p,
+html[data-theme='dark'] .content .chartDisclaimer {color:#aab4c0!important}
+html[data-theme='dark'] .content .coinChartIndicators span {background:#20252c!important;color:#d5dbe3!important;border-color:#343a40!important}
+html[data-theme='dark'] .content .marketDot[data-fallback] {background:#2b3139!important;color:#eaecef!important}
+.content .marketDot[data-fallback]::after {content:attr(data-fallback);font-size:10px;font-weight:900;letter-spacing:-.04em}
+html {zoom:80%!important}
