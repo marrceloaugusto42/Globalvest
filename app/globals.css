@@ -2087,3 +2087,8 @@ html[data-theme='dark'] .content .exchangeEye{color:#eaecef!important;background
 .googleTranslateHidden,.goog-te-banner-frame,.skiptranslate{display:none!important}
 html{top:0!important}
 @media(max-width:900px){.content .dashboardHeaderTools{display:flex!important;align-items:center!important;gap:8px!important;flex-wrap:nowrap!important}.content .dashboardHeaderTools>.globalvestLanguagePickerWrap>.globalvestLanguagePicker{max-width:108px!important;min-width:0!important;font-size:12px!important;padding:0 6px!important}.content .dashboardHeaderTools>.headerSupportButton{flex:0 0 auto!important}}
+
+/* Keep language selection as a preference only; block automatic browser translation widgets. */
+html{top:0!important}
+.googleTranslateHidden,.goog-te-banner-frame,.skiptranslate{display:none!important}
+body{top:0!important}
