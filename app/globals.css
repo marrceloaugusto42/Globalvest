@@ -2153,3 +2153,45 @@ html {zoom:82%!important}
 
 /* Requested site scale: 80 percent on laptop and mobile. */
 html { zoom:80%!important }
+
+
+/* Final laptop viewport fix: avoid shrinking the entire app and let dashboard content use the full available width. */
+@media (min-width: 901px) {
+  html { zoom: 1 !important; }
+  body { width: 100%; overflow-x: hidden; }
+  .app {
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: 240px minmax(0, 1fr) !important;
+    align-items: stretch;
+  }
+  .app > aside { width: auto; min-width: 0; }
+  .app > .content {
+    width: 100%;
+    max-width: none !important;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 30px clamp(28px, 3.2vw, 56px) !important;
+  }
+  .content > * { min-width: 0; }
+  .content .marketTable { max-width: 100%; }
+  .content .marketTable .marketRow,
+  .content .marketTable .marketTableHeader { min-width: 720px; }
+  .content .exchangeCards { grid-template-columns: minmax(280px, 1.6fr) repeat(3, minmax(150px, 1fr)); }
+  .content .assetStrip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .content .productGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .content .walletGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .content .adminStats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .content .adminPanels { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .content .earnGrid, .content .securityGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  .app { grid-template-columns: 210px minmax(0, 1fr) !important; }
+  .app > .content { padding: 24px !important; }
+  .content .exchangeCards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .content .exchangeCards .balanceCard { grid-column: 1 / -1; }
+  .content .exchangeCards .miniBalanceCard:last-child { grid-column: auto; }
+  .content .assetStrip { grid-template-columns: 1fr; }
+  .content .assetStrip > div { border-right: 0; border-bottom: 1px solid #eef0f2; }
+  .content .productGrid, .content .adminPanels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
