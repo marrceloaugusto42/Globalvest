@@ -2077,3 +2077,13 @@ html{zoom:75%!important}
 .content .exchangeEye svg{width:21px!important;height:21px!important;display:block!important}
 html[data-theme='dark'] .content .exchangeEye{color:#eaecef!important;background:rgba(234,236,239,.08)!important}
 @media(max-width:390px){.content .mobileTopBrand{gap:6px!important;padding-right:4px!important}.content .mobileTopBrand>.globalvestLanguagePickerWrap>.globalvestLanguagePicker{max-width:78px!important;min-width:66px!important}.content .mobileBottomNav button b{font-size:11px!important}}
+
+
+/* Dashboard language preference sits next to Support, never next to notifications. */
+.content .mobileTopBrand>.globalvestLanguagePickerWrap,.content .mobileHeaderActions .globalvestLanguagePickerWrap{display:none!important}
+.content .dashboardHeaderTools>.globalvestLanguagePickerWrap{display:flex!important;position:relative!important;z-index:100040!important;flex:0 0 auto!important;min-width:0!important}
+.content .dashboardHeaderTools>.globalvestLanguagePickerWrap>.globalvestLanguagePicker{max-width:128px!important;min-height:38px!important;padding:0 9px!important}
+.content .dashboardHeaderTools>.globalvestLanguagePickerWrap .languagePickerMenu{left:auto!important;right:0!important;top:calc(100% + 7px)!important;z-index:100060!important}
+.googleTranslateHidden,.goog-te-banner-frame,.skiptranslate{display:none!important}
+html{top:0!important}
+@media(max-width:900px){.content .dashboardHeaderTools{display:flex!important;align-items:center!important;gap:8px!important;flex-wrap:nowrap!important}.content .dashboardHeaderTools>.globalvestLanguagePickerWrap>.globalvestLanguagePicker{max-width:108px!important;min-width:0!important;font-size:12px!important;padding:0 6px!important}.content .dashboardHeaderTools>.headerSupportButton{flex:0 0 auto!important}}
