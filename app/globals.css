@@ -1999,3 +1999,14 @@ html[data-theme='dark'] .dashboardLanguagePicker .globalvestLanguagePicker{backg
 html[data-theme='dark'] .dashboardLanguagePicker .languagePickerMenu{background:#181a20;border-color:#343a40}
 html[data-theme='dark'] .dashboardLanguagePicker .languagePickerMenu button{color:#eaecef}
 @media(max-width:900px){.dashboardLanguagePicker{display:none!important}}
+
+/* Requested 80% overall interface zoom and fixed bottom quick actions */
+html{zoom:80%}
+.content{padding-bottom:calc(94px + env(safe-area-inset-bottom, 0px))!important}
+.mobileBottomNav{position:fixed!important;left:0!important;right:0!important;bottom:0!important;z-index:100000!important;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:4px!important;min-height:76px!important;padding:9px 8px calc(9px + env(safe-area-inset-bottom, 0px))!important;background:#181a20!important;border-top:1px solid #343a40!important;box-shadow:0 -6px 24px rgba(0,0,0,.2)!important}
+.mobileBottomNav button{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:4px!important;min-width:0!important;min-height:56px!important;border:0!important;border-radius:10px!important;background:transparent!important;color:#eaecef!important;font-size:12px!important;font-weight:900!important;white-space:nowrap!important}
+.mobileBottomNav button span{font-size:20px!important;line-height:22px!important;font-weight:950!important}
+.mobileBottomNav button b{font-size:12px!important;line-height:15px!important;font-weight:950!important}
+.mobileBottomNav button.active{background:#12382d!important;color:#35d6a0!important}
+.quickActions{display:none!important}
+@media(max-width:520px){.mobileBottomNav{min-height:72px!important;padding:7px 5px calc(7px + env(safe-area-inset-bottom, 0px))!important}.mobileBottomNav button b{font-size:11px!important}.mobileBottomNav button span{font-size:19px!important}}
