@@ -2056,3 +2056,24 @@ html{zoom:75%!important}
   .content .mobileTopBrand .languagePickerMenu,
   .content .mobileHeaderActions .languagePickerMenu{position:absolute!important;top:calc(100% + 6px)!important;right:0!important;left:auto!important;z-index:100050!important;max-height:65vh!important;overflow-y:auto!important}
 }
+
+
+/* Final polish: single mobile language picker, consistent loading surface, strong fixed actions. */
+.splash,html,body{background:#0b0e11!important;color:#eaecef}
+.splash{position:fixed!important;inset:0!important;width:100%!important;min-height:100dvh!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:12px!important;background:#0b0e11!important;color:#eaecef!important;z-index:999999!important}
+.splash p{color:#aeb4bc!important}
+.splashBar{background:#252b33!important}
+.content .mobileTopBrand>.globalvestLanguagePickerWrap{display:flex!important;position:relative!important;z-index:100020!important;flex:0 0 auto!important;min-width:0!important}
+.content .mobileTopBrand>.globalvestLanguagePickerWrap>.globalvestLanguagePicker{width:auto!important;max-width:100px!important;min-width:72px!important;min-height:40px!important;padding:0 7px!important}
+.content .mobileTopBrand>.globalvestLanguagePickerWrap .languagePickerMenu{left:0!important;right:auto!important;top:calc(100% + 7px)!important;z-index:100050!important}
+.content .mobileHeaderActions .globalvestLanguagePickerWrap{display:none!important}
+.content .dashboardHeaderTools .dashboardLanguagePicker{display:none!important}
+.content .mobileBottomNav{min-height:86px!important;padding:9px 8px calc(9px + env(safe-area-inset-bottom,0px))!important;background:#181a20!important;border-top:1px solid #343a40!important;box-shadow:0 -8px 24px rgba(0,0,0,.24)!important}
+.content .mobileBottomNav button{min-height:66px!important;border-radius:12px!important;font-size:14px!important;font-weight:950!important;letter-spacing:.01em!important;color:#eaecef!important}
+.content .mobileBottomNav button span{font-size:24px!important;font-weight:950!important}
+.content .mobileBottomNav button b{font-size:13px!important;line-height:16px!important;font-weight:950!important}
+.content .mobileBottomNav button.active{background:#12382d!important;color:#35d6a0!important}
+.content .exchangeEye{width:38px!important;height:38px!important;min-width:38px!important;min-height:38px!important;border-radius:10px!important;background:rgba(128,140,155,.12)!important;color:var(--gv-text,#1e2329)!important;touch-action:manipulation!important}
+.content .exchangeEye svg{width:21px!important;height:21px!important;display:block!important}
+html[data-theme='dark'] .content .exchangeEye{color:#eaecef!important;background:rgba(234,236,239,.08)!important}
+@media(max-width:390px){.content .mobileTopBrand{gap:6px!important;padding-right:4px!important}.content .mobileTopBrand>.globalvestLanguagePickerWrap>.globalvestLanguagePicker{max-width:78px!important;min-width:66px!important}.content .mobileBottomNav button b{font-size:11px!important}}
