@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description:
     "Explore global investment opportunities, manage your portfolio, and track your assets with Globalvest Capital.",
   applicationName: "Globalvest Capital",
+  manifest: "/manifest.webmanifest",
   icons: { icon: "/icon.svg", shortcut: "/icon.svg" },
   openGraph: {
     type: "website",
