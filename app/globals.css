@@ -1988,3 +1988,14 @@ html[data-theme='dark'] .marketTable{background:#181a20;border-color:#343a40}
 html[data-theme='dark'] .marketTable .marketRow{border-color:#343a40}
 @media(max-width:720px){.marketTable .marketRow{grid-template-columns:minmax(105px,1.2fr) minmax(78px,.9fr) minmax(60px,.65fr) minmax(76px,.8fr) 42px;gap:7px;padding:13px 10px}.marketTable .marketTableHeader{font-size:9px;padding:10px}.marketTable .marketRow strong{font-size:12px}.marketTable .marketName{gap:6px;font-size:12px}.marketTable .marketDot{width:27px;height:27px}.marketTable .marketRow button{padding:5px 7px;font-size:10px}}
 @media(max-width:380px){.marketTable .marketRow{grid-template-columns:minmax(88px,1.1fr) minmax(68px,.9fr) minmax(52px,.6fr) minmax(64px,.75fr) 35px;gap:5px;padding:11px 7px}.marketTable .marketRow strong{font-size:10px}.marketTable .marketName small{font-size:9px}}
+
+/* Desktop header language selector; mobile keeps the compact top-brand selector. */
+.dashboardLanguagePicker{position:relative;z-index:100020;display:flex;align-items:center;flex:0 0 auto}
+.dashboardLanguagePicker .globalvestLanguagePicker{min-height:40px;max-width:150px;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:0 11px;border:1px solid #dce2e9;border-radius:11px;background:#fff;color:#17212f;font-weight:800;white-space:nowrap}
+.dashboardLanguagePicker .languagePickerMenu{position:absolute;top:calc(100% + 8px);right:0;z-index:100030;width:190px;max-height:340px;overflow-y:auto;border:1px solid #dce2e9;border-radius:13px;background:#fff;box-shadow:0 16px 38px rgba(0,0,0,.18);padding:6px}
+.dashboardLanguagePicker .languagePickerMenu button{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;padding:10px;border:0;border-radius:8px;background:transparent;color:#17212f;text-align:left;font-size:13px;font-weight:700}
+.dashboardLanguagePicker .languagePickerMenu button:hover,.dashboardLanguagePicker .languagePickerMenu button[aria-selected=true]{background:#eef8f3;color:#08794f}
+html[data-theme='dark'] .dashboardLanguagePicker .globalvestLanguagePicker{background:#181a20;color:#eaecef;border-color:#343a40}
+html[data-theme='dark'] .dashboardLanguagePicker .languagePickerMenu{background:#181a20;border-color:#343a40}
+html[data-theme='dark'] .dashboardLanguagePicker .languagePickerMenu button{color:#eaecef}
+@media(max-width:900px){.dashboardLanguagePicker{display:none!important}}
