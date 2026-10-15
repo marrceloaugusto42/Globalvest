@@ -2040,3 +2040,19 @@ html[data-theme='dark'] .content .exchangeEye{color:#eaecef!important}
  .content .mobileTopBrand>.brand{font-size:13px!important}
  .content .mobileBottomNav button b{font-size:12px!important}
 }
+
+
+/* Globalvest refinements: 75% interface scale and visible top language control */
+html{zoom:75%!important}
+@media(max-width:900px){
+  .dashboardLanguagePicker{display:flex!important}
+  .content .mobileTopBrand{display:flex!important;align-items:center!important;gap:8px!important;padding-right:0!important;min-width:0!important}
+  .content .mobileTopBrand .globalvestLanguagePickerWrap,
+  .content .mobileHeaderActions .globalvestLanguagePickerWrap{display:flex!important;visibility:visible!important;opacity:1!important;position:relative!important;z-index:100030!important;flex:0 1 auto!important;min-width:0!important}
+  .content .mobileTopBrand .globalvestLanguagePicker,
+  .content .mobileHeaderActions .globalvestLanguagePicker{max-width:124px!important;min-height:36px!important;padding:0 7px!important;gap:4px!important;font-size:12px!important}
+  .content .mobileTopBrand .languagePickerLabel,
+  .content .mobileHeaderActions .languagePickerLabel{display:inline!important;overflow:hidden!important;text-overflow:ellipsis!important;max-width:72px!important}
+  .content .mobileTopBrand .languagePickerMenu,
+  .content .mobileHeaderActions .languagePickerMenu{position:absolute!important;top:calc(100% + 6px)!important;right:0!important;left:auto!important;z-index:100050!important;max-height:65vh!important;overflow-y:auto!important}
+}
