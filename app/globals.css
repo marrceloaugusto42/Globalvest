@@ -2262,3 +2262,16 @@ html { zoom: 1 !important; }
 @media(max-width:700px){.pwaInstallPrompt{right:12px;left:12px;bottom:90px;max-width:none}.pwaInstallPrompt button{min-height:48px}}
 /* Make fixed bottom navigation/actions easy to read and tap without changing layout semantics. */
 @media(max-width:900px){.app nav[aria-label*="bottom" i],.app .bottomNav,.app .bottomActions,.app .mobileBottomNav,.app .mobileBottomActions,.app .bottomBar{min-height:72px}.app nav[aria-label*="bottom" i] button,.app .bottomNav button,.app .bottomActions button,.app .mobileBottomNav button,.app .mobileBottomActions button,.app .bottomBar button{min-height:58px;min-width:64px;padding:10px 12px;font-size:14px;font-weight:800}.app nav[aria-label*="bottom" i] button svg,.app .bottomNav button svg,.app .bottomActions button svg,.app .mobileBottomNav button svg,.app .mobileBottomActions button svg,.app .bottomBar button svg{width:23px;height:23px}}
+
+
+/* Requested standard scale and identity-status prompt. */
+html { zoom: 90% !important; }
+.kycDashboardPrompt{display:flex;align-items:center;gap:14px;width:100%;margin:0 0 22px;padding:17px 20px;border:1px solid #d7e6f7;border-radius:14px;background:#f0f7ff;color:#14263b;box-sizing:border-box}
+.kycDashboardPrompt .kycPromptIcon{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:#dbeafe;color:#1d4ed8;font-size:22px;font-weight:900}
+.kycDashboardPrompt>div{flex:1;min-width:0}.kycDashboardPrompt strong{display:block;font-size:15px;font-weight:800}.kycDashboardPrompt p{margin:5px 0 0;font-size:13px;line-height:1.5;color:#42546a}
+.kycDashboardPrompt button{display:flex;align-items:center;gap:8px;flex-shrink:0;min-height:44px;padding:10px 15px;border:0;border-radius:9px;background:#1d4ed8;color:#fff;font-size:13px;font-weight:800;cursor:pointer}
+html[data-theme="dark"] .kycDashboardPrompt{background:#142337;border-color:#29425e;color:#f3f7fc}
+html[data-theme="dark"] .kycDashboardPrompt .kycPromptIcon{background:#1e3a5f;color:#93c5fd}
+html[data-theme="dark"] .kycDashboardPrompt p{color:#c1cfdf}
+html[data-theme="dark"] .kycDashboardPrompt button{background:#2563eb;color:#fff}
+@media(max-width:600px){.kycDashboardPrompt{align-items:flex-start;flex-wrap:wrap;padding:14px;gap:10px}.kycDashboardPrompt>div{flex:1 1 calc(100% - 56px)}.kycDashboardPrompt button{margin-left:52px;min-height:46px}}
