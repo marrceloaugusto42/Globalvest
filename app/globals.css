@@ -2435,3 +2435,143 @@ html[data-theme='dark'] .notificationItem span,html[data-theme='dark'] .notifica
  .content .exchangeAssets,.content .exchangeShortcuts,.content .exchangeMarketSection{border-radius:14px!important}
  .stat,.product,.panel,.wallet,.card{border-radius:14px!important}
 }
+
+
+/* Mobile exchange-style quick actions: larger tap targets and unmistakable labels. */
+.mobileBottomNav{
+  min-height:86px!important;
+  height:auto!important;
+  padding:9px 8px max(10px, env(safe-area-inset-bottom))!important;
+  gap:6px!important;
+  align-items:stretch!important;
+  box-shadow:0 -8px 28px rgba(8,16,28,.10)!important;
+  z-index:30!important;
+}
+.mobileBottomNav button{
+  flex:1 1 0!important;
+  min-width:0!important;
+  min-height:64px!important;
+  padding:8px 3px!important;
+  border-radius:12px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:5px!important;
+  font-size:14px!important;
+  font-weight:850!important;
+  line-height:1.1!important;
+  letter-spacing:-.01em!important;
+  -webkit-tap-highlight-color:transparent;
+}
+.mobileBottomNav button b{
+  display:block!important;
+  font-size:14px!important;
+  line-height:1.15!important;
+  font-weight:850!important;
+  white-space:nowrap!important;
+}
+.mobileBottomNav button span{
+  display:block!important;
+  font-size:25px!important;
+  line-height:1!important;
+  font-weight:800!important;
+}
+.mobileBottomNav button.active{
+  box-shadow:inset 0 0 0 1px rgba(54,163,255,.22)!important;
+}
+html[data-theme='dark']{
+  --gv-canvas:#0b0e11;
+  --gv-surface:#14181e;
+  --gv-surface-raised:#1b2028;
+  --gv-line:#2a3039;
+  --gv-ink:#eaecef;
+  --gv-muted:#9aa4b2;
+}
+html[data-theme='dark'] body,
+html[data-theme='dark'] .app,
+html[data-theme='dark'] .content{
+  background:#0b0e11!important;
+  color:#eaecef!important;
+}
+html[data-theme='dark'] .app aside{
+  background:#0b0e11!important;
+  border-right:1px solid #252b34!important;
+}
+html[data-theme='dark'] .content header,
+html[data-theme='dark'] .pageTitleRow{color:#f0f3f6!important}
+html[data-theme='dark'] .stat,
+html[data-theme='dark'] .product,
+html[data-theme='dark'] .panel,
+html[data-theme='dark'] .wallet,
+html[data-theme='dark'] .card,
+html[data-theme='dark'] .todayPlanCard,
+html[data-theme='dark'] .dailyProfitCard,
+html[data-theme='dark'] .exchangeAssets,
+html[data-theme='dark'] .exchangeShortcuts,
+html[data-theme='dark'] .exchangeMarketSection,
+html[data-theme='dark'] .notificationPanel{
+  background:#14181e!important;
+  color:#eaecef!important;
+  border-color:#2a3039!important;
+  box-shadow:0 5px 18px rgba(0,0,0,.18)!important;
+}
+html[data-theme='dark'] .content h1,
+html[data-theme='dark'] .content h2,
+html[data-theme='dark'] .content h3,
+html[data-theme='dark'] .content strong,
+html[data-theme='dark'] .dailyProfitMetrics strong,
+html[data-theme='dark'] .listRow b{
+  color:#f0f3f6!important;
+}
+html[data-theme='dark'] .content p,
+html[data-theme='dark'] .content small,
+html[data-theme='dark'] .content label,
+html[data-theme='dark'] .muted,
+html[data-theme='dark'] .productTop,
+html[data-theme='dark'] .dailyProfitMetrics span,
+html[data-theme='dark'] .dailyProfitMetrics small{
+  color:#9aa4b2!important;
+}
+html[data-theme='dark'] .mobileNav,
+html[data-theme='dark'] .mobileBottomNav{
+  background:rgba(11,14,17,.98)!important;
+  border-color:#2a3039!important;
+  box-shadow:0 -8px 30px rgba(0,0,0,.35)!important;
+  backdrop-filter:blur(18px);
+}
+html[data-theme='dark'] .mobileBottomNav button{
+  color:#b2bac5!important;
+}
+html[data-theme='dark'] .mobileBottomNav button.active{
+  color:#66b7ff!important;
+  background:rgba(54,163,255,.13)!important;
+}
+html[data-theme='dark'] .mobileBottomNav button.active b,
+html[data-theme='dark'] .mobileBottomNav button.active span{
+  color:#66b7ff!important;
+}
+html[data-theme='dark'] .primary,
+html[data-theme='dark'] .exchangeDeposit{
+  background:#0ecb81!important;
+  color:#071b13!important;
+  font-weight:850!important;
+}
+html[data-theme='dark'] .ghost{
+  background:#1b2028!important;
+  color:#eaecef!important;
+  border-color:#343b46!important;
+}
+html[data-theme='dark'] input,
+html[data-theme='dark'] select,
+html[data-theme='dark'] textarea{
+  background:#1b2028!important;
+  color:#eaecef!important;
+  border-color:#343b46!important;
+}
+@media(max-width:700px){
+  .content{padding-bottom:124px!important}
+  .mobileBottomNav{min-height:90px!important}
+  .mobileBottomNav button{min-height:68px!important}
+  .mobileBottomNav button b{font-size:14px!important}
+}
