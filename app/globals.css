@@ -2275,3 +2275,45 @@ html[data-theme="dark"] .kycDashboardPrompt .kycPromptIcon{background:#1e3a5f;co
 html[data-theme="dark"] .kycDashboardPrompt p{color:#c1cfdf}
 html[data-theme="dark"] .kycDashboardPrompt button{background:#2563eb;color:#fff}
 @media(max-width:600px){.kycDashboardPrompt{align-items:flex-start;flex-wrap:wrap;padding:14px;gap:10px}.kycDashboardPrompt>div{flex:1 1 calc(100% - 56px)}.kycDashboardPrompt button{margin-left:52px;min-height:46px}}
+
+
+/* Landing header balance: reserve space for the brand, language selector and auth actions. */
+@media (min-width: 901px) {
+  .landing.bybitInspired nav {
+    height: 88px;
+    max-width: 1480px;
+    padding: 12px clamp(22px, 2.5vw, 40px);
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) auto minmax(410px, 1.2fr);
+    align-items: center;
+    column-gap: clamp(16px, 2vw, 30px);
+  }
+  .landing.bybitInspired nav .brand { white-space: nowrap; min-width: 0; }
+  .landing.bybitInspired .landingMenu { display:flex; align-items:center; justify-content:center; gap:clamp(14px,1.6vw,26px); white-space:nowrap; }
+  .landing.bybitInspired .landingAuth { display:flex; align-items:center; justify-content:flex-end; gap:10px; min-width:0; white-space:nowrap; }
+  .landing.bybitInspired .landingAuth .globalvestLanguagePickerWrap { flex:0 1 155px; min-width:120px; }
+  .landing.bybitInspired .landingAuth .globalvestLanguagePicker { width:100%; min-width:0; max-width:none; height:42px; }
+  .landing.bybitInspired .landingAuth .qrLoginButton,
+  .landing.bybitInspired .landingAuth .loginLink,
+  .landing.bybitInspired .landingAuth .primary { flex:0 0 auto; min-height:42px; padding:10px 13px; }
+}
+@media (min-width: 901px) and (max-width: 1180px) {
+  .landing.bybitInspired nav { grid-template-columns:minmax(150px,.8fr) auto minmax(370px,1.4fr); column-gap:12px; padding-inline:18px; }
+  .landing.bybitInspired .landingMenu { gap:12px; }
+  .landing.bybitInspired .landingAuth { gap:7px; }
+  .landing.bybitInspired .landingAuth .globalvestLanguagePickerWrap { flex-basis:125px; min-width:105px; }
+  .landing.bybitInspired .landingAuth .qrLoginButton,
+  .landing.bybitInspired .landingAuth .loginLink,
+  .landing.bybitInspired .landingAuth .primary { padding-inline:9px; font-size:13px; }
+}
+@media (max-width: 900px) {
+  .landing.bybitInspired nav { height:auto; min-height:76px; padding:14px 18px; display:flex; flex-wrap:wrap; gap:12px; }
+  .landing.bybitInspired nav .brand { flex:1 1 145px; min-width:0; }
+  .landing.bybitInspired .landingMenu { order:3; flex:1 0 100%; display:flex; gap:16px; overflow-x:auto; padding:4px 0; }
+  .landing.bybitInspired .landingAuth { flex:1 1 100%; display:flex; flex-wrap:wrap; align-items:center; gap:8px; min-width:0; }
+  .landing.bybitInspired .landingAuth .globalvestLanguagePickerWrap { flex:1 1 145px; min-width:0; max-width:100%; }
+  .landing.bybitInspired .landingAuth .globalvestLanguagePicker { width:100%; min-width:0; max-width:none; }
+  .landing.bybitInspired .landingAuth .qrLoginButton,
+  .landing.bybitInspired .landingAuth .loginLink,
+  .landing.bybitInspired .landingAuth .primary { min-height:44px; flex:1 1 auto; padding:10px 12px; }
+}
