@@ -1638,7 +1638,7 @@ html[data-theme='dark'] .content .exchangeGain.marketChangeUnavailable{color:#84
 html[data-theme='dark'] .content .quickActions button{background:linear-gradient(180deg,#202630 0%,#181d25 100%)!important;border-color:#303846!important;color:#f0f3f7!important;box-shadow:none!important}
 .content .allActionsGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 28px}
 .content .allActionCard{display:flex;align-items:center;gap:14px;text-align:left;min-height:94px;padding:18px;border:1px solid #e2e8f0;border-radius:16px;background:#fff;color:#1e2329;box-shadow:0 4px 16px rgba(16,24,40,.04)}
-.content .allActionCard>span{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;border-radius:14px;background:#e8f7f0;color:#0ecb81;font-size:24px;font-weight:800}
+.content .allActionCard>span{width:52px;height:52px;flex:0 0 52px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(145deg,#edf4ff,#dce8ff);color:#1d4ed8;font-size:27px;font-weight:800;line-height:1;box-shadow:inset 0 0 0 1px rgba(59,130,246,.14)}html[data-theme='dark'] .content .allActionCard>span{background:linear-gradient(145deg,#26364b,#1b2738);box-shadow:inset 0 0 0 1px rgba(96,165,250,.24)}
 .content .allActionCard>div{display:flex;flex:1;min-width:0;flex-direction:column;gap:6px}
 .content .allActionCard b{font-size:15px;font-weight:800}
 .content .allActionCard small{font-size:12px;line-height:1.4;color:#707a8a}
