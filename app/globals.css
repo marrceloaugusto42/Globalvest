@@ -2575,3 +2575,7 @@ html[data-theme='dark'] textarea{
   .mobileBottomNav button{min-height:68px!important}
   .mobileBottomNav button b{font-size:14px!important}
 }
+
+.content .markDepositPaid{display:block;width:100%;margin-top:12px;min-height:48px;font-weight:800}
+.content .depositPaidNotice{margin:12px 0 0;padding:12px 14px;border-radius:12px;background:#e8f7ef;color:#11633b;font-weight:700;line-height:1.45}
+html[data-theme='dark'] .content .depositPaidNotice{background:#17372b;color:#a7f3c7}
