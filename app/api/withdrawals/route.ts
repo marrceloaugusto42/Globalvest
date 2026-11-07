@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     const admin = createClient(supabaseUrl, serviceKey, { auth: { persistSession: false, autoRefreshToken: false } });
     const [{ data: profile, error: profileError }, { data: wallets, error: walletError }] = await Promise.all([
       admin.from('profiles').select('kyc_status').eq('id', userId).maybeSingle(),
-      admin.from('wallets').select('currency,available_balance').eq('user_id', userId),
+      admin.from('wallets').select('currency,balance,available_balance').eq('user_id', userId),
     ]);
     if (profileError || walletError) return NextResponse.json({ error: 'Could not verify your account and wallet balances. Please try again.' }, { status: 503 });
     if (profile?.kyc_status !== 'verified') return NextResponse.json({ error: 'Please verify your identity before making a withdrawal.' }, { status: 403 });
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       const code = String(wallet.currency || '').toUpperCase();
       const rate = code === 'USD' || code === 'USDT' ? 1 : Number(rateData?.rates?.[code]);
       if (!Number.isFinite(rate) || rate <= 0) return NextResponse.json({ error: 'We could not verify the current USD value of your ' + code + ' wallet. Please try again later.' }, { status: 503 });
-      totalUsd += Number(wallet.available_balance || 0) / rate;
+      totalUsd += Number(wallet.balance ?? wallet.available_balance ?? 0) / rate;
     }
     if (totalUsd < 10000) return NextResponse.json({ error: 'Minimum amount to withdraw is from $10,000 up. Your combined account value must be at least $10,000 USD equivalent, regardless of currency.' }, { status: 403 });
 
