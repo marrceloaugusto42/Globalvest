@@ -2630,3 +2630,67 @@ html[data-theme='dark'] .content .receiptUpload input[type='file']{
 
 /* Globalvest withdrawal form */
 .withdrawalPanel{margin-top:18px}.withdrawMethodTabs{display:flex;gap:10px;margin:18px 0;flex-wrap:wrap}.withdrawMethodTabs button{border:1px solid var(--border,#263246);background:transparent;color:inherit;border-radius:10px;padding:11px 18px;font-weight:700;cursor:pointer}.withdrawMethodTabs button.active{background:var(--accent,#16a36a);border-color:var(--accent,#16a36a);color:#fff}.withdrawFormGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.withdrawFormGrid label{display:flex;flex-direction:column;gap:7px;min-width:0}.withdrawFormGrid label>span{font-size:13px;font-weight:650;opacity:.85}.withdrawFormGrid input,.withdrawFormGrid select{width:100%;min-width:0;box-sizing:border-box}.withdrawFull{grid-column:1/-1}.withdrawFeeSummary{display:grid;grid-template-columns:1fr auto;gap:7px 12px;padding:14px;border:1px solid var(--border,#263246);border-radius:12px;background:rgba(120,140,160,.07)}.withdrawFeeSummary small{grid-column:1/-1;opacity:.7}.withdrawSubmit{margin-top:16px;width:100%}.withdrawPendingNote{display:block;margin-top:10px;opacity:.72}.withdrawalAdminRow{align-items:flex-start}.withdrawalAdminRow>span:first-child{min-width:0;overflow-wrap:anywhere}.withdrawalAdminRow>span:first-child small{display:block;margin-top:5px;white-space:normal}@media(max-width:640px){.withdrawFormGrid{grid-template-columns:1fr}.withdrawFull{grid-column:auto}.withdrawalAdminRow{flex-direction:column;gap:12px}.withdrawalAdminRow .adminActions{width:100%;display:flex;flex-wrap:wrap}}
+
+
+/* Compact responsive density: fit more of the exchange dashboard at normal browser zoom. */
+.app{min-height:100dvh}
+.app>.content{min-width:0}
+.content{padding:16px 22px 92px!important}
+.content header{gap:12px;margin-bottom:16px}
+.content header h1{font-size:clamp(20px,2vw,27px);line-height:1.2}
+.content header p{margin:5px 0 0;font-size:13px}
+.exchangeHome{gap:12px}
+.exchangeAssets,.exchangeShortcuts,.exchangeMarketSection{padding:16px!important}
+.exchangeAssets{border-radius:14px!important}
+.exchangeBalanceLine>strong{font-size:clamp(27px,3.2vw,38px)!important}
+.exchangeShortcuts{gap:8px!important}
+.exchangeShortcuts button{padding:10px 6px!important;min-height:76px!important}
+.exchangeShortcutIcon{width:36px!important;height:36px!important}
+.exchangeMarketSection{margin-top:12px!important}
+.stat,.product,.panel,.wallet,.card{padding:16px!important}
+.sectionHead{margin-top:20px}
+.content h1{line-height:1.2}
+.content h2{font-size:clamp(17px,1.7vw,21px);line-height:1.25}
+.content input,.content select,.content textarea{min-height:40px;padding:9px 11px}
+.content button{min-height:38px}
+.withdrawalPanel{padding:17px!important}
+.withdrawMethodTabs{margin:12px 0}
+.withdrawFormGrid{gap:11px}
+.withdrawFeeSummary{padding:12px}
+.withdrawMinimumNotice{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:12px 0;padding:13px 15px;border:1px solid var(--border,#dce2e8);border-radius:12px;background:rgba(13,187,145,.07)}
+.withdrawMinimumNotice>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.withdrawMinimumNotice b{font-size:14px}
+.withdrawMinimumNotice span{font-size:12px;line-height:1.45;color:var(--muted,#77808b)}
+.withdrawMinimumNotice>strong{font-size:16px;white-space:nowrap}
+.withdrawBlockedMessage{margin:10px 0;padding:12px 14px;border-radius:10px;background:#fff1f0;color:#a83232;font-size:13px;font-weight:750;line-height:1.45}
+.withdrawFxError{display:block;color:#b54708;margin:6px 0}
+.withdrawSubmit:disabled{opacity:.48!important;cursor:not-allowed!important;filter:saturate(.55)}
+html[data-theme='dark'] .withdrawMinimumNotice{background:rgba(14,203,129,.08);border-color:#2a313b}
+html[data-theme='dark'] .withdrawBlockedMessage{background:#3a2022;color:#ffb4b4}
+@media(min-width:1200px){
+ .content{padding:14px 24px 86px!important}
+ .exchangeHome{max-width:1500px;margin:0 auto}
+ .content header{padding-bottom:12px}
+ .exchangeAssets,.exchangeShortcuts,.exchangeMarketSection{padding:15px!important}
+ .stat,.product,.panel,.wallet,.card{padding:15px!important}
+}
+@media(max-width:900px){
+ .content{padding:13px 14px 120px!important}
+ .content header{margin-bottom:12px}
+ .exchangeAssets,.exchangeShortcuts,.exchangeMarketSection{padding:13px!important}
+}
+@media(max-width:700px){
+ .content{padding:10px 10px 126px!important}
+ .content header h1{font-size:19px}
+ .content header p{font-size:12px}
+ .exchangeAssets,.exchangeShortcuts,.exchangeMarketSection{border-radius:12px!important}
+ .stat,.product,.panel,.wallet,.card{padding:13px!important;border-radius:12px!important}
+ .withdrawalPanel{padding:13px!important}
+ .withdrawMinimumNotice{align-items:flex-start;padding:11px 12px}
+ .withdrawMinimumNotice>strong{font-size:14px}
+}
+@media(max-width:380px){
+ .content{padding-left:8px!important;padding-right:8px!important}
+ .withdrawMinimumNotice{gap:8px}
+ .withdrawMinimumNotice span{font-size:11px}
+}
