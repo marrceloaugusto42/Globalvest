@@ -32,10 +32,10 @@ Yoruba:{
 };
 const codes:Record<Language,string>={English:'en',French:'fr',Spanish:'es',Portuguese:'pt',Arabic:'ar',Chinese:'zh-CN',Hindi:'hi',German:'de',Vietnamese:'vi',Yoruba:'yo'};
 const normalize=(s:string)=>s.replace(/\s+/g,' ').trim();
+const textOriginal=new WeakMap<Text,string>();
+const attrOriginal=new WeakMap<Element,Record<string,string>>();
 export function installGlobalvestTranslations(language:Language){
  const root=document.body;
- const textOriginal=new WeakMap<Text,string>();
- const attrOriginal=new WeakMap<Element,Record<string,string>>();
  const skip=(el:Element|null)=>!!el?.closest('script,style,svg,textarea,input,select,option,[translate="no"],.notranslate,.languagePickerMenu');
  const translateText=(node:Text)=>{const parent=node.parentElement;if(!parent||skip(parent))return;const current=node.nodeValue||'';let original=textOriginal.get(node);if(original===undefined){original=current;textOriginal.set(node,original)}const key=normalize(original);const dict=language==='English'?{}:dictionaries[language as Exclude<Language,'English'>]||{};const translated=dict[key];if(translated!==undefined){const leading=original.match(/^\s*/)?.[0]||'';const trailing=original.match(/\s*$/)?.[0]||'';const next=leading+translated+trailing;if(current!==next)node.nodeValue=next}else if(current!==original&&language==='English')node.nodeValue=original;};
  const translateElement=(el:Element)=>{if(skip(el))return;const attrs=['placeholder','title','aria-label'];let originals=attrOriginal.get(el);if(!originals){originals={};attrOriginal.set(el,originals)}for(const attr of attrs){const value=el.getAttribute(attr);if(value===null)continue;if(originals[attr]===undefined)originals[attr]=value;const source=originals[attr];const next=language==='English'?source:(dictionaries[language as Exclude<Language,'English'>]||{})[normalize(source)]||source;if(value!==next)el.setAttribute(attr,next)}};
