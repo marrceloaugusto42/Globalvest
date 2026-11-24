@@ -2694,3 +2694,38 @@ html[data-theme='dark'] .withdrawBlockedMessage{background:#3a2022;color:#ffb4b4
  .withdrawMinimumNotice{gap:8px}
  .withdrawMinimumNotice span{font-size:11px}
 }
+
+/* Investor-first dashboard: plain-language actions, clear hierarchy and calmer layout */
+.investorQuickActions,.investorGettingStarted{margin-top:18px;padding:22px;border:1px solid var(--gv-line,#e3e7eb);border-radius:18px;background:var(--gv-surface,#fff);box-shadow:0 5px 18px rgba(20,35,50,.035)}
+.investorSectionIntro{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:16px}
+.investorEyebrow{display:block;font-size:10px;font-weight:850;letter-spacing:.13em;color:#16845e;margin-bottom:7px}
+.investorSectionIntro h2,.investorGettingCopy h2{margin:0;font-size:21px;line-height:1.25;letter-spacing:-.025em;color:var(--gv-ink,#1e2329)}
+.investorSectionIntro p,.investorGettingCopy p{margin:6px 0 0;color:var(--gv-muted,#707a8a);font-size:13px;line-height:1.55}
+.investorActionGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}
+.investorAction{display:flex;align-items:center;gap:11px;min-width:0;min-height:82px;padding:14px!important;border:1px solid var(--gv-line,#e3e7eb);border-radius:14px;background:var(--gv-surface-raised,#f8fafb);color:var(--gv-ink,#1e2329);text-align:left;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
+.investorAction:hover{transform:translateY(-2px);border-color:#0eaa73;box-shadow:0 7px 18px rgba(10,120,80,.09)}
+.investorActionIcon{display:grid;place-items:center;flex:0 0 39px;width:39px;height:39px;border-radius:12px;background:rgba(14,203,129,.12);color:#078c5b;font-size:23px;font-weight:800}
+.investorAction>span:nth-child(2){display:flex;flex-direction:column;gap:4px;min-width:0}
+.investorAction b{font-size:14px;line-height:1.2;color:var(--gv-ink,#1e2329)}
+.investorAction small{font-size:11px;line-height:1.35;color:var(--gv-muted,#707a8a)}
+.investorAction>strong{margin-left:auto;color:#0b9b68;font-size:18px}
+.investorGettingStarted{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:center;padding:24px}
+.investorGettingCopy h2{font-size:23px;max-width:380px}
+.investorGettingCopy p{max-width:430px;font-size:13px}
+.investorExploreButton{display:inline-flex;align-items:center;gap:12px;margin-top:16px;padding:12px 16px!important;border:0;border-radius:10px;background:#0ecb81;color:#071b13;font-size:13px;font-weight:850}
+.investorExploreButton span{font-size:18px}
+.investorSteps{display:grid;gap:10px}
+.investorSteps>div{display:flex;align-items:center;gap:13px;padding:12px 14px;border:1px solid var(--gv-line,#e3e7eb);border-radius:12px;background:var(--gv-surface-raised,#f8fafb)}
+.investorSteps>div>span{display:grid;place-items:center;flex:0 0 34px;height:34px;border-radius:10px;background:rgba(14,203,129,.12);color:#078c5b;font-size:12px;font-weight:900}
+.investorSteps section{display:flex;flex-direction:column;gap:3px}
+.investorSteps b{font-size:13px;color:var(--gv-ink,#1e2329)}
+.investorSteps small{font-size:11px;line-height:1.4;color:var(--gv-muted,#707a8a)}
+.content .exchangeAccountStrip button{display:flex;flex-direction:column;align-items:flex-start;gap:5px;padding:12px 14px!important}
+.content .exchangeAccountStrip button b{font-size:13px}
+.content .exchangeAccountStrip button span{font-size:11px;opacity:.8}
+@media(max-width:1050px){.investorActionGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.investorGettingStarted{grid-template-columns:1fr;gap:18px}}
+@media(max-width:560px){.investorQuickActions,.investorGettingStarted{padding:15px;margin-top:12px;border-radius:14px}.investorActionGrid{grid-template-columns:1fr;gap:8px}.investorAction{min-height:68px;padding:11px!important}.investorSectionIntro h2,.investorGettingCopy h2{font-size:19px}.investorGettingStarted{gap:15px}.investorSteps>div{padding:10px 11px}}
+html[data-theme='dark'] .investorQuickActions,html[data-theme='dark'] .investorGettingStarted{background:#14181e!important;border-color:#2a3039!important;box-shadow:0 5px 18px rgba(0,0,0,.18)!important}
+html[data-theme='dark'] .investorAction,html[data-theme='dark'] .investorSteps>div{background:#1b2028!important;border-color:#303946!important;color:#eaecef!important}
+html[data-theme='dark'] .investorAction b,html[data-theme='dark'] .investorSteps b,html[data-theme='dark'] .investorSectionIntro h2,html[data-theme='dark'] .investorGettingCopy h2{color:#f0f3f6!important}
+html[data-theme='dark'] .investorAction small,html[data-theme='dark'] .investorSteps small,html[data-theme='dark'] .investorSectionIntro p,html[data-theme='dark'] .investorGettingCopy p{color:#a2adba!important}
