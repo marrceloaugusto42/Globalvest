@@ -34,6 +34,21 @@ const codes:Record<Language,string>={English:'en',French:'fr',Spanish:'es',Portu
 const normalize=(s:string)=>s.replace(/\s+/g,' ').trim();
 const textOriginal=new WeakMap<Text,string>();
 const attrOriginal=new WeakMap<Element,Record<string,string>>();
+const lastTranslated=new WeakMap<Text,string>();
+function translateDynamicPhrase(source:string,language:Language):string|undefined{
+ const rules:Record<string,Partial<Record<Language,string>>> = {
+  'Welcome back, ': {French:'Bon retour, ',Spanish:'Bienvenido de nuevo, ',Portuguese:'Bem-vindo de volta, ',Arabic:'مرحبًا بعودتك، ',Chinese:'欢迎回来，',Hindi:'वापसी पर स्वागत है, ',German:'Willkommen zurück, ',Vietnamese:'Chào mừng bạn quay lại, ',Yoruba:'Ẹ káàbọ̀ padà, '},
+  'Welcome back ': {French:'Bon retour ',Spanish:'Bienvenido de nuevo ',Portuguese:'Bem-vindo de volta ',Arabic:'مرحبًا بعودتك ',Chinese:'欢迎回来 ',Hindi:'वापसी पर स्वागत है ',German:'Willkommen zurück ',Vietnamese:'Chào mừng bạn quay lại ',Yoruba:'Ẹ káàbọ̀ padà '},
+  'Hello, ': {French:'Bonjour, ',Spanish:'Hola, ',Portuguese:'Olá, ',Arabic:'مرحبًا، ',Chinese:'你好，',Hindi:'नमस्ते, ',German:'Hallo, ',Vietnamese:'Xin chào, ',Yoruba:'Ẹ káàbọ̀, '},
+  'No results found': {French:'Aucun résultat trouvé',Spanish:'No se encontraron resultados',Portuguese:'Nenhum resultado encontrado',Arabic:'لم يتم العثور على نتائج',Chinese:'未找到结果',Hindi:'कोई परिणाम नहीं मिला',German:'Keine Ergebnisse gefunden',Vietnamese:'Không tìm thấy kết quả',Yoruba:'A kò rí àbájáde kankan'},
+  'Something went wrong': {French:'Une erreur s’est produite',Spanish:'Algo salió mal',Portuguese:'Algo deu errado',Arabic:'حدث خطأ ما',Chinese:'出现问题',Hindi:'कुछ गलत हो गया',German:'Etwas ist schiefgelaufen',Vietnamese:'Đã xảy ra lỗi',Yoruba:'Ohun kan ti lọ́nà àìtọ́'},
+  'Please try again': {French:'Veuillez réessayer',Spanish:'Inténtalo de nuevo',Portuguese:'Tente novamente',Arabic:'يرجى المحاولة مرة أخرى',Chinese:'请重试',Hindi:'कृपया पुनः प्रयास करें',German:'Bitte versuchen Sie es erneut',Vietnamese:'Vui lòng thử lại',Yoruba:'Jọ̀wọ́ tún gbìyànjú'},
+  'Your session has expired': {French:'Votre session a expiré',Spanish:'Tu sesión ha caducado',Portuguese:'Sua sessão expirou',Arabic:'انتهت صلاحية جلستك',Chinese:'登录会话已过期',Hindi:'आपका सत्र समाप्त हो गया है',German:'Ihre Sitzung ist abgelaufen',Vietnamese:'Phiên của bạn đã hết hạn',Yoruba:'Àkókò ìjókòó rẹ ti parí'},
+  'Network error': {French:'Erreur réseau',Spanish:'Error de red',Portuguese:'Erro de rede',Arabic:'خطأ في الشبكة',Chinese:'网络错误',Hindi:'नेटवर्क त्रुटि',German:'Netzwerkfehler',Vietnamese:'Lỗi mạng',Yoruba:'Àṣìṣe nẹ́tíwọ́ọ̀kì'}
+ };
+ for(const [prefix,translations] of Object.entries(rules)){if(source.startsWith(prefix)){const translated=translations[language];if(translated)return translated+source.slice(prefix.length)}}
+ return undefined;
+}
 export function installGlobalvestTranslations(language:Language){
  const root=document.body;
  const skip=(el:Element|null)=>!!el?.closest('script,style,svg,textarea,input,select,option,[translate="no"],.notranslate,.languagePickerMenu');
