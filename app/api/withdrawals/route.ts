@@ -37,18 +37,6 @@ export async function POST(request: Request) {
     if (profileError || walletError) return NextResponse.json({ error: 'Could not verify your account and wallet balances. Please try again.' }, { status: 503 });
     if (profile?.kyc_status !== 'verified') return NextResponse.json({ error: 'Please verify your identity before making a withdrawal.' }, { status: 403 });
 
-    const ratesResponse = await fetch('https://open.er-api.com/v6/latest/USD', { cache: 'no-store' });
-    if (!ratesResponse.ok) return NextResponse.json({ error: 'Live exchange rates are unavailable. Please try again shortly.' }, { status: 503 });
-    const rateData = await ratesResponse.json();
-    let totalUsd = 0;
-    for (const wallet of wallets || []) {
-      const code = String(wallet.currency || '').toUpperCase();
-      const rate = code === 'USD' || code === 'USDT' ? 1 : Number(rateData?.rates?.[code]);
-      if (!Number.isFinite(rate) || rate <= 0) return NextResponse.json({ error: 'We could not verify the current USD value of your ' + code + ' wallet. Please try again later.' }, { status: 503 });
-      totalUsd += Math.max(Number(wallet.balance || 0), Number(wallet.available_balance || 0)) / rate;
-    }
-    if (totalUsd < 10000) return NextResponse.json({ error: 'Minimum amount to withdraw is from $10,000 up. Your combined account value must be at least $10,000 USD equivalent, regardless of currency.' }, { status: 403 });
-
     const wallet = (wallets || []).find((item) => String(item.currency).toUpperCase() === currency);
     if (!wallet || Number(wallet.available_balance || 0) < amount) return NextResponse.json({ error: 'Insufficient available balance in the selected wallet.' }, { status: 400 });
 
@@ -75,7 +63,7 @@ export async function POST(request: Request) {
       status: 'pending',
     }).select('id,reference,status').single();
     if (error) return NextResponse.json({ error: 'Withdrawal request failed: ' + error.message }, { status: 400 });
-    return NextResponse.json({ ok: true, request: data, accountValueUsd: totalUsd });
+    return NextResponse.json({ ok: true, request: data });
   } catch {
     return NextResponse.json({ error: 'Withdrawal request could not be processed. Please try again.' }, { status: 500 });
   }
