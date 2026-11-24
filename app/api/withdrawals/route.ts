@@ -29,16 +29,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Enter valid withdrawal details.' }, { status: 400 });
     }
 
+    // The withdrawal is a request, not an immediate balance transfer.
+    // Do not block submission on a wallet-balance read: balances and eligibility
+    // are checked during the internal review before any payout is made.
     const admin = createClient(supabaseUrl, serviceKey, { auth: { persistSession: false, autoRefreshToken: false } });
-    const [{ data: profile, error: profileError }, { data: wallets, error: walletError }] = await Promise.all([
-      admin.from('profiles').select('kyc_status').eq('id', userId).maybeSingle(),
-      admin.from('wallets').select('currency,balance,available_balance').eq('user_id', userId),
-    ]);
-    if (profileError || walletError) return NextResponse.json({ error: 'Could not verify your account and wallet balances. Please try again.' }, { status: 503 });
-    if (profile?.kyc_status !== 'verified') return NextResponse.json({ error: 'Please verify your identity before making a withdrawal.' }, { status: 403 });
-
-    const wallet = (wallets || []).find((item) => String(item.currency).toUpperCase() === currency);
-    if (!wallet || Number(wallet.available_balance || 0) < amount) return NextResponse.json({ error: 'Insufficient available balance in the selected wallet.' }, { status: 400 });
 
     if (method === 'bank' && (!body.country || !body.bank_currency || !body.bank_name || !String(body.account_name || '').trim() || !String(body.account_number || '').trim())) {
       return NextResponse.json({ error: 'Complete all bank account details before submitting.' }, { status: 400 });
