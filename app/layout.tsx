@@ -1,5 +1,6 @@
 import "./globals.css";
 import GlobalvestSplash from "./components/GlobalvestSplash";
+import GlobalvestTranslationRuntime from "./components/GlobalvestTranslationRuntime";
 import type { Metadata } from "next";
 
 const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://globalvestcapital.site";
@@ -53,7 +54,7 @@ export const viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body><GlobalvestSplash />{children}</body>
+      <body><GlobalvestTranslationRuntime /><GlobalvestSplash />{children}</body>
     </html>
   );
 }
