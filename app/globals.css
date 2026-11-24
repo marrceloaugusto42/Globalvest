@@ -2952,3 +2952,26 @@ html[data-theme='dark'] .supportInboxComposer textarea,html[data-theme='dark'] .
 html[data-theme='dark'] .supportChatMessage.fromCustomer{background:rgba(22,163,106,.14)!important;border-color:rgba(22,163,106,.22)!important}
 html[data-theme='dark'] .supportChatFile{color:#eaf0f6!important;border-color:#344252!important}
 @media(max-width:760px){.marketTools{align-items:stretch}.marketTools>input{max-width:none;flex-basis:100%}.marketFilterTabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.marketFilterTabs button{width:100%}.supportInboxLayout{grid-template-columns:minmax(0,1fr)!important}.supportInboxThread{min-height:420px}.supportHero{padding:17px!important}.supportAvailability{margin-left:70px}}
+
+
+/* Distinct, high-contrast action marks in both themes */
+.investorAction.investorDeposit .investorActionIcon{background:rgba(245,158,11,.16)!important;color:#d97706!important}
+.investorAction.investorInvest .investorActionIcon{background:rgba(14,165,233,.16)!important;color:#0284c7!important}
+.investorAction.investorWithdraw .investorActionIcon{background:rgba(139,92,246,.16)!important;color:#7c3aed!important}
+.investorAction.investorHistory .investorActionIcon{background:rgba(20,184,166,.16)!important;color:#0f9488!important}
+html[data-theme='dark'] .investorAction.investorDeposit .investorActionIcon{background:rgba(245,158,11,.2)!important;color:#fbbf24!important}
+html[data-theme='dark'] .investorAction.investorInvest .investorActionIcon{background:rgba(14,165,233,.2)!important;color:#38bdf8!important}
+html[data-theme='dark'] .investorAction.investorWithdraw .investorActionIcon{background:rgba(139,92,246,.22)!important;color:#c4b5fd!important}
+html[data-theme='dark'] .investorAction.investorHistory .investorActionIcon{background:rgba(20,184,166,.2)!important;color:#5eead4!important}
+.content .allActionCard:nth-child(4n+1)>span{background:linear-gradient(145deg,#fff4d6,#ffe3a0)!important;color:#a16207!important}
+.content .allActionCard:nth-child(4n+2)>span{background:linear-gradient(145deg,#dff4ff,#bde8ff)!important;color:#0369a1!important}
+.content .allActionCard:nth-child(4n+3)>span{background:linear-gradient(145deg,#efe5ff,#d9c5ff)!important;color:#6d28d9!important}
+.content .allActionCard:nth-child(4n)>span{background:linear-gradient(145deg,#dcfce9,#b8f2ce)!important;color:#15803d!important}
+html[data-theme='dark'] .content .allActionCard:nth-child(4n+1)>span{background:linear-gradient(145deg,#51401e,#342b1b)!important;color:#fbbf24!important}
+html[data-theme='dark'] .content .allActionCard:nth-child(4n+2)>span{background:linear-gradient(145deg,#173c50,#172c3b)!important;color:#38bdf8!important}
+html[data-theme='dark'] .content .allActionCard:nth-child(4n+3)>span{background:linear-gradient(145deg,#3c2b5a,#2b2341)!important;color:#c4b5fd!important}
+html[data-theme='dark'] .content .allActionCard:nth-child(4n)>span{background:linear-gradient(145deg,#1e4934,#19372b)!important;color:#86efac!important}
+.transactionStatementHead{margin:0 0 16px!important;align-items:center;gap:14px;flex-wrap:wrap}
+.transactionStatementHead h2{margin:0 0 5px}
+.transactionStatementHead p{margin:0}
+@media(max-width:600px){.transactionStatementHead>button{width:100%}}
