@@ -1,6 +1,6 @@
 'use client';
 import { useEffect } from 'react';
-import { installGlobalvestTranslations } from '@/lib/i18n';
+import { installGlobalvestTranslations } from '../../lib/i18n';
 
 const supported = ['English','French','Spanish','Portuguese','Arabic','Chinese','Hindi','German','Vietnamese','Yoruba'] as const;
 
