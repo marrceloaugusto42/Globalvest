@@ -2895,3 +2895,60 @@ html[data-theme='dark'] .investorAction,html[data-theme='dark'] .investorSteps>d
   .dashboardBootActions { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .dashboardBootMarket { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
+
+
+/* Globalvest market tools, recognizable asset marks and support-desk finish */
+.marketTools{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:14px 0 18px;flex-wrap:wrap}
+.marketTools>input{flex:1 1 240px;max-width:380px;min-height:44px;padding:0 14px;border:1px solid var(--gv-line,#303946);border-radius:11px;background:var(--gv-surface-raised,#f8fafb);color:var(--gv-ink,#1e2329)}
+.marketFilterTabs{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.marketFilterTabs button{min-height:38px;padding:8px 12px;border:1px solid var(--gv-line,#dce3e9);border-radius:9px;background:var(--gv-surface,#fff);color:var(--gv-muted,#687386);font-size:12px;font-weight:750}
+.marketFilterTabs button.active{background:#153b31;color:#fff;border-color:#153b31}
+.marketDataBadge{display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid var(--gv-line,#dce3e9);border-radius:999px;color:var(--gv-muted,#687386);font-size:11px;font-weight:750;white-space:nowrap}
+.marketDataBadge:first-letter{color:#16a36a}
+.marketName{min-width:0}
+.marketWatchToggle{width:30px;min-width:30px;height:30px;min-height:30px!important;padding:0;border:1px solid transparent;border-radius:8px;background:transparent;color:#8a96a5;font-size:20px;line-height:1}
+.marketWatchToggle:hover,.marketWatchToggle.saved{background:rgba(245,180,40,.12);color:#e5a400;border-color:rgba(229,164,0,.2)}
+.marketDot img,.coinMark img,.exchangeCoinLogo img,.launchpoolCardTop img{filter:none!important;opacity:1!important;mix-blend-mode:normal!important}
+.marketDot{background:transparent!important}
+.marketDot img{background:transparent!important}
+.exchangeCoinLogo img{background:#f7f9fc!important}
+.content .exchangeShortcuts button:nth-child(1) .exchangeShortcutIcon{background:rgba(245,158,11,.16)!important;color:#f59e0b!important}
+.content .exchangeShortcuts button:nth-child(2) .exchangeShortcutIcon{background:rgba(14,165,233,.16)!important;color:#38bdf8!important}
+.content .exchangeShortcuts button:nth-child(3) .exchangeShortcutIcon{background:rgba(168,85,247,.16)!important;color:#c084fc!important}
+.content .exchangeShortcuts button:nth-child(4) .exchangeShortcutIcon{background:rgba(34,197,94,.16)!important;color:#4ade80!important}
+.supportPage{max-width:1180px!important;gap:20px!important}
+.supportHero{border:1px solid var(--gv-line,#dce3e9);border-radius:18px!important;background:var(--gv-surface,#fff)!important;box-shadow:0 8px 28px rgba(10,25,40,.045)}
+.supportHeroIcon{background:linear-gradient(145deg,#123e32,#0e8a62)!important;box-shadow:0 8px 20px rgba(10,120,80,.18)}
+.supportAvailability{background:rgba(22,163,106,.08);border-color:rgba(22,163,106,.2);color:var(--gv-ink,#1e2329)}
+.supportAvailability i{background:#16a36a;box-shadow:0 0 0 4px rgba(22,163,106,.12)}
+.supportInbox,.supportForm,.supportTickets{border-radius:17px!important;border:1px solid var(--gv-line,#dce3e9)!important;background:var(--gv-surface,#fff)!important;box-shadow:0 8px 28px rgba(10,25,40,.04)}
+.supportInboxLayout{grid-template-columns:minmax(250px,330px) minmax(0,1fr)!important;gap:14px!important}
+.supportInboxList,.supportInboxThread{border-color:var(--gv-line,#dce3e9)!important;border-radius:14px!important;background:var(--gv-surface-raised,#f8fafb)!important}
+.supportInboxListTitle{background:var(--gv-surface,#fff)!important;border-color:var(--gv-line,#dce3e9)!important;color:var(--gv-ink,#1e2329)!important}
+.supportInboxItem{background:var(--gv-surface,#fff)!important;color:var(--gv-ink,#1e2329)!important;border-color:var(--gv-line,#e6ece8)!important}
+.supportInboxItem:hover,.supportInboxItem.active{background:rgba(22,163,106,.08)!important}
+.supportInboxItem.active{box-shadow:inset 3px 0 #16a36a!important}
+.supportInboxThreadHead,.supportInboxComposer{background:var(--gv-surface-raised,#f8fafb)!important;border-color:var(--gv-line,#e7ece9)!important}
+.supportInboxThreadHead h3,.supportInboxEmpty h3{color:var(--gv-ink,#1e2329)!important}
+.supportInboxThreadHead p,.supportInboxItem small{color:var(--gv-muted,#778392)!important}
+.supportInboxMessages{background:var(--gv-surface,#fff)!important;scroll-behavior:smooth}
+.supportInboxComposer textarea,.supportChatActions textarea{background:var(--gv-surface,#fff)!important;color:var(--gv-ink,#1e2329)!important;border-color:var(--gv-line,#dce3e9)!important}
+.supportChatMessage.fromCustomer{background:rgba(22,163,106,.09)!important;border-color:rgba(22,163,106,.18)!important}
+.supportChatMessage.fromSupport{background:var(--gv-surface-raised,#f8fafb)!important}
+.supportChatFile{padding:9px 11px;border:1px dashed var(--gv-line,#cbd5df);border-radius:10px;color:var(--gv-ink,#1e2329)}
+html[data-theme='dark'] .marketFilterTabs button{background:#182330!important;border-color:#344252!important;color:#aeb9c6!important}
+html[data-theme='dark'] .marketFilterTabs button.active{background:#15543e!important;border-color:#197b57!important;color:#f3fff8!important}
+html[data-theme='dark'] .marketDataBadge{background:#17212c!important;border-color:#344252!important;color:#aeb9c6!important}
+html[data-theme='dark'] .marketWatchToggle{color:#9aa8b7!important}
+html[data-theme='dark'] .marketWatchToggle.saved,html[data-theme='dark'] .marketWatchToggle:hover{color:#f5c451!important;background:rgba(245,180,40,.12)!important}
+html[data-theme='dark'] .supportHero,html[data-theme='dark'] .supportInbox,html[data-theme='dark'] .supportForm,html[data-theme='dark'] .supportTickets{background:#141c26!important;border-color:#2b3948!important;color:#eaf0f6!important}
+html[data-theme='dark'] .supportInboxList,html[data-theme='dark'] .supportInboxThread{background:#111923!important;border-color:#2b3948!important}
+html[data-theme='dark'] .supportInboxListTitle,html[data-theme='dark'] .supportInboxItem,html[data-theme='dark'] .supportInboxThreadHead,html[data-theme='dark'] .supportInboxComposer{background:#17212c!important;border-color:#2b3948!important;color:#eaf0f6!important}
+html[data-theme='dark'] .supportInboxItem:hover,html[data-theme='dark'] .supportInboxItem.active{background:#1c342d!important}
+html[data-theme='dark'] .supportInboxThreadHead h3,html[data-theme='dark'] .supportInboxEmpty h3{color:#f0f4f8!important}
+html[data-theme='dark'] .supportInboxThreadHead p,html[data-theme='dark'] .supportInboxItem small{color:#9eacba!important}
+html[data-theme='dark'] .supportInboxMessages{background:#111923!important}
+html[data-theme='dark'] .supportInboxComposer textarea,html[data-theme='dark'] .supportChatActions textarea{background:#0e151e!important;color:#eaf0f6!important;border-color:#344252!important}
+html[data-theme='dark'] .supportChatMessage.fromCustomer{background:rgba(22,163,106,.14)!important;border-color:rgba(22,163,106,.22)!important}
+html[data-theme='dark'] .supportChatFile{color:#eaf0f6!important;border-color:#344252!important}
+@media(max-width:760px){.marketTools{align-items:stretch}.marketTools>input{max-width:none;flex-basis:100%}.marketFilterTabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.marketFilterTabs button{width:100%}.supportInboxLayout{grid-template-columns:minmax(0,1fr)!important}.supportInboxThread{min-height:420px}.supportHero{padding:17px!important}.supportAvailability{margin-left:70px}}
