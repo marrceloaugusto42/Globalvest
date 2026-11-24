@@ -1,10 +1,11 @@
 'use client';
 
-import {useState} from 'react';
+import {useEffect,useState} from 'react';
 import {useRouter} from 'next/navigation';
 import {getSupabase} from '../../lib/supabase';
+import {installGlobalvestTranslations} from '../../lib/i18n';
 
-export default function LoginPage(){
+export default function LoginPage(){useEffect(()=>{let lang='English';try{lang=localStorage.getItem('globalvest-language')||'English'}catch{};const codes:Record<string,string>={English:'en',French:'fr',Spanish:'es',Portuguese:'pt',Arabic:'ar',Chinese:'zh-CN',Hindi:'hi',German:'de',Vietnamese:'vi',Yoruba:'yo'};document.documentElement.lang=codes[lang]||'en';document.documentElement.dir=lang==='Arabic'?'rtl':'ltr';return installGlobalvestTranslations(lang as any)},[]);
   const sb=getSupabase();const router=useRouter();
   const [email,setEmail]=useState('');const [password,setPassword]=useState('');
   const [showPassword,setShowPassword]=useState(false);const [busy,setBusy]=useState(false);const [error,setError]=useState('');
