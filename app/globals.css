@@ -3111,3 +3111,16 @@ html[data-theme='light'] .content .exchangeGain {color:#08734f!important}
 @keyframes gvSplashProgress{from{transform:translateX(-110%)}to{transform:translateX(300%)}}
 @keyframes gvSplashSpin{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.gvEntrySplash,.gvSplashMark,.gvSplashLoadingText,.gvSplashLoader span{animation:none!important}.gvSplashLoader span{width:100%}}
+
+/* Keep language controls completely out of sight while the entry splash is active. */
+body:has(.gvEntrySplash) .globalvestLanguagePickerWrap,
+body:has(.gvEntrySplash) .globalvestLanguagePicker,
+body:has(.gvEntrySplash) .languagePickerMenu,
+body:has(.gvEntrySplash) .dashboardLanguagePicker,
+body:has(.gvEntrySplash) #google_translate_element,
+body:has(.gvEntrySplash) .goog-te-banner-frame,
+body:has(.gvEntrySplash) .skiptranslate{
+  display:none!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+}
