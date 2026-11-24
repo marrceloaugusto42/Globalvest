@@ -3087,3 +3087,26 @@ html[data-theme='light'] .content .exchangeMarketTabs button.selected {backgroun
 html[data-theme='light'] .content .exchangeCoinLogo {background:#edf1f5!important;color:#202630!important;box-shadow:inset 0 0 0 1px rgba(32,38,48,.06)!important}
 html[data-theme='light'] .content .exchangeCoinLogo img {background:#fff!important}
 html[data-theme='light'] .content .exchangeGain {color:#08734f!important}
+
+/* One-time, premium Globalvest entry splash. Uses the site's established deep-green identity. */
+.gvEntrySplash{
+ position:fixed;inset:0;z-index:99999;display:grid;place-items:center;overflow:hidden;
+ background:radial-gradient(ellipse at 50% 43%,rgba(20,105,76,.34) 0%,rgba(10,48,36,.18) 35%,transparent 68%),#071b15;
+ color:#f5fbf7;animation:gvSplashFadeIn .38s ease both;isolation:isolate
+}
+.gvSplashContent{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;padding:28px}
+.gvSplashMark{width:78px;height:78px;display:grid;place-items:center;margin-bottom:22px;color:#8ed9b7;filter:drop-shadow(0 0 22px rgba(89,201,151,.24));animation:gvSplashMarkIn .72s cubic-bezier(.2,.8,.2,1) both}
+.gvSplashMark svg{width:100%;height:100%}
+.gvSplashWordmark{font-size:clamp(25px,4vw,35px);font-weight:850;letter-spacing:.19em;line-height:1.1;padding-left:.19em;color:#f7fbf8}
+.gvSplashSubline{margin-top:10px;font-size:10px;font-weight:700;letter-spacing:.52em;padding-left:.52em;color:#91b6a5}
+.gvSplashLoader{width:116px;height:2px;margin-top:36px;background:rgba(174,216,195,.18);overflow:hidden;border-radius:99px}
+.gvSplashLoader span{display:block;width:38%;height:100%;border-radius:99px;background:#79cba4;box-shadow:0 0 12px rgba(121,203,164,.6);animation:gvSplashProgress 1.45s cubic-bezier(.4,0,.2,1) both}
+.gvSplashLoadingText{margin-top:14px;font-size:11px;font-weight:500;letter-spacing:.08em;color:rgba(225,241,232,.68);animation:gvSplashTextIn .7s .18s both}
+.gvSplashGlow{position:absolute;width:min(56vw,560px);aspect-ratio:1;border-radius:50%;filter:blur(85px);opacity:.14;pointer-events:none}
+.gvSplashGlowOne{left:-20%;top:-34%;background:#17865f}
+.gvSplashGlowTwo{right:-23%;bottom:-42%;background:#326b55;opacity:.12}
+@keyframes gvSplashFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes gvSplashMarkIn{from{opacity:0;transform:translateY(12px) scale(.92)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes gvSplashTextIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@keyframes gvSplashProgress{from{transform:translateX(-110%)}to{transform:translateX(300%)}}
+@media(prefers-reduced-motion:reduce){.gvEntrySplash,.gvSplashMark,.gvSplashLoadingText,.gvSplashLoader span{animation:none!important}.gvSplashLoader span{width:100%}}
