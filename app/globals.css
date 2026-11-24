@@ -2996,3 +2996,87 @@ html[data-theme='dark'] .content .allActionCard:nth-child(4n)>span{background:li
 html[data-theme='dark'] .dashboardMarketPreview{background:#111923;border-color:#293543;color:#edf2f7}
 html[data-theme='dark'] .dashboardMarketCoin{background:#182330;border-color:#2b3947;color:#edf2f7}
 @media(max-width:760px){.dashboardMarketGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboardMarketHeading{align-items:flex-start}.dashboardMarketHeading button{font-size:11px}}
+
+
+/* Laptop light-mode correction: desktop cards must follow the selected theme.
+   Keep the established neutral surfaces and Globalvest green accent. */
+html[data-theme='light'] .content .exchangeAssets,
+html[data-theme='light'] .content .exchangeShortcuts,
+html[data-theme='light'] .content .exchangeMarketSection,
+html[data-theme='light'] .content .investorQuickActions,
+html[data-theme='light'] .content .investorGettingStarted {
+  background:var(--gv-surface,#f8fafc)!important;
+  color:var(--gv-ink,#202630)!important;
+  border-color:var(--gv-line,#dce2e9)!important;
+  box-shadow:0 5px 18px rgba(18,31,48,.045)!important;
+}
+html[data-theme='light'] .content .exchangeShortcuts button,
+html[data-theme='light'] .content .investorAction,
+html[data-theme='light'] .content .investorSteps>div {
+  background:var(--gv-surface-raised,#fff)!important;
+  color:var(--gv-ink,#202630)!important;
+  border-color:var(--gv-line,#dce2e9)!important;
+}
+html[data-theme='light'] .content .exchangeShortcuts button b,
+html[data-theme='light'] .content .investorAction b,
+html[data-theme='light'] .content .investorSteps b,
+html[data-theme='light'] .content .exchangeCoinSymbol,
+html[data-theme='light'] .content .exchangeCoinPrice strong {
+  color:var(--gv-ink,#202630)!important;
+}
+html[data-theme='light'] .content .exchangeShortcuts button span,
+html[data-theme='light'] .content .investorAction small,
+html[data-theme='light'] .content .investorSteps small,
+html[data-theme='light'] .content .exchangeCoinPrice small {
+  color:var(--gv-muted,#6f7b8b)!important;
+}
+html[data-theme='light'] .content .exchangeCoinRow {
+  background:var(--gv-surface-raised,#fff)!important;
+  color:var(--gv-ink,#202630)!important;
+  border-color:var(--gv-line,#dce2e9)!important;
+}
+html[data-theme='light'] .content .exchangeCoinRow:hover {
+  background:#f0f4f7!important;
+}
+html[data-theme='light'] .content .exchangeAssetsLabel,
+html[data-theme='light'] .content .exchangeAssetsLabel>span,
+html[data-theme='light'] .content .exchangeEye {
+  color:var(--gv-ink,#202630)!important;
+}
+html[data-theme='light'] .content .exchangeBalanceLine>strong {
+  color:var(--gv-ink,#202630)!important;
+}
+@media (min-width:901px) {
+  .content .exchangeAssetsLabel {
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:10px!important;
+    min-width:0!important;
+  }
+  .content .exchangeAssetsLabel>span {
+    min-width:0!important;
+    overflow-wrap:anywhere!important;
+  }
+  .content .exchangeEye {
+    position:relative!important;
+    display:inline-flex!important;
+    flex:0 0 38px!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:38px!important;
+    min-width:38px!important;
+    height:38px!important;
+    min-height:38px!important;
+    margin:0!important;
+    padding:0!important;
+    border:1px solid var(--gv-line,#dce2e9)!important;
+    border-radius:10px!important;
+    background:var(--gv-surface-raised,#fff)!important;
+    color:var(--gv-ink,#202630)!important;
+    z-index:1!important;
+  }
+  .content .exchangeEye svg {width:21px!important;height:21px!important}
+  .content .exchangeBalanceLine {min-width:0!important;flex-wrap:wrap!important}
+  .content .exchangeBalanceLine>strong {min-width:0!important;overflow-wrap:anywhere!important}
+}
