@@ -2,21 +2,12 @@
 
 import { useEffect, useState } from "react";
 
-const SPLASH_KEY = "globalvest-entry-splash-seen";
-
 export default function GlobalvestSplash() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    try {
-      if (window.sessionStorage.getItem(SPLASH_KEY) === "1") return;
-      window.sessionStorage.setItem(SPLASH_KEY, "1");
-    } catch {
-      // If storage is unavailable, still show the entry animation for this visit.
-    }
-
-    setVisible(true);
-    const timeout = window.setTimeout(() => setVisible(false), 1850);
+    // Show the entry screen on every full page load and refresh.
+    const timeout = window.setTimeout(() => setVisible(false), 5000);
     return () => window.clearTimeout(timeout);
   }, []);
 
