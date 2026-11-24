@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       const code = String(wallet.currency || '').toUpperCase();
       const rate = code === 'USD' || code === 'USDT' ? 1 : Number(rateData?.rates?.[code]);
       if (!Number.isFinite(rate) || rate <= 0) return NextResponse.json({ error: 'We could not verify the current USD value of your ' + code + ' wallet. Please try again later.' }, { status: 503 });
-      totalUsd += Number(wallet.available_balance ?? wallet.balance ?? 0) / rate;
+      totalUsd += Math.max(Number(wallet.balance || 0), Number(wallet.available_balance || 0)) / rate;
     }
     if (totalUsd < 10000) return NextResponse.json({ error: 'Minimum amount to withdraw is from $10,000 up. Your combined account value must be at least $10,000 USD equivalent, regardless of currency.' }, { status: 403 });
 
