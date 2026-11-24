@@ -2975,3 +2975,24 @@ html[data-theme='dark'] .content .allActionCard:nth-child(4n)>span{background:li
 .transactionStatementHead h2{margin:0 0 5px}
 .transactionStatementHead p{margin:0}
 @media(max-width:600px){.transactionStatementHead>button{width:100%}}
+
+
+/* Dashboard market preview: compact four-asset strip */
+.dashboardMarketPreview{width:100%;min-width:0;padding:18px;border:1px solid var(--gv-line,#293543);border-radius:17px;background:var(--gv-surface,#fff);box-sizing:border-box;overflow:hidden}
+.dashboardMarketHeading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.dashboardMarketHeading small{font-size:10px;font-weight:800;letter-spacing:.12em;color:#16a36a}
+.dashboardMarketHeading h2{margin:4px 0;font-size:18px}
+.dashboardMarketHeading p{margin:0;color:var(--gv-muted,#8793a1);font-size:12px}
+.dashboardMarketHeading button{border:0;background:transparent;color:#16a36a;font-weight:750;cursor:pointer;white-space:nowrap}
+.dashboardMarketGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.dashboardMarketCoin{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;min-width:0;padding:13px;border:1px solid var(--gv-line,#dce3e9);border-radius:12px;background:var(--gv-surface-raised,#f8fafb);color:var(--gv-ink,#1e2329);text-align:left;cursor:pointer}
+.dashboardMarketCoinIdentity{display:flex;align-items:center;gap:9px;min-width:0;grid-column:1/-1}
+.dashboardMarketCoinIdentity img{width:27px;height:27px;object-fit:contain;flex:0 0 27px}
+.dashboardMarketCoinIdentity span{display:grid;min-width:0}
+.dashboardMarketCoinIdentity b{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dashboardMarketCoinIdentity small{font-size:10px;color:var(--gv-muted,#8793a1)}
+.dashboardMarketCoin>strong{font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.dashboardMarketCoin>em{justify-self:end;font-size:10px;font-style:normal;font-weight:750;white-space:nowrap}
+html[data-theme='dark'] .dashboardMarketPreview{background:#111923;border-color:#293543;color:#edf2f7}
+html[data-theme='dark'] .dashboardMarketCoin{background:#182330;border-color:#2b3947;color:#edf2f7}
+@media(max-width:760px){.dashboardMarketGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboardMarketHeading{align-items:flex-start}.dashboardMarketHeading button{font-size:11px}}
